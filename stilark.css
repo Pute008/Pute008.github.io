@@ -1,0 +1,55 @@
+/* bakgrunnsfargen til navigatoren er anig linjene */
+body {
+    margin: 0;
+}
+
+/* navigatoren har en farge og er 10px stor */
+.nav {
+    display: flex;
+    background-color: wheat;
+    padding: 10px;
+}
+
+/* lenkene i navigatorene forandrer farge, blir større osv */
+.nav a {
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: large;
+    font-weight: bold;
+    padding: 1rem;
+    color: black;
+    border-radius: 1rem;
+}
+
+/* når du er anig lenkene i navigatoren vil det komme en farge rundt lenkene */
+.nav a:hover {
+    background-color: antiquewhite;
+}
+
+/* Punktene som er synlige i navigatoren forsvinner */
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+/* forandrer bildestørrelse */
+#bilde {
+    max-width: 20%;
+    max-height: 20%;
+}
+
+/* videoen som er på nettsiden skal være midtstilt */
+iframe {
+    margin: 0 auto;
+    display: block;
+}
+
+/* det som er "h1" skal være 10px mer til høyre */
+h1 {
+    margin-left: 10px;
+}
+
+/* det som er i "p" skal være 10px mer til høyre */
+div {
+    margin-left: 10px;
+}

@@ -104,6 +104,8 @@ html, body {
     height: 650px; /* Høyden på headeren */
     width: 100%; /* Sørger for at containeren tar opp hele bredden */
     overflow: hidden; /* Hindrer innholdet i å gå utenfor området */
+    background-color: black;
+    z-index: -2;
 }
  
 .item5 video {
@@ -249,3 +251,7 @@ p {
     margin-bottom: 10px; */
     padding: 1rem;
 }
+
+/* .item2 {
+    position: absolute sticky
+} */

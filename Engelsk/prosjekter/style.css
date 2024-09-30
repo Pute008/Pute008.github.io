@@ -5,6 +5,7 @@ html, body {
 }
 
 .item1 {grid-area: header;}
+.item5 {grid-area: header2;}
 .item2 {grid-area: menu;}
 .item3 {grid-area: main;}
 .item4 {grid-area: footer;}
@@ -13,13 +14,14 @@ html, body {
 .grid-container{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto 1fr auto auto;
+    grid-template-rows: auto auto 1fr auto auto;
     grid-template-areas: 
     /* '' */
-    'header header header header header'
-    'menu   menu   menu   menu   menu'
-    'main   main   main   main   main'
-    'footer footer footer footer footer';
+    'header  header  header  header  header'
+    'menu    menu    menu    menu    menu'
+    'header2 header2 header2 header2 header2'
+    'main    main    main    main    main'
+    'footer  footer  footer  footer  footer';
 }
 
 #tittel {
@@ -32,7 +34,7 @@ html, body {
 }
 
 .item1 { /* header */
-    background: linear-gradient(270deg, #ff0000, #000000);
+    background: linear-gradient(270deg, #ff0000, #ffffff);
     color: white;
     text-align: center;
 
@@ -49,6 +51,66 @@ html, body {
     background-color: #ff0000;
     color: white;
 }
+
+.item5 {
+    color: rgb(0, 0, 0);
+    background-color: pink;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+/* Gammel videokode!!! kan brukes som paralax ode */
+/* Style the video: 100% width and height to cover the entire window
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+  
+  /* Add some content at the bottom of the video/page */
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+  
+  /* Style the button used to pause/play the video */
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+  
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+} /* */
+
+
+
+
+/* Header (item2) med videoer */
+
+
+
+
 
 /*  */
 * {
@@ -107,6 +169,18 @@ ul li:hover ul.dropdown {
     /* scale: %; */
     width: 20%;
     /* height: 20%; */
+    float: left ;
+    padding: 1rem;
+
+}
+
+#bilde_i_tekst {
+    max-width: 20%;
+    float: left;
+    padding: 1rem;
+    scale: 100%;
+    object-fit: contain;
+    
 }
 
 /* når skjermen blir mindre */

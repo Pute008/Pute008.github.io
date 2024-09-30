@@ -52,16 +52,7 @@ html, body {
     color: white;
 }
 
-.item5 {
-    color: rgb(0, 0, 0);
-    background-color: pink;
 
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
 
 
 
@@ -106,7 +97,37 @@ html, body {
 
 
 
+
 /* Header (item2) med videoer */
+.item5 {
+    position: relative;
+    height: 650px; /* Høyden på headeren */
+    width: 100%; /* Sørger for at containeren tar opp hele bredden */
+    overflow: hidden; /* Hindrer innholdet i å gå utenfor området */
+}
+ 
+.item5 video {
+    position: absolute; /* Fikser videoens posisjon */
+    top: 0;
+    left: 0;
+    width: 100%; /* Sørger for at videoen tar opp hele bredden */
+    height: 100%; /* Sørger for at videoen tar opp hele høyden */
+    object-fit: cover; /* Sørger for at videoen dekker hele området uten å miste proporsjonene */
+    z-index: -1; /* Lar videoen være bak eventuelle andre elementer */
+}
+ 
+#headerVideo {
+    position: absolute; /* Plasser videoen absolutt */
+    top: 0;
+    left: 0;
+    width: 100%; /* Fyller bredden */
+    height: 100%; /* Fyller høyden */
+    object-fit: cover; /* Fyller området uten forvrengning */
+    z-index: -1; /* Plasserer video bak annet innhold */
+}
+ 
+
+
 
 
 

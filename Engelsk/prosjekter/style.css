@@ -46,7 +46,7 @@ html, body {
 }
 
 .item2 {
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
 }
 
@@ -73,7 +73,7 @@ html, body {
   
 
 
-  /* Add some content at the bottom of the video/page */
+  Add some content at the bottom of the video/page
 .content {
     position: fixed;
     bottom: 0;
@@ -83,7 +83,7 @@ html, body {
     padding: 20px;
 }
   
-  /* Style the button used to pause/play the video */
+  Style the button used to pause/play the video
 #myBtn {
     width: 200px;
     font-size: 18px;
@@ -260,3 +260,10 @@ p {
 /* .item2 {
     position: absolute sticky
 } */
+
+.footer_logo {
+    width: 10%;
+    scale: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

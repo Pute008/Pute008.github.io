@@ -244,3 +244,9 @@ p a:hover {
     background-color: green;
     color: white;
 }
+
+.tittelbilde {
+    scale: 300%;
+    width: 25%;
+    height: 25%;
+}

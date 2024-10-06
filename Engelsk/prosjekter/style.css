@@ -46,7 +46,7 @@ html, body {
 }
 
 .item2 {
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
 }
 

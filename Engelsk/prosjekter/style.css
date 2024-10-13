@@ -1,26 +1,19 @@
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: Light 300 Italic;
 }
 
-.item1 {
-  grid-area: header;
-}
-.item5 {
-  grid-area: header2;
-}
-.item2 {
-  grid-area: menu;
-}
-.item3 {
-  grid-area: main;
-}
-.item4 {
-  grid-area: footer;
-}
+.item1 {grid-area: header;}
+
+.item5 {grid-area: header2;}
+
+.item2 {grid-area: menu;}
+
+.item3 {grid-area: main;}
+
+.item4 {grid-area: footer;}
 
 .grid-container {
   display: grid;
@@ -68,45 +61,6 @@ body {
   color: white;
 }
 
-/* Gammel videokode!!! kan brukes som paralax kode */
-/* Style the video: 100% width and height to cover the entire window
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-  
-
-
-  Add some content at the bottom of the video/page
-.content {
-    position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-}
-  
-  Style the button used to pause/play the video
-#myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
-    border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-}
-  
-#myBtn:hover {
-    background: #ddd;
-    color: black;
-} /* */
-
 /* Header (item5) med videoer */
 .item5 {
   position: relative;
@@ -118,7 +72,7 @@ body {
 }
 
 .item5 video {
-  position: absolute; /* Fikser videoens posisjon */
+  position: absolute; /* Fikser video posisjonen */
   top: 0;
   left: 0;
   width: 100%; /* Sørger for at videoen tar opp hele bredden */
@@ -198,9 +152,10 @@ ul li:hover ul.dropdown {
   padding: 1rem;
 }
 
+/* crest bilde på side1/idex */
 #bilde_i_tekst {
   max-width: 20%;
-  float: left;
+  float: right;
   padding: 1rem;
   /* scale: 100%; */
   object-fit: contain;

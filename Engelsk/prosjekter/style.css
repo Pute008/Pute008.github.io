@@ -229,7 +229,7 @@ p {
 
 .footer_logo {
   width: 10%;
-  scale: 100%;
+  /* scale: 100%; */
   justify-content: flex-end;
   align-items: flex-end;
 }

@@ -101,6 +101,7 @@ html, body {
 ul {
   list-style: none;
   background: #ff0000;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 ul li {
@@ -130,6 +131,7 @@ ul li ul.dropdown {
   /* z-index viser hvor den skal være plasert p skjermen, om den skal være over noe tekst eller under noe tekst */
   z-index: 999;
   display: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* når du hvorer over dropdownmenyen skal den ha denne fargen */
@@ -150,7 +152,7 @@ ul li:hover ul.dropdown {
 
 .bilder {
   /* scale: %; */
-  width: 20%;
+  width: 25%;
   /* height: 20%; */
   float: left;
   padding: 1rem;
@@ -211,9 +213,9 @@ h3 {
   padding: 1rem;
 }
 
-/* h4 {
-  text-decoration: none;
-} */
+h4 {
+  padding: 1rem;
+}
 
 p {
   /* margin-top: 10px;
@@ -230,4 +232,32 @@ p {
   scale: 100%;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+.stonehengebilde {
+  width: 50%;
+  /* height: 20%; */
+  float: center;
+  padding: 1rem;
+}
+
+.big_ben_bilde {
+  width: 12%;
+  /* height: 20%; */
+  float: right;
+  padding: 1rem;
+}
+
+.london_eye_bilde {
+  width: 25%;
+  /* height: 20%; */
+  float: center;
+  padding: 1rem;
+}
+
+.egyptian_bilde {
+  width: 10%;
+  /* height: 20%; */
+  float: center;
+  padding: 1rem;
 }

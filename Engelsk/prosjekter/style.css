@@ -261,3 +261,11 @@ p {
   float: center;
   padding: 1rem;
 }
+
+.breakfast {
+    /* scale: %; */
+    width: 25%;
+    /* height: 20%; */
+    float: center;
+    padding: 1rem;
+}

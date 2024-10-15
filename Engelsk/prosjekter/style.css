@@ -122,18 +122,22 @@ ul li ul.dropdown li {
   display: block;
 }
 
+
 ul li ul.dropdown {
-  width: 100%;
+  width: 1                                                                                                                                         00%;
   background: #dc3b00;
   position: absolute;
+  /* z-index viser hvor den skal være plasert p skjermen, om den skal være over noe tekst eller under noe tekst */
   z-index: 999;
   display: none;
 }
 
+/* når du hvorer over dropdownmenyen skal den ha denne fargen */
 ul li a:hover {
   background: #790000;
 }
 
+/* når du hovrer over dropdownmenyen skal den vises som en blokk */
 ul li:hover ul.dropdown {
   display: block;
 }
@@ -206,6 +210,10 @@ h2 {
 h3 {
   padding: 1rem;
 }
+
+/* h4 {
+  text-decoration: none;
+} */
 
 p {
   /* margin-top: 10px;

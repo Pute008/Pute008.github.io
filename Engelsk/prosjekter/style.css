@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: Light 300 Italic;
+  /* font-family: Light 300 Italic; */
 }
 
 .item1 {grid-area: header;}
@@ -17,7 +17,9 @@ html, body {
 
 .grid-container {
   display: grid;
+  /* grid-template-columns viser hvor mange items det skal være i en kolonne */
   grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows viser hvor mange items det skal være i en rad */
   grid-template-rows: auto auto 1fr auto auto;
   grid-template-areas: 
     /* '' */
@@ -50,12 +52,13 @@ html, body {
 }
 
 .item2 {
-  /* gjør at menyen blir sticky når du blar ned, men holer seg i midten av teksten når du er på toppen av nettsiden. */
+  /* gjør at menyen blir sticky når du blar ned, men holder seg i midten av teksten når du er på toppen av nettsiden. */
   position: sticky;
   top: 0;
   width: 100%;
 }
 
+/* footer. rød tekst og rød bakgrunn */
 .item4 {
   background-color: #ff0000;
   color: white;
@@ -91,7 +94,7 @@ html, body {
   z-index: -1; /* Plasserer video bak annet innhold */
 }
 
-/*  */
+/* dropdown css kode */
 * {
   padding: 0;
   margin: 0;
@@ -127,6 +130,7 @@ ul li ul.dropdown li {
 ul li ul.dropdown {
   width: 1                                                                                                                                         00%;
   background: #dc3b00;
+  /* position absoulute passer på at menyen ikke går ned sammen med dropdown menyen når du hovrer over den */
   position: absolute;
   /* z-index viser hvor den skal være plasert p skjermen, om den skal være over noe tekst eller under noe tekst */
   z-index: 999;
@@ -144,7 +148,7 @@ ul li:hover ul.dropdown {
   display: block;
 }
 
-/*  */
+/* dropdown css koden slutter her */
 
 .flyt {
   float: left;

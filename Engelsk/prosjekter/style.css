@@ -30,6 +30,7 @@ html, body {
     "footer  footer  footer  footer  footer";
 }
 
+/* hvedsakelig tekst */
 #tittel {
   font-size: 2rem;
 }
@@ -39,6 +40,32 @@ html, body {
   /* padding: 1rem; */
 }
 
+/* tekst */
+h1 {
+  margin-top: 2px;
+  margin-bottom: 1px;
+  padding: 1rem;
+}
+
+h2 {
+  padding: 1rem;
+}
+
+h3 {
+  padding: 1rem;
+}
+
+h4 {
+  padding: 1rem;
+}
+
+p {
+  /* margin-top: 10px;
+    margin-bottom: 10px; */
+  padding: 1rem;
+}
+
+/* diverse funksjoner for itemsene i griden */
 .item1 {
   /* header */
   background: linear-gradient(270deg, #ff0000, #ffffff);
@@ -75,6 +102,7 @@ html, body {
   z-index: -2;
 }
 
+/* css kode for videoene */
 .item5 video {
   position: absolute; /* Fikser video posisjonen */
   top: 0;
@@ -94,6 +122,8 @@ html, body {
   object-fit: cover; /* Fyller området uten forvrengning */
   z-index: -1; /* Plasserer video bak annet innhold */
 }
+/* css header videokode slutter her */
+
 
 /* dropdown css kode */
 * {
@@ -155,23 +185,6 @@ ul li:hover ul.dropdown {
   float: left;
 }
 
-.bilder {
-  /* scale: %; */
-  width: 25%;
-  /* height: 20%; */
-  float: left;
-  padding: 1rem;
-}
-
-/* crest bilde på side1/idex */
-#bilde_i_tekst {
-  max-width: 20%;
-  float: right;
-  padding: 1rem;
-  /* scale: 100%; */
-  object-fit: contain;
-}
-
 /* når skjermen blir mindre */
 @media screen and (max-width: 800px) {
   grid-container {
@@ -204,33 +217,22 @@ ul li:hover ul.dropdown {
   }
 }
 
-h1 {
-  margin-top: 2px;
-  margin-bottom: 1px;
+.bilder {
+  /* scale: %; */
+  width: 25%;
+  /* height: 20%; */
+  float: left;
   padding: 1rem;
 }
 
-h2 {
+/* crest bilde på side1/idex */
+#bilde_i_tekst {
+  max-width: 20%;
+  float: right;
   padding: 1rem;
+  /* scale: 100%; */
+  object-fit: contain;
 }
-
-h3 {
-  padding: 1rem;
-}
-
-h4 {
-  padding: 1rem;
-}
-
-p {
-  /* margin-top: 10px;
-    margin-bottom: 10px; */
-  padding: 1rem;
-}
-
-/* .item2 {
-    position: absolute sticky
-} */
 
 .footer_logo {
   width: 10%;

@@ -1,3 +1,4 @@
+// bildegalleri
 // bestemmer hvem JS koden skal gjelde for
 let bilde = document.getElementById("bildegalleri");
 

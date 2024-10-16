@@ -280,12 +280,9 @@ ul li:hover ul.dropdown {
 /* css bildekoder slutter her */
 
 
-/* // <uniquifier>: Use a unique and descriptive class name */
-/* // <weight>: Use a value from 100 to 900 */
-
-/* .roboto-slab-<uniquifier> {
+.roboto-slab-grid-container {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 900;
   font-style: normal;
-} */
+}

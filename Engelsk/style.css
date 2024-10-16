@@ -181,9 +181,9 @@ ul li:hover ul.dropdown {
 
 /* dropdown css koden slutter her */
 
-.flyt {
+/* .flyt {
   float: left;
-}
+} */
 
 /* når skjermen blir mindre */
 @media screen and (max-width: 800px) {
@@ -217,6 +217,7 @@ ul li:hover ul.dropdown {
   }
 }
 
+/* css kode for alle bildene, lagde mange forskjellige siden det er forskjellige bildestørelser på hvert bilde */
 .bilder {
   /* scale: %; */
   width: 25%;
@@ -276,6 +277,7 @@ ul li:hover ul.dropdown {
     float: center;
     padding: 1rem;
 }
+/* css bildekoder slutter her */
 
 
 /* // <uniquifier>: Use a unique and descriptive class name */

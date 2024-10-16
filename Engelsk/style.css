@@ -276,3 +276,14 @@ ul li:hover ul.dropdown {
     float: center;
     padding: 1rem;
 }
+
+
+/* // <uniquifier>: Use a unique and descriptive class name */
+/* // <weight>: Use a value from 100 to 900 */
+
+/* .roboto-slab-<uniquifier> {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */

@@ -1,16 +1,18 @@
 // bildegalleri
+
 // bestemmer hvem JS koden skal gjelde for
 let bilde = document.getElementById("bildegalleri");
 
 // console.log(bilde);
+
 bilde.src = "/bilder/Granite_image_ King_Ramesses_II.jpg";
 
 let bildeIndeks = 0;
 
 let arrayBilder = [
-    "/bilder/Granite_image_ King_Ramesses_II.jpg",
-    "/bilder/Granite_head_King_Amenhotep_III.jpg",
-    "/bilder/Limestone_Egyptian_Rulres.jpg"
+    "Granite_image_King_Ramesses_II.jpg",
+    "Granite_head_King_Amenhotep_III.jpg",
+    "Limestone_Egyptian_Rulres.jpg"
 ];
 
 setInterval(skiftBilde, 5000);

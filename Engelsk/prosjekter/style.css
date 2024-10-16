@@ -54,6 +54,7 @@ html, body {
 .item2 {
   /* gjør at menyen blir sticky når du blar ned, men holder seg i midten av teksten når du er på toppen av nettsiden. */
   position: sticky;
+  /* top betyr at den blir sticky når den er anig toppen på menyen */
   top: 0;
   width: 100%;
 }

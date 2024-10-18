@@ -16,7 +16,9 @@ html, body {
 
 .grid-container {
     display: grid;
+    /* grid-template-columns viser hvor mange items det skal være i en kolonne */
     grid-template-columns: repeat(5, 1fr);
+    /* grid-template-rows viser hvor mange items det skal være i en rad */
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     'header header header header header'
@@ -39,6 +41,7 @@ html, body {
     color: green;
     text-align: center;
 
+    /* Bruker flexbox for å plassere bildet/logoen og teksten i midten av headeren */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,11 +61,12 @@ html, body {
     background-color: green;
 }
 
-.item5 {
+/* meny, men ikke i bruk */
+/* .item5 {
     * {
         padding: 0;
         margin: 0;
-        /* font-family: monospace; */
+        font-family: monospace;
     }
     
     ul {
@@ -105,8 +109,8 @@ html, body {
         display: block;
     }
     
-    /*  */
-}
+    
+} */
 
 
 .flyt {
@@ -148,9 +152,10 @@ p a {
 
 p a:hover {
     color: green;
+    background-color: rgb(0, 84, 30);
 }
 
-
+/* når skjermen blir mindre */
 @media screen and (max-width: 800px){
     grid-container {
         display: flex;
@@ -188,8 +193,7 @@ p a:hover {
     }
 }
 
-/* fleksboks på side 3 */
-
+/* flexbox på side 3 */
 .boks {
     background-color: black;
     border: 5px solid green;
@@ -208,26 +212,6 @@ p a:hover {
     gap: 1rem;
 }
 
-/* .button {
-    background-color: green ;
-    transition-duration: 0.4s;
-
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-
-.butto:hover {
-    background-color: green;
-    color: white;
-} */
-
 .button {
     background-color: green; /* Green */
     border: none;
@@ -243,14 +227,14 @@ p a:hover {
 }
 
 .button3 {
-    background-color: white; 
-    color: black; 
+    background-color: rgb(0, 0, 0); 
+    color: greenyellow; 
     border: 2px solid green;
 }
   
 .button3:hover {
     background-color: green;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .tittelbilde {

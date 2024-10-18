@@ -167,6 +167,7 @@ p a:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-size: 75%;
     }
 
     .flyt {
@@ -180,6 +181,10 @@ p a:hover {
 
     #tittel {
         font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 100%;
     }
 }
 

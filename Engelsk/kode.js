@@ -5,10 +5,11 @@ let bilde = document.getElementById("bildegalleri");
 
 // console.log(bilde);
 
-bilde.src = "/bilder/Granite_image_ King_Ramesses_II.jpg";
+bilde.src = "bilder/Granite_image_King_Ramesses_II.jpg";
 
 let bildeIndeks = 0;
 
+// hvilket bilder som skal bli brukt
 let arrayBilder = [
     "Granite_image_King_Ramesses_II.jpg",
     "Granite_head_King_Amenhotep_III.jpg",
@@ -22,5 +23,5 @@ function skiftBilde() {
     if(bildeIndeks >= arrayBilder.length) {
         bildeIndeks = 0;
     }
-    bilde.src = "/bilder/" + arrayBilder[bildeIndeks];
+    bilde.src = "bilder/" + arrayBilder[bildeIndeks];
 }

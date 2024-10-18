@@ -46,6 +46,8 @@ html, body {
 
 .item2 {
     background-color: black;
+    /* position: sticky;
+    top: 0; */
 }
 
 .item3 {
@@ -250,4 +252,8 @@ p a:hover {
     scale: 300%;
     width: 25%;
     height: 25%;
+}
+
+.nextpage {
+    justify-content: center;
 }

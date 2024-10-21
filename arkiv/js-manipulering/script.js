@@ -62,10 +62,13 @@ let alder = year - fødselsår;
 document.getElementById("year").innerText = "Du er " + alder + " år gammel."
 
 
-let farge = prompt("Hva er favorittfargen din?");
-document.body.style.backgroundColor = farge;
-
-
 // kode hvis du vil ha linear gradient!
+let farge = prompt("Hva er din favorittfarge?");
+document.body.style.background = "linear-gradient("+ farge + ")";
 
+// annen fargekode
+let farge2 = prompt("Favorittfarge:");
+// document.body.style.backgroundColor = farge;
+document.querySelector("body").style.backgroundColor = farge2; // Jo Bjørnar sin anbefaling
+// document.getElementById("kroppen").style.backgroundColor = farge2; // MÅ ha en ID
 

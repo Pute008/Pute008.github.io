@@ -22,3 +22,4 @@ document.querySelector("#test").style.color = testfarge;
 
 localStorage.setItem("lastname", "smith");
 localStorage.getItem("lastname");
+

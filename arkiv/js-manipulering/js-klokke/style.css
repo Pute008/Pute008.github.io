@@ -1,0 +1,13 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #123456;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.timer:hover {
+    
+}

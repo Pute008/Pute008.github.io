@@ -1,6 +1,9 @@
-let bildegalleri = [
-    "bilde1.jpg",
-    "bilde2.jpg",
-    "bilde_av_meg.png",
-    "picture.webp"
+let bildegalleri = document.getElementById("bilde")
+
+bildegalleri.src 
+[
+    "e-sport.jpg",
+    "gambling.jpg",
+    "katt_spiller.jpg",
+    "xbox"
 ];

@@ -1,0 +1,69 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: navy;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stein, .saks, .papir {
+    margin: 1rem;
+    border: 3px solid black;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.stein:hover {
+    background-color: blue;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.saks:hover {
+    background-color: green;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.papir:hover {
+    background-color: purple;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+    border-color: black;
+    background-color: #123456;
+    height: 500px;
+    width: 900px;
+    padding: 1rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content:space-around;
+    
+}
+
+.bilder {
+    width: 200px;
+}
+
+#tekstboks {
+    border: 5px solid rgb(85, 0, 255);
+    border-radius: 1rem;
+    background-color: #123456;
+    flex-wrap: wrap;
+}
+
+/* .saks {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.papir {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+} */

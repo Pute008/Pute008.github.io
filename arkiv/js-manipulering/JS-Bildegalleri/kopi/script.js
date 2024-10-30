@@ -20,7 +20,7 @@ bilde.src = "../bilder/" + bildeGalleriMedTekst[0].bilde;
 setInterval(skiftBilde, 2000);
 function skiftBilde() {
     aktivBilde = aktivBilde + 1; //øker med en slik at den viser et nytt bilde
-    if (aktivBilde >= bildeGalleriMedTekst.length) { // sjekker om jeg ikke kommer utenfor arrayen, altså ikke noe bilde
+    if (aktivBilde >= bildeGalleriMedTekst.length) { // sjekker om jeg/koden ikke kommer utenfor arrayen, altså ikke noe bilde
         aktivBilde = 0; //nullstiller til det første bildet
     }
     bilde.src = "../bilder/" + bildeGalleriMedTekst[aktivBilde].bilde;

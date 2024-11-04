@@ -1,0 +1,49 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+}
+
+#box {
+    background-color: green;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+#stein, #saks, #papir {
+    margin: 1rem;
+}
+
+#stein:hover {
+    background-color: greenyellow;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#saks:hover {
+    background-color: greenyellow;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#papir:hover {
+    background-color: greenyellow;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.bilder {
+    width: 200px;
+}

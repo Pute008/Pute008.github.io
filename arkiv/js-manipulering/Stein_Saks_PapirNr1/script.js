@@ -48,6 +48,16 @@ function velgPapir(){
     let tilfeldigtall = Math.floor(Math.random() * 3);
     if (tilfeldigtall === 0) {
         console.log("Motstander valgte stein, Du vant!");
-        document.getElementById("tekstboks").innerHTML="Motstander valgte stein, Du vant!"
+        document.getElementById("tekstboks").innerHTML="Motstander valgte stein, Du vant!";
+    }
+
+    else if (tilfeldigtall === 1) {
+        console.log("Motstander valgte saks, motstander vant!")
+        document.getElementById("tekstboks").innerHTML="Motstander valgte saks, motstander vant!"
+    }
+
+    else if (tilfeldigtall) {
+        console.log("Motstander valgte papir, uavgjort.")
+        document.getElementById("tekstboks").innerHTML="Motstander valgte papir, uavgjort."
     }
 }

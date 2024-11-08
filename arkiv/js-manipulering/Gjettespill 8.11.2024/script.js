@@ -43,7 +43,7 @@ function velgNr1(){
         console.log("Feil");
         document.getElementById("tekst").innerText = "Du valgte Feil! " + nr1.textContent + " var ikke riktig!";
 
-        nr1.removeChild('click', VelgNr1);
+        document.body.removeChild(0); //JBH hjelper meg nestegang
     }
 }
 

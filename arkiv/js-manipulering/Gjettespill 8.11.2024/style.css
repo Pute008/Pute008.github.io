@@ -7,3 +7,37 @@ html, body {
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+#nr1, #nr2, #nr3, #nr4, #nr5, #nr6, #nr7, #nr8, #nr9, #nr10 {
+    background-color: green;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    width: 40px;
+}
+
+#nr1:hover, #nr2:hover, #nr3:hover, #nr4:hover, #nr5:hover, #nr6:hover, #nr7:hover, #nr8:hover, #nr9:hover, #nr10:hover {
+    background-color: darkgreen;
+    cursor: pointer;
+}
+
+#box1 {
+    background-color: darkgoldenrod;
+    justify-content:flex-start;
+    align-items:flex-start;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+#box2 {
+    background-color: rgb(225, 162, 0);
+    justify-content:center;
+    align-items:center;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}

@@ -61,3 +61,4 @@ function velgPapir(){
         document.getElementById("tekstboks").innerHTML="Motstander valgte papir, uavgjort."
     }
 }
+

@@ -17,7 +17,7 @@ let tekst = [
     "Det sprakk!",
     "Ikke ødelegg det!",
     "Noe kommer ut!",
-    "En kylling! Så søøøøøøøøt",
+    "En kylling! Så søt",
     "Du kan ikke trykke mer!"
 ]
 
@@ -25,21 +25,21 @@ kyllingbilde.src = bilder[0]
 document.getElementById("undertekstbilde").innerText= tekst[0]
 
 let antallKlikk = 0;
-let bigclick = 0;
+let bigClick = 0;
 
 function klikkPaaEgg() {
     antallKlikk = antallKlikk + 1;
     if (antallKlikk == 3) {
         antallKlikk = 0
-        bigclick++
+        bigClick++
     }
 
-    if (bigclick >= 1) {
-        kyllingbilde.src = bilder[bigclick]
-        document.getElementById("undertekstbilde").innerHTML = tekst[bigclick]
+    if (bigClick >= 1) {
+        kyllingbilde.src = bilder[bigClick]
+        document.getElementById("undertekstbilde").innerHTML = tekst[bigClick]
     }
 
-    if (bigclick >= 5) {
+    if (bigClick >= 5) {
         kyllingbilde.src = bilder[4]
         document.getElementById("undertekstbilde").innerText = tekst[5]
     }

@@ -22,12 +22,12 @@ function sendInn() {
     let email = html_email.value;
     let range = html_range.value;
 
-    console.log("Brukernavnet er " + brukernavn);
-    console.log("Passordet er " + passord);
-    console.log("Fargen er " + farge);
-    console.log("I dag er det " + tid);
-    console.log("Du er " + nummer + " år gammel");
-    console.log("Din email er " + email);
+    console.log("Navn: " + brukernavn);
+    console.log("Passord: " + passord);
+    console.log("Farge: " + farge);
+    console.log("Dato: " + tid);
+    console.log("Alder:  " + nummer + " år");
+    console.log("Email: " + email);
     console.log(range);
 
     document.getElementById("output").innerText = "Brukernavnet ditt er " + brukernavn + "og fargen er " + farge + ". Men vi kan ikke oppgi passordet ditt. " + "Alderen din er " + nummer + ". E-mailen din er " + email;
@@ -48,6 +48,9 @@ function range() {
 
 
 
+
+
+// knapp kode
 
 // if (width = range * 10)
 

@@ -4,7 +4,6 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(52, 52, 52);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* background-color: black; */
 }
 
@@ -16,16 +15,13 @@ html, body {
 
 .grid-container {
     display: grid;
-    /* grid-template-columns viser hvor mange items det skal være i en kolonne */
     grid-template-columns: repeat(5, 1fr);
-    /* grid-template-rows viser hvor mange items det skal være i en rad */
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     'header header header header header'
-    'menu   menu   menu   menu   menu'
-    'main   main   main   main   main'
+    'menu main main main main'
     /* 'menu menu2 menu2 menu2 menu2' */
-    'footer footer footer footer footer';
+    'menu footer footer footer footer';
 }
 
 #tittel {
@@ -42,7 +38,6 @@ html, body {
     color: green;
     text-align: center;
 
-    /* Bruker flexbox for å plassere bildet/logoen og teksten i midten av headeren */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,10 +45,6 @@ html, body {
 
 .item2 {
     background-color: black;
-    /* width: 100%; */
-    position: sticky;
-    top: 0;
-
 }
 
 .item3 {
@@ -64,12 +55,11 @@ html, body {
     background-color: green;
 }
 
-/* meny, men ikke i bruk */
-/* .item5 {
+.item5 {
     * {
         padding: 0;
         margin: 0;
-        font-family: monospace;
+        /* font-family: monospace; */
     }
     
     ul {
@@ -112,8 +102,8 @@ html, body {
         display: block;
     }
     
-    
-} */
+    /*  */
+}
 
 
 .flyt {
@@ -155,10 +145,9 @@ p a {
 
 p a:hover {
     color: green;
-    background-color: rgb(0, 84, 30);
 }
 
-/* når skjermen blir mindre */
+
 @media screen and (max-width: 800px){
     grid-container {
         display: flex;
@@ -175,7 +164,6 @@ p a:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-size: 75%;
     }
 
     .flyt {
@@ -190,13 +178,10 @@ p a:hover {
     #tittel {
         font-size: 1rem;
     }
-
-    h1 {
-        font-size: 100%;
-    }
 }
 
-/* flexbox på side 3 */
+/* fleksboks på side 3 */
+
 .boks {
     background-color: black;
     border: 5px solid green;
@@ -216,36 +201,21 @@ p a:hover {
 }
 
 .button {
-    background-color: green; /* Green */
+    background-color: green ;
+    transition-duration: 0.4s;
+
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    transition-duration: 0.4s;
     cursor: pointer;
-}
+  }
 
-.button3 {
-    background-color: rgb(0, 0, 0); 
-    color: greenyellow; 
-    border: 2px solid green;
-}
-  
-.button3:hover {
+.butto:hover {
     background-color: green;
-    color: rgb(0, 0, 0);
-}
-
-.tittelbilde {
-    scale: 300%;
-    width: 25%;
-    height: 25%;
-}
-
-.nextpage {
-    justify-content: center;
+    color: white;
 }

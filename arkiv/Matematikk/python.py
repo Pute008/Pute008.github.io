@@ -37,3 +37,4 @@ print(50//6)
 # b)
 print('Hva blir resten når vi deler 50 på 6?')
 print(50%6)
+

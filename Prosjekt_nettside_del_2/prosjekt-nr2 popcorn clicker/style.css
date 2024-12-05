@@ -1,0 +1,40 @@
+* {
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+
+.item1 {grid-area: header;}
+
+.item2 {grid-area: game;}
+
+.item3 {grid-area: menu;}
+
+.item4 {grid-area: footer;}
+
+.grid-container {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    'header header header header header'
+    'game   game   game   menu   menu'
+    'game   game   game   menu   menu'
+    'game   game   game   footer footer';
+}
+
+.item1 {
+    background-color: red;
+}
+
+.item2 {
+    background-color: green;
+}
+
+.item3 {
+    background-color: blue;
+}
+
+.item4 {
+    background-color: orange;
+}

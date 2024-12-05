@@ -25,3 +25,7 @@ function popcornKlikk() {
     popcornTotal = popcornTotal + 1;
     document.getElementById("undertekst").innerText = "Popcorn: "+ popcornTotal;
 };
+
+// if (salgsMann =){
+
+// }

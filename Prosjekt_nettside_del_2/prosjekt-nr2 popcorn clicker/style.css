@@ -14,7 +14,7 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-columns:  auto auto auto auto;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
     'header header header header header'
@@ -29,12 +29,24 @@
 
 .item2 {
     background-color: green;
+    text-align: center;
 }
 
 .item3 {
     background-color: blue;
+    display:flex;
+    flex-direction: column;
 }
 
 .item4 {
     background-color: orange;
 }
+
+#popcornBucket {
+    
+}
+
+button {
+    height: 20px;
+}
+

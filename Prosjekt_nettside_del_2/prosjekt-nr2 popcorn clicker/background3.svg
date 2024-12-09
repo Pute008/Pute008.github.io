@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #29abe2;
+      }
+
+      .cls-3 {
+        stroke: red;
+      }
+
+      .cls-3, .cls-2, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke-width: 5px;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #666;
+      }
+
+      .cls-7 {
+        fill: #c7b299;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #000;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-6" x=".5" y="795.5" width="1919" height="284"/>
+    <path d="M1919,796v283H1v-283h1918M1920,795H0v285h1920v-285h0Z"/>
+  </g>
+  <g>
+    <rect class="cls-7" x=".5" y=".5" width="1919" height="793"/>
+    <path d="M1919,1v792H1V1h1918M1920,0H0v794h1920V0h0Z"/>
+  </g>
+  <g>
+    <rect class="cls-1" x="782.5" y="369.5" width="384" height="424"/>
+    <path d="M1166,370v423h-383v-423h383M1167,369h-385v425h385v-425h0Z"/>
+  </g>
+  <line class="cls-4" x1="974.5" y1="368.5" x2="974.5" y2="793.5"/>
+  <rect class="cls-2" x="159.5" y="348.5" width="440" height="208"/>
+  <rect class="cls-2" x="1304.5" y="198.5" width="502" height="589"/>
+  <g>
+    <polygon class="cls-5" points="905.36 316.5 827.2 86 1108.81 86 1031.64 316.5 905.36 316.5"/>
+    <path d="M1108.11,86.5l-38.31,114.43-38.52,115.07h-125.56l-39.02-115.07-38.8-114.43h280.22M1109.5,85.5h-283c26.17,77.17,52.33,154.33,78.5,231.5h127c25.83-77.17,51.67-154.33,77.5-231.5h0Z"/>
+  </g>
+  <line class="cls-3" x1="880.5" y1="243.5" x2="1056.5" y2="243.5"/>
+  <line class="cls-3" x1="891.5" y1="276.5" x2="1045.5" y2="277.5"/>
+  <line class="cls-3" x1="871.5" y1="217.5" x2="1064.5" y2="219.5"/>
+  <line class="cls-3" x1="858.5" y1="178.5" x2="1079.5" y2="175.5"/>
+  <line class="cls-3" x1="845.5" y1="141.5" x2="1090.5" y2="141.5"/>
+  <line class="cls-3" x1="836.5" y1="113.5" x2="1100.5" y2="113.5"/>
+</svg>

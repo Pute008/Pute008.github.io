@@ -117,7 +117,7 @@ function buyClickers() {
 
         clickerPris = clickerPris * 1.1;
 
-        popcornPerSek = popcornPerSek+1
+        popcornPerSek = popcornPerSek + 1
         document.getElementById("undertekst").innerText = "Popcorn: " + Math.floor(popcornTotal);
         document.getElementById("salgsmannPris").innerText = "Pris " + Math.floor(clickerPris);
         document.getElementById("AntallClickers").innerText = "Antall: " + clickers;
@@ -207,7 +207,7 @@ function buyNewPlace() {
 
         popcornMultiplier = 1;
         popcornPerSek = 0;
-        document.getElementById("undertekst").innerText = "Popcorn: "+popcornTotal;
+        document.getElementById("undertekst").innerText = "Popcorn: " + popcornTotal;
     }
 }
 

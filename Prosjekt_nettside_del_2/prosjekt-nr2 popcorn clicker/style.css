@@ -55,8 +55,17 @@
     justify-content: space-between;
 }
 
+.knapp:hover {
+    background-color: rgb(13, 88, 26);
+}
+
 .knapp > button{
     width:111px;
+
+}
+
+.knapp > button:hover{
+    background-color: red;
 
 }
 

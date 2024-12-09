@@ -25,11 +25,11 @@
 }
 
 .item1 {
-    background-color: red;
+    background-color: rgb(255, 132, 0);
 }
 
 .item2 {
-    background-color: green;
+    background-color: rgb(62, 62, 62);
     text-align: center;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .item4 {
-    background-color: orange;
+    background-color: rgb(52, 241, 0);
 }
 
 .knapp {

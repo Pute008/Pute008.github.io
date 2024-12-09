@@ -26,13 +26,20 @@ let popcornSmakSoya = 0;
 let popcornSmakSoyaPris = 20;
 
 // prisen til clickers
-let clickerPris = 10
+let clickerPris = 10;
+
+let saltPris = 50;
+
+let salt = 0;
+
+let newPlacePris = 10000;
 
 
 
 // array av bilder
 let bilder = [
     "popcorn bucket EMPTY WHATTT.svg",
+    "Asset 1.svg"
     // et annet bilde her
 ]
 
@@ -82,10 +89,11 @@ function buySoya() {
         popcornSmakSoyaPris = popcornSmakSoyaPris*1.3;
 
         // 4) multipleieren vil øke 1.2 når du har kjøpt (20%)
-        popcornMultiplier= popcornMultiplier * 1.2
+        popcornMultiplier= popcornMultiplier * 1.02
 
         // 5) teksten som viser hvor mye popcorn du har vil endres
         document.getElementById("undertekst").innerText = "Popcorn: "+ Math.floor(popcornTotal);
+        document.getElementById("soyaPris").innerText = "Pris " + Math.floor(popcornSmakSoyaPris);
     }
     
 }
@@ -102,16 +110,67 @@ function buyClickers() {
 
         clickerPris = clickerPris * 1.1;
 
-        popcornPerSek=popcornPerSek+1
-        document.getElementById("undertekst").innerText = "Popcorn: "+ Math.floor(popcornTotal);
+        popcornPerSek = popcornPerSek+1
+        document.getElementById("undertekst").innerText = "Popcorn: " + Math.floor(popcornTotal);
+        document.getElementById("salgsmannPris").innerText = "Pris " + Math.floor(clickerPris);
+    }
+}
+
+
+
+
+
+
+let saltShop = document.getElementById("saltShop");
+
+saltShop.addEventListener("click", buySalt);
+
+function buySalt() {
+    if (popcornTotal >= saltPris) {
+        salt = salt + 1;
+
+        popcornTotal = popcornTotal - saltPris;
+
+        saltPris = saltPris * 1.2;
+
+        popcornMultiplier = popcornMultiplier * 1.05
+
+        document.getElementById("undertekst").innerText = "Popcorn: " + Math.floor(popcornTotal);
+        document.getElementById("saltPris").innerText = "Pris " + Math.floor(saltPris)
     }
 }
 
 setInterval(myTimer,1000);
 
 function myTimer() {
-    popcornTotal = popcornTotal+popcornPerSek*popcornMultiplier
+    popcornTotal = popcornTotal + popcornPerSek *  popcornMultiplier
     document.getElementById("undertekst").innerText = "Popcorn: "+ Math.floor(popcornTotal);
 }
 
 
+
+
+let newPlaceShop = document.getElementById("newPlaceShop");
+
+newPlaceShop.addEventListener("click", buyNewPlace)
+
+function buyNewPlace() {
+    if (popcornTotal >= newPlacePris) {
+        
+        popcornTotal = popcornTotal - newPlacePris;
+
+        newPlacePris = newPlacePris * 2;
+
+        popcornMultiplier = popcornMultiplier * 1.3;
+
+        document.getElementById("undertekst").innerText = "Popcorn: " + Math.floor(popcornTotal);
+        document.getElementById("newPlacePris").innerText = "Pris " + Math.floor(newPlacePris);
+    }
+}
+
+
+
+let backgroundBilder = [
+    "background1.svg",
+    "background2.svg"
+]

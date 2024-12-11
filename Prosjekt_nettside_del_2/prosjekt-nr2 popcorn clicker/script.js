@@ -38,6 +38,12 @@ let newPlace = 0;
 
 
 
+
+let lyd = new Audio("#");
+lyd.play();
+
+
+
 // array av bilder
 let bilder = [
     "popcorn bucket EMPTY WHATTT.svg",

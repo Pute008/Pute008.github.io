@@ -39,7 +39,7 @@ html, body {
 }
 
 .item1 {
-    background: linear-gradient( rgb(84, 0, 251), rgb(98, 0, 255), rgb(139, 0, 181), rgb(193, 0, 193));
+    background-color: blueviolet;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -54,7 +54,7 @@ html, body {
 
 .item4 {
     width: 100%;
-    background-color: red;
+    background-color: blueviolet;
     /* justify-content: flex-end; */
     align-items: flex-end;
     

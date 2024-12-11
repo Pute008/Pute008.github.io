@@ -73,7 +73,7 @@ function popcornKlikk() {
     if (popcornTotal >= 100) {
         popcornBucket.src= bilder[1];
     }
-};
+}
 
 
 

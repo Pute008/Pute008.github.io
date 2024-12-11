@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+}
+
+.item1 {grid-area: header;}
+
+.item2 {grid-area: menu;}
+
+.item3 {grid-area: main;}
+
+.item4 {grid-area: footer;}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    'header header header header header'
+    'menu   menu   menu   menu   menu'
+    'main   main   main   main   main'
+    'footer footer footer footer footer';
+}
+
+#boxLogin {}

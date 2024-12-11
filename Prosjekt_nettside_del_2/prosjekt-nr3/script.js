@@ -1,4 +1,4 @@
-document.getElementById("buttonRead").addEventListener("start", openGuide);
+document.getElementById("buttonRead").addEventListener("click", openGuide);
 
 
 function openGuide(event) {
@@ -11,7 +11,6 @@ function openGuide(event) {
 
     console.log("This is running!");
 }
-
 
 
 
@@ -32,5 +31,6 @@ function givePaper(event) {
 
     alert("Thanks for the answers " + username);
     document.getElementById("boxLogin").style.display = "none"; /* show eller block */
+    document.getElementById("boxText").style.display = "block";
 
 }

@@ -35,10 +35,11 @@ html, body {
 
 #boxText {
     display: none;
+
 }
 
 .item1 {
-    background-color: red;
+    background: linear-gradient( rgb(84, 0, 251), rgb(98, 0, 255), rgb(139, 0, 181), rgb(193, 0, 193));
     font-size: 2rem;
     display: flex;
     align-items: center;

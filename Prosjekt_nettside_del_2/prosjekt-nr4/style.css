@@ -63,3 +63,8 @@ h1 {
 #runde {
     background-color: orange;
 }
+
+#rundeTid {
+    color: white;
+    font-size: 1.7rem;
+}

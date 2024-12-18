@@ -1,3 +1,4 @@
+// alle knappene
 let startKnapp = document.getElementById("start");
 let sluttKnapp = document.getElementById("stop");
 let resetKnapp = document.getElementById("reset");

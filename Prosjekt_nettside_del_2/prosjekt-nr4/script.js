@@ -9,6 +9,8 @@ let minutter = 0;
 let sekunder = 0;
 let count = 0;
 
+// let rundeListe = [];
+
 // denne koden er for å starte nedtellingen
 // startknappen vil sette "timer" til true som vil starte "stopWatch" funksjonen
 startKnapp.addEventListener("click", function () {
@@ -23,6 +25,8 @@ sluttKnapp.addEventListener("click", function () {
 
 rundeKnapp.addEventListener("click", function () {
     console.log("H", hour, "M", minutter, "S", sekunder, "ms", count);
+    // let rundetid = 
+    // rundeListe.push(rundetid);
     document.getElementById("rundeTid").innerHTML = "Hr " + hour + " Min " + minutter + " Sek " + sekunder + " mSek " + count;
 })
 

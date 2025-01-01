@@ -28,23 +28,27 @@ let popcornSmakSoyaPris = 20;
 // prisen til clickers
 let clickerPris = 10;
 
+// prisen på salt
 let saltPris = 50;
 
+// antall salt
 let salt = 0;
 
+// hva et nytt sted skal koste
 let newPlacePris = 10000;
 
+// hvor mange nye steder du har
 let newPlace = 0;
 
 
 
-
+// hvordan man kan spille av lyd
 let lyd = new Audio("#");
 lyd.play();
 
 
 
-// array av bilder
+// array av bilder for popcorn bucketen (IKKE Bakgrunnen/nytt sted)
 let bilder = [
     "popcorn bucket EMPTY WHATTT.svg",
     "Asset 1.svg"
@@ -57,6 +61,7 @@ let bilder = [
 // multiplier, 
 let popcornMultiplier = 1;
 
+// en annen multiplier
 let popcornMultiplier2 = 1;
 
 

@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: verdana;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
@@ -46,6 +46,7 @@ h1 {
     transition: 0.5s;
     color: rgb(255, 255, 255);
     font-weight: 500;
+
 }
 
 #start {

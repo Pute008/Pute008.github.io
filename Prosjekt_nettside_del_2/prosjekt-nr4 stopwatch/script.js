@@ -99,3 +99,14 @@ function stopWatch(){
         setTimeout(stopWatch, 10);
     }
 }
+
+let fargeText = document.getElementById("h1Color");
+
+fargeText.addEventListener("click", function() {
+    document.getElementById("h1Color").style.color = "red";
+
+    let lyd = new Audio("LydTimeStop.mp3");
+    lyd.play();
+
+    document.getElementById("h1Color").style.color = "white";
+})

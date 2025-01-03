@@ -66,7 +66,7 @@
 
 .knapp > button:hover{
     background-color: red;
-
+    cursor: pointer;
 }
 
 .saveKnapp {
@@ -88,4 +88,8 @@ grid-container {
     "game"
     "footer";
 }
+}
+
+#popcornBucket {
+    cursor: pointer;
 }

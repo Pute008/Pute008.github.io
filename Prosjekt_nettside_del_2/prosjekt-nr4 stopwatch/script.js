@@ -93,10 +93,12 @@ function stopWatch(){
         //     countString = "0" + countString
         // }
 
+        // denne koden oppdaterer visningen av stoppeklokken på nettsiden slik at timene, minuttene, sekundene og millisekundene vises for brukeren
         document.getElementById("timer").innerHTML = timerString;
         document.getElementById("minutter").innerHTML = minutterString;
         document.getElementById("sekunder").innerHTML = sekunderString;
         document.getElementById("count").innerHTML = countString;
+        // oppdaterer stoppeklokken etter hvert millisekund, viser den nye tiden på klokken
         setTimeout(stopWatch, 10);
     }
 }

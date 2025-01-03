@@ -171,7 +171,7 @@ function buySalt() {
 }
 
 
-
+// for clickerene
 let timer=1000
 
 setInterval(myTimer, timer);
@@ -233,7 +233,7 @@ function buyNewPlace() {
     }
 }
 
-
+// array av bilder til nytt sted
 let backgroundBilder = [
     "background1.svg",
     "background2.svg",

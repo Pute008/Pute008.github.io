@@ -78,6 +78,9 @@ function popcornKlikk() {
     if (popcornTotal >= 100) {
         popcornBucket.src= bilder[1];
     }
+
+    let lyd = new Audio("popcornPop.mp3");
+    lyd.play();
 }
 
 
@@ -110,6 +113,9 @@ function buySoya() {
         document.getElementById("undertekst").innerText = "Popcorn: "+ Math.floor(popcornTotal);
         document.getElementById("soyaPris").innerText = "Pris " + Math.floor(popcornSmakSoyaPris);
         document.getElementById("AntallSoya").innerText = "Antall: " + popcornSmakSoya;
+        
+        let lyd = new Audio("CoinDrop.mp3");
+        lyd.play();
     }
     
 }
@@ -132,6 +138,8 @@ function buyClickers() {
         document.getElementById("undertekst").innerText = "Popcorn: " + Math.floor(popcornTotal);
         document.getElementById("salgsmannPris").innerText = "Pris " + Math.floor(clickerPris);
         document.getElementById("AntallClickers").innerText = "Antall: " + clickers;
+        let lyd = new Audio("CoinDrop.mp3");
+        lyd.play();
     }
 }
 
@@ -157,6 +165,8 @@ function buySalt() {
         document.getElementById("undertekst").innerText = "Popcorn: " + Math.floor(popcornTotal);
         document.getElementById("saltPris").innerText = "Pris " + Math.floor(saltPris)
         document.getElementById("AntallSalt").innerText = "Antall: " + salt;
+        let lyd = new Audio("CoinDrop.mp3");
+        lyd.play();
     }
 }
 
@@ -189,8 +199,9 @@ function buyNewPlace() {
         document.getElementById("undertekst").innerText = "Popcorn: " + Math.floor(popcornTotal);
         document.getElementById("newPlacePris").innerText = "Pris " + Math.floor(newPlacePris);
         document.getElementById("AntallNewPlace").innerText = "Antall: " + newPlace;
-
-
+        let lyd = new Audio("WOW.mp3");
+        lyd.play();
+        
         document.querySelector(".item2").style.background = "url(" + backgroundBilder[1] + ")";
 
 

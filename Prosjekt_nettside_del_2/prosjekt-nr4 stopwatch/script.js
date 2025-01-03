@@ -100,13 +100,16 @@ function stopWatch(){
     }
 }
 
+// når du trykker på overskriften
 let fargeText = document.getElementById("h1Color");
 
 fargeText.addEventListener("click", function() {
     document.getElementById("h1Color").style.color = "red";
 
+    // lyd spilles av
     let lyd = new Audio("LydTimeStop.mp3");
     lyd.play();
 
-    document.getElementById("h1Color").style.color = "white";
+    // I framtiden kan det hende at jeg utvider denne funksjonen slik at teksten går tilbake til normalen
+    // document.getElementById("h1Color").style.color = "white";
 })

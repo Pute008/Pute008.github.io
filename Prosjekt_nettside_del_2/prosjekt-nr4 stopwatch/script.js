@@ -44,6 +44,7 @@ resetKnapp.addEventListener("click", function () {
     document.getElementById("sekunder").innerHTML = "0";
     document.getElementById("count").innerHTML = "0";
     document.getElementById("rundeTid").innerHTML = " ";
+    document.getElementById("h1Color").style.color = "white";
 });
 
 // hva som skjer etter at du har trykket på start knappen

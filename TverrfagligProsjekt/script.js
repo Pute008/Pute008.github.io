@@ -18,8 +18,21 @@ let bilder = [
     "bilde12"
 ]
 
-bilder.addEventListener("click", trykk)
+// bilder.addEventListener("click", trykk);
 
-function trykk() {
+// function trykk() {
     
+// }
+
+
+
+
+document.getElementById("ElektriskAvfallReadMore").addEventListener("click", readElektriskAvfall);
+
+function readElektriskAvfall(event) {
+    console.log("Jeg blir trykket på!")
+
+    event.preventDefault();
+
+    document.getElementById("ElektriskAvfallText").style.display = "block";
 }

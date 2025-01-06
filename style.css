@@ -72,8 +72,8 @@ text-align: center;
 
 /* Bruker flexbox for å plassere bildet/logoen og teksten i midten av headeren */
 display: flex;
-justify-content: center;
-align-items: center;
+/* justify-content: center; */
+/* align-items: center; */
 }
 
 .item2 {

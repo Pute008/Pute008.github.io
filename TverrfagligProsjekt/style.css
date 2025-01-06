@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: green;
+    background-color: rgb(201, 201, 201);
     scroll-behavior: smooth;
 }
 
@@ -21,20 +21,35 @@ html, body {
 
 .header {
     grid-area: header;
+    background: linear-gradient(to bottom right, #123456, rgb(95, 95, 252), yellow, orange) no-repeat;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
+
 
 .menu {
     grid-area: menu;
     position: sticky;
     top: 0;
+    align-content: space-around;
 }
 
 .main {
     grid-area: main;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .footer {
     grid-area: footer;
+    background: linear-gradient(to bottom right, #123456, #3186db);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -74,7 +89,7 @@ ul {
     
     ul li ul.dropdown {
     width: 1                                                                                                                                      00%;
-    background: #005c03;
+    background: #3186db;
     /* position absoulute passer på at menyen ikke går ned sammen med dropdown menyen når du hovrer over den */
     position: absolute;
     /* z-index viser hvor den skal være plasert p skjermen, om den skal være over noe tekst eller under noe tekst */
@@ -85,10 +100,65 @@ ul {
     
     /* når du hvorer over dropdownmenyen skal den ha denne fargen */
     ul li a:hover {
-    background: #00ff2a;
+    background: #123456;
     }
     
     /* når du hovrer over dropdownmenyen skal den vises som en blokk */
     ul li:hover ul.dropdown {
     display: block;
-    }    
+    }
+
+.homePageButton {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    float: right;
+    transition: 1s;
+    /* transform: scale(1); */
+}
+
+.homePageButton:hover {
+    transform: scale(1.75);
+    transition: 1s;   
+}
+
+.test {
+    overflow: hidden;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.main h1 {
+    font-size: 2.7rem;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    border: solid 5px black;
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(to bottom right, #123456, #3186db);
+    box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
+
+    transition: 1s;
+}
+
+.flexbox:hover {
+    transform: scale(1.07);
+    transition: 0.5s;
+}
+
+.flexbox h1 {
+    margin: 5px;
+    padding: 5px;
+}
+
+.flexbox p {
+    margin: 5px;
+    padding: 5px;
+}

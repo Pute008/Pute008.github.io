@@ -106,7 +106,7 @@ display: block;
 
 
 ul li ul.dropdown {
-width: 1                                                                                                                                      00%;
+width: 100%;
 background: #3186db;
 position: absolute;
 z-index: -1;

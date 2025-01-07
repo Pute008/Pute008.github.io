@@ -259,7 +259,8 @@ p {
 
 .knappLes1:hover {
     transform: scale(1.30);
-    transition: 1s;   
+    transition: 1s;
+    cursor: pointer;
 }
 
 #ElektriskAvfallText {

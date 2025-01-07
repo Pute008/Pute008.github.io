@@ -26,13 +26,15 @@ let bilder = [
 
 
 
-
 document.getElementById("ElektriskAvfallReadMore").addEventListener("click", readElektriskAvfall);
 
 function readElektriskAvfall(event) {
+
     console.log("Jeg blir trykket på!")
 
     event.preventDefault();
 
     document.getElementById("ElektriskAvfallText").style.display = "block";
+    // document.getElementById("ElektriskAvfallReadMore").style.justifyContent = "center";
+    // document.getElementById("ElektriskAvfallReadMore").style.display = "flex";
 }

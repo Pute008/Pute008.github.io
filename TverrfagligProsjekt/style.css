@@ -55,7 +55,7 @@ html, body {
     justify-items: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
     margin-top: 1ren;
 }
 
@@ -159,11 +159,6 @@ p {
     background: linear-gradient(to bottom right, #123456, #3186db);
     box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
 
-    justify-content: top;
-    /* display: flex; */
-    align-items: top;
-    align-content: center;
-
     transition: 1s;
 }
 
@@ -176,12 +171,22 @@ p {
 .flexbox h1 {
     margin: 5px;
     padding: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 .flexbox p {
     margin: 5px;
     padding: 5px;
+    display: flex;
+    justify-content: center;
 }
+
+/* .flexbox .knappLes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
 
 /* logo på enden som sender deg til hovednettsiden */
@@ -249,7 +254,7 @@ p {
 
 /* For at tekst skal dukke opp */
 
-.knappLes1 {
+.knappLes {
     background-color: red;
     width: 50px;
     height: 50px;
@@ -257,11 +262,29 @@ p {
     /* transform: scale(1); */
 }
 
-.knappLes1:hover {
+.knappLes:hover {
     transform: scale(1.30);
     transition: 1s;
     cursor: pointer;
 }
+
+
+/* for at teksten ikke skal vises */
+.knappSluttLes {
+    background-color: rgb(81, 0, 255);
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+    /* transform: scale(1); */
+}
+
+.knappSluttLes:hover {
+    transform: scale(1.30);
+    transition: 1s;
+    cursor: pointer;
+}
+
+
 
 #ElektriskAvfallText {
     display: none;

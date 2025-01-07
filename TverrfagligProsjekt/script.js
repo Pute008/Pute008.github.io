@@ -38,3 +38,10 @@ function readElektriskAvfall(event) {
     // document.getElementById("ElektriskAvfallReadMore").style.justifyContent = "center";
     // document.getElementById("ElektriskAvfallReadMore").style.display = "flex";
 }
+
+document.getElementById("sluttALes").addEventListener("click", sluttALes);
+
+function sluttALes() {
+
+    document.getElementById("ElektriskAvfallText").style.display = "none";
+}

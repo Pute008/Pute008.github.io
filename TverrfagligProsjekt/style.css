@@ -163,6 +163,8 @@ p {
 .flexbox:hover {
     transform: scale(1.07);
     transition: 0.5s;
+    border-radius: 10%;
+
 }
 
 .flexbox h1 {

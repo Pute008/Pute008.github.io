@@ -26,7 +26,12 @@ html, body {
 .header {
     grid-area: header;
     /* background: linear-gradient(to bottom right, #123456, rgb(95, 95, 252), yellow, orange) no-repeat; */
-    background: url("bilder/batteryBackground1.jpg") -300px -300px no-repeat;
+
+    background: url("bilder/batteryBackground1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     height: 400px;
     justify-content: center;
     align-items: center;
@@ -50,7 +55,7 @@ html, body {
     justify-items: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 1ren;
 }
 
@@ -66,7 +71,7 @@ html, body {
 
 
 
-/* menu */
+/* menu/dropdown meny */
 
 * {
     padding: 0;
@@ -118,18 +123,9 @@ ul li:hover ul.dropdown {
 display: block;
 }
 
-.homePageButton {
-    background-color: red;
-    width: 50px;
-    height: 50px;
-    transition: 1s;
-    /* transform: scale(1); */
-}
 
-.homePageButton:hover {
-    transform: scale(1.30);
-    transition: 1s;   
-}
+
+/* forskjellige tekst */
 
 .footerText {
     overflow: hidden;
@@ -142,6 +138,8 @@ p {
 
 .title {
     font-family: "Poppins", serif;
+    color: white;
+    font-size: 5rem;
 }
 
 .main h1 {
@@ -149,6 +147,10 @@ p {
     font-family: "Poppins", serif;
 }
 
+
+
+
+/* flexbox kode */
 .flexbox {
 
     border: solid 5px black;
@@ -157,6 +159,11 @@ p {
     background: linear-gradient(to bottom right, #123456, #3186db);
     box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
 
+    justify-content: top;
+    /* display: flex; */
+    align-items: top;
+    align-content: center;
+
     transition: 1s;
 }
 
@@ -164,7 +171,6 @@ p {
     transform: scale(1.07);
     transition: 0.5s;
     border-radius: 10%;
-
 }
 
 .flexbox h1 {
@@ -177,6 +183,8 @@ p {
     padding: 5px;
 }
 
+
+/* logo på enden som sender deg til hovednettsiden */
 .logo {
     width: 3rem;
     transition: 1s;
@@ -233,9 +241,26 @@ p {
         transition: 1s;
     }
 
+    .title {
+        font-size: 3rem;
+    }
+
 }
 
+/* For at tekst skal dukke opp */
 
+.homePageButton {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+    /* transform: scale(1); */
+}
+
+.homePageButton:hover {
+    transform: scale(1.30);
+    transition: 1s;   
+}
 
 #ElektriskAvfallText {
     display: none;

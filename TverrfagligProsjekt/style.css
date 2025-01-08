@@ -123,11 +123,14 @@ list-style: none;
 background: #000000;
 box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.3);
 
+transition: all 1s ease;
+
 }
 
 ul li {
 display: inline-block;
 position: relative;
+
 }
 
 ul li a {
@@ -139,13 +142,18 @@ text-decoration: none;
 text-align: center;
 font-size: 20px;
 
-/* transition: 1s; */
+
 }
 
-ul li ul.dropdown li {
+/* ul li ul.dropdown li {
 display: block;
-}
+} */
 
+.dropdown{
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;
+}
 
 ul li ul.dropdown {
 width: 100%;
@@ -154,17 +162,25 @@ position: absolute;
 /* z-index: 99; */
 display: none;
 box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+transition: all 1s ease;
+
 }
 
 ul li a:hover {
 background: #123456;
+transition: 0.5s;
+/* transition: all 1s ease; */
+
+
 
 }
 
 ul li:hover ul.dropdown {
 display: block;
-/* transform: skewY(10deg);
-transition: 1s; */
+transition: 1s;
+
+
+
 }
 
 
@@ -213,6 +229,7 @@ p {
     color: white;
     background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
     border: solid 5px orange;
+    box-shadow: 7px 7px 7px rgba(66, 66, 66, 0.9);
 }
 
 .flexbox h1 {
@@ -314,6 +331,7 @@ p {
 .knappLes:hover {
     transform: translateX(25px);
     transition: 0.5s;
+    color: yellow;
 }
 
 /* for at teksten ikke skal vises */
@@ -329,6 +347,7 @@ p {
     transform: translateY(-10px);
     transition: 0.5s;
     cursor: pointer;
+    color: red;
 }
 
 
@@ -353,10 +372,20 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 1s ease-in;
+    opacity: 0;
+}
+
+.elektriskAvfallClass {
+    opacity: 1;
 }
 
 #ElektriskAvfallText p {
     justify-content: center;
     display: flex;
     margin-left: 25px;
+}
+
+#ElektriskAvfallText:hover {
+    transition: 1s ease-in;
 }

@@ -10,6 +10,7 @@ function readElektriskAvfall(event) {
 
     elektriskAvfallTekst.style.display = "block";
     elektriskAvfallTekst.style.justifyContent = "center";
+    elektriskAvfallTekst.style.opacity = "100";
 }
 
 document.getElementById("sluttALes").addEventListener("click", sluttALes);

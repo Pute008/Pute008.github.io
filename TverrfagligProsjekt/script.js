@@ -34,9 +34,10 @@ function readElektriskAvfall(event) {
 
     event.preventDefault();
 
-    document.getElementById("ElektriskAvfallText").style.display = "block";
-    // document.getElementById("ElektriskAvfallReadMore").style.justifyContent = "center";
-    // document.getElementById("ElektriskAvfallReadMore").style.display = "flex";
+    let elektriskAvfallTekst = document.getElementById("ElektriskAvfallText");
+
+    elektriskAvfallTekst.style.display = "block";
+    elektriskAvfallTekst.style.justifyContent = "center";
 }
 
 document.getElementById("sluttALes").addEventListener("click", sluttALes);
@@ -44,4 +45,15 @@ document.getElementById("sluttALes").addEventListener("click", sluttALes);
 function sluttALes() {
 
     document.getElementById("ElektriskAvfallText").style.display = "none";
+    // sticky???
+}
+
+
+
+
+function keyCode(event) {
+    let x = event.keyCode;
+    if (x == 27) {
+        document.getElementById("ElektriskAvfallText").style.display = "none";
+    }
 }

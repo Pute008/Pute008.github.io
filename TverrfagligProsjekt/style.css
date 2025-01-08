@@ -8,7 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(29, 29, 29);
     scroll-behavior: smooth;
 }
 
@@ -59,6 +59,7 @@ html, body {
     flex-wrap: wrap;
     gap: 3rem;
     margin-top: 1ren;
+    position: relative;
 }
 
 .game {
@@ -207,10 +208,11 @@ p {
 
 .flexbox:hover {
     transform: scale(1.07);
-    transition: 0.5s;
+    transition: 1s;
     border-radius: 10%;
     color: white;
     background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    border: solid 5px orange;
 }
 
 .flexbox h1 {
@@ -227,16 +229,7 @@ p {
     justify-content: center; */
 }
 
-.test p{
-    transition: 1s;
-    margin: 0px 25px 0px 25px;
-    list-style: none;
-}
 
-.test:hover p {
-    transform: translateX(25px);
-    transition: 0.5s;
-}
 
 
 /* .flexbox .knappLes {
@@ -312,43 +305,55 @@ p {
 /* For at tekst skal dukke opp */
 
 .knappLes {
-    background-color: red;
-    width: 50px;
-    height: 50px;
+    cursor: pointer;
     transition: 1s;
-    /* transform: scale(1); */
+    margin: 0px 25px 0px 25px;
+    list-style: none;
 }
 
 .knappLes:hover {
-    transform: scale(1.30);
-    transition: 1s;
-    cursor: pointer;
+    transform: translateX(25px);
+    transition: 0.5s;
 }
-
 
 /* for at teksten ikke skal vises */
 .knappSluttLes {
-    background-color: rgb(81, 0, 255);
-    width: 50px;
-    height: 50px;
+    cursor: pointer;
+    margin: 0px 25px 0px 25px;
     transition: 1s;
     /* transform: scale(1); */
 }
 
 .knappSluttLes:hover {
-    transform: scale(1.30);
-    transition: 1s;
+    transform: translateX(25px);
+    transition: 0.5s;
     cursor: pointer;
 }
 
 
 
 #ElektriskAvfallText {
-    display: none;
-    background-color: red;
+    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    color: white;
     width: 600px;
     height: 400px;
     /* display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ElektriskAvfallText p {
+    justify-content: center;
+    display: flex;
+    margin-left: 25px;
 }

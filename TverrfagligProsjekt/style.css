@@ -14,12 +14,13 @@ html, body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
     "header header header header header"
     "menu   menu   menu   menu   menu"
     "main   main   main   main   main"
+    "game   game   game   game   game"
     "footer footer footer footer footer";
 }
 
@@ -44,6 +45,7 @@ html, body {
     position: sticky;
     top: 0;
     align-content: space-around;
+    z-index: 999;
 }
 
 .main {
@@ -59,9 +61,46 @@ html, body {
     margin-top: 1ren;
 }
 
+.game {
+    grid-area: game;
+    background-color: #123456;
+    font-family: "Poppins", serif;
+    height: 280px;
+}
+
+.game h1 {
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 25px;
+    padding-top: 25px;
+}
+
+.game p {
+    font-size: 1.3rem;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 25px;
+    padding-top: 25px;
+}
+
+.game a {
+    margin-left: 25px;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer {
     grid-area: footer;
-    background: linear-gradient(to bottom right, #123456, #3186db);
+    /* background: linear-gradient(to bottom right, #123456, #3186db); */
+    background: black;
+    color: white;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -98,6 +137,8 @@ color: white;
 text-decoration: none;
 text-align: center;
 font-size: 20px;
+
+/* transition: 1s; */
 }
 
 ul li ul.dropdown li {
@@ -109,7 +150,7 @@ ul li ul.dropdown {
 width: 100%;
 background: #3186db;
 position: absolute;
-z-index: -1;
+/* z-index: 99; */
 display: none;
 box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
@@ -121,6 +162,8 @@ background: #123456;
 
 ul li:hover ul.dropdown {
 display: block;
+/* transform: skewY(10deg);
+transition: 1s; */
 }
 
 
@@ -156,7 +199,7 @@ p {
     border: solid 5px black;
     height: 400px;
     width: 400px;
-    background: linear-gradient(to bottom right, #123456, #3186db);
+    background: linear-gradient(to bottom right, #14487b, #3186db);
     box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
 
     transition: 1s;
@@ -166,6 +209,8 @@ p {
     transform: scale(1.07);
     transition: 0.5s;
     border-radius: 10%;
+    color: white;
+    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
 }
 
 .flexbox h1 {
@@ -178,9 +223,21 @@ p {
 .flexbox p {
     margin: 5px;
     padding: 5px;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 }
+
+.test p{
+    transition: 1s;
+    margin: 0px 25px 0px 25px;
+    list-style: none;
+}
+
+.test:hover p {
+    transform: translateX(25px);
+    transition: 0.5s;
+}
+
 
 /* .flexbox .knappLes {
     display: flex;

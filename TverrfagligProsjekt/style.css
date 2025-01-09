@@ -317,6 +317,10 @@ p {
         font-size: 3rem;
     }
 
+    #ElektriskAvfallText {
+        width: 300px;
+        height: 200px;
+    }
 }
 
 /* For at tekst skal dukke opp */
@@ -341,6 +345,9 @@ p {
     transition: 0.5s;
     list-style: none;
     /* transform: scale(1); */
+    /* width: 20px; */
+    /* text-align: center; */
+    /* flex-basis: 50%; */
 }
 
 .knappSluttLes:hover {

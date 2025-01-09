@@ -1,3 +1,5 @@
+// når du trykker på les mer knappen vil teksten vises
+
 document.getElementById("ElektriskAvfallReadMore").addEventListener("click", readElektriskAvfall);
 
 function readElektriskAvfall(event) {
@@ -13,6 +15,7 @@ function readElektriskAvfall(event) {
     elektriskAvfallTekst.style.opacity = "100";
 }
 
+// når du trykker på lukk hvor teksten vises vil teksten og boksen skjules
 document.getElementById("sluttALes").addEventListener("click", sluttALes);
 
 function sluttALes() {
@@ -22,7 +25,7 @@ function sluttALes() {
 }
 
 
-
+// når du trykker på "escape" så skal det skjule seg
 
 function keyCode(event) {
     let x = event.keyCode;
@@ -30,6 +33,7 @@ function keyCode(event) {
         document.getElementById("ElektriskAvfallText").style.display = "none";
     }
 }
+
 
 // game
 

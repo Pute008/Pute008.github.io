@@ -136,7 +136,7 @@ position: relative;
 ul li a {
 font-family: "Poppins", serif;
 display: block;
-padding: 20px 25px;
+padding: 20px 50px;
 color: white;
 text-decoration: none;
 text-align: center;
@@ -149,11 +149,11 @@ font-size: 20px;
 display: block;
 } */
 
-.dropdown{
+/* .dropdown{
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;
-}
+} */
 
 ul li ul.dropdown {
 width: 100%;
@@ -163,7 +163,6 @@ position: absolute;
 display: none;
 box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 transition: all 1s ease;
-
 }
 
 ul li a:hover {
@@ -179,10 +178,11 @@ ul li:hover ul.dropdown {
 display: block;
 transition: 1s;
 
-
-
 }
 
+.dropdown li {
+    width: 100%;
+}
 
 
 /* forskjellige tekst */
@@ -318,8 +318,15 @@ p {
     }
 
     #ElektriskAvfallText {
-        width: 300px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
+    }
+
+    #ElektriskAvfallText p {
+        margin-top: 25px;
+        justify-content: center;
+        display: flex;
+        margin-left: 25px;
     }
 }
 
@@ -387,7 +394,15 @@ p {
     opacity: 1;
 }
 
+#ElektriskAvfallText h1 {
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    margin-left: 25px;
+}
+
 #ElektriskAvfallText p {
+    margin-top: 25px;
     justify-content: center;
     display: flex;
     margin-left: 25px;
@@ -395,4 +410,10 @@ p {
 
 #ElektriskAvfallText:hover {
     transition: 1s ease-in;
+}
+
+#lightBulb {
+    width: 100px;
+    justify-content: right;
+    justify-items: right;
 }

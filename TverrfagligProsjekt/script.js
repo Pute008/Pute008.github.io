@@ -38,63 +38,19 @@ function keyCode(event) {
 }
 
 
-// game
-
-// lage en quiz
-// statistikk
-
-// let bilder = [
-//     "bilde1",
-//     "bilde2",
-//     "bilde3",
-//     "bilde4",
-//     "bilde5",
-//     "bilde6",
-//     "bilde7",
-//     "bilde8",
-//     "bilde9",
-//     "bilde10",
-//     "bilde11",
-//     "bilde12"
-// ]
 
 
-// let poengskar = 0;
-
-// bilder.addEventListener("click", trykkPaBilde);
-// function trykkPaBilde() {
-//     if (bilder = "bilde1") {
-//         poengskar += 1;
-//         document.getElementById("svar").innerText = "Riktig!"
-//         document.getElementById("pointVisning").innerHTML = "Poeng " + poengskar + "/4";
-//     }
-
-//     if (bilder = "bilde2") {
-//         poengskar += 1;
-//     }
-
-//     if (bilder = "bilde3") {
-//         poengskar += 1;
-//     }
-
-//     else if (bilder = "bilde4") { /*her tenkte jeg at resten kunne stå og skrive at ingen ting ville skje når du trykker på de andre*/
-//         poengskar += 1;
-//     }
-// }
-
-
-
-
-
-
+// når du trykker på lever inn knappen
 document.getElementById("btnSubmit").addEventListener("click", sendsvar);
 
 function sendsvar(event) {
     event.preventDefault();
     console.log("Jeg blir trykket på!");
 
+    // nanvnet som brukeren skriver inn blir lagret i variabelen navn
     let navn = document.querySelector("#navn").value;
 
+    // svaret som brukeren skriver inn blir lagret i variabelen svar
     let svar = document.querySelector("#myInput").value;
 
     // document.getElementById("output").style.display = "block";
@@ -120,7 +76,12 @@ function sendsvar(event) {
     
         //   her er tallene på y aksen
           data: [svar, 26.4, 18],
-          borderWidth: 1
+          borderWidth: 1,
+        //   backgroundColor: [
+        //     'rgba(255, 99, 132, 0.2)',
+        //     'rgba(54, 162, 235, 0.2)',
+        //     'rgba(255, 206, 86, 0.2)'
+        //   ]
           
         }]
       },
@@ -147,23 +108,72 @@ function sendsvar(event) {
 // Det andre eksempelet er eit såkalla line chart, dette er ein type linjediagram
 // Sjå ein nærare forklaring her: https://www.chartjs.org/docs/latest/charts/line.html
 
-// const ctx2 = document.getElementById('myChart2');
+const ctx2 = document.getElementById('myChart2');
 
-// new Chart(ctx2, {
-//     type: 'line',
-//     data: {
-//       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-//       datasets: [{
-//         label: '# of Votes',
-//         data: [12, 19, 3, 5, 2, 3],
-//         borderWidth: 1
-//       }]
-//     },
-//     options: {
-//       scales: {
-//         y: {
-//           beginAtZero: true
-//         }
-//       }
-//     }
-//   });
+new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+      labels: ['Gull', 'Sølv', 'Bronse'],
+      datasets: [{
+        label: '% av mineraler i en PC',
+        data: [12, 1, 3,],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(54, 162, 235, 0.6)',
+          'rgba(255, 206, 86, 0.6)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+
+  // game
+
+// lage en quiz
+// statistikk
+
+let bilder = [
+    "bilde1",
+    "bilde2",
+    "bilde3",
+    "bilde4",
+    "bilde5",
+    "bilde6",
+    "bilde7",
+    "bilde8",
+    "bilde9",
+    "bilde10",
+    "bilde11",
+    "bilde12"
+]
+
+let poengskar = 0;
+
+bilder.addEventListener("click", trykkPaBilde);
+function trykkPaBilde() {
+    if (bilder = "bilde1") {
+        poengskar += 1;
+        document.getElementById("svar").innerText = "Riktig!"
+        document.getElementById("pointVisning").innerHTML = "Poeng " + poengskar + "/4";
+    }
+
+    if (bilder = "bilde2") {
+        poengskar += 1;
+    }
+
+    if (bilder = "bilde3") {
+        poengskar += 1;
+    }
+
+    else if (bilder = "bilde4") { /*her tenkte jeg at resten kunne stå og skrive at ingen ting ville skje når du trykker på de andre*/
+        poengskar += 1;
+    }
+}

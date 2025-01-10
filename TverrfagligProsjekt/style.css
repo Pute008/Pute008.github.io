@@ -20,6 +20,7 @@ html, body {
     "header header header header header"
     "menu   menu   menu   menu   menu"
     "main   main   main   main   main"
+    "graf   graf   graf   graf   graf"
     "game   game   game   game   game"
     "footer footer footer footer footer";
 }
@@ -61,6 +62,22 @@ html, body {
     margin-top: 1ren;
     position: relative;
 }
+
+.main h1 {
+    font-size: 2rem;
+    font-family: "Poppins", serif;
+}
+
+
+.graf {
+    grid-area: graf;
+    background-color: red;
+    font-family: "Poppins", serif;
+    height: 280px;
+}
+
+
+
 
 .game {
     grid-area: game;
@@ -202,11 +219,6 @@ p {
     font-size: 5rem;
 }
 
-.main h1 {
-    font-size: 2rem;
-    font-family: "Poppins", serif;
-}
-
 
 
 
@@ -245,8 +257,6 @@ p {
     /* display: flex;
     justify-content: center; */
 }
-
-
 
 
 /* .flexbox .knappLes {
@@ -408,57 +418,12 @@ p {
     margin-left: 25px;
 }
 
-#ElektriskAvfallText:hover {
+/* #ElektriskAvfallText:hover {
     transition: 1s ease-in;
-}
+} */
 
 #lightBulb {
     width: 100px;
     /* justify-content: right;
     justify-items: right; */
-}
-
-.grid-containerTextBox {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-    "text text bilder"
-    "text text bilder"
-    "text text bilder"
-    "knappSluttLes knappSluttLes knappSluttLes";
-}
-
-.text {
-    grid-area: text;
-    /* background: red; */
-    color: white;
-    width: 33%;
-    height: 400px;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    z-index: 9999;
-    border-radius: 10px;
-}
-
-.bilder {
-    grid-area: bilder;
-    /* background: blue; */
-    color: white;
-    width: 600px;
-    height: 400px;
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    z-index: 9999;
-
-    border-radius: 10px;
-}
-
-.text h1 {
-    margin-top: 25px;
-    justify-content: center;
-    display: flex;
-    margin-left: 25px;
 }

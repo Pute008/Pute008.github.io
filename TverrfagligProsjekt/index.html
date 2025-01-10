@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Sixtyfour&display=swap" rel="stylesheet">
 
+    <!-- kode fra chart.js -->
+    <script src=""></script>
+
 </head>
 <body onkeydown="keyCode(event)">
     <div class="header">
@@ -25,10 +28,10 @@
                     <a href="#">Tema</a>
                     <ul class="dropdown">
                         <li><a href="#MenyHvaErElektriskAvfall">1</a></li>
-                        <li><a href="">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
+                        <li><a href="#HvorSkalAvfalletGaa">2</a></li>
+                        <li><a href="#HvaGjorNorge">3</a></li>
+                        <li><a href="#HvorBlirElektronikkProdusert">4</a></li>
+                        <li><a href="#FareneMedElektriskAvfall">5</a></li>
                     </ul>
                 </li>
             </li> 
@@ -52,59 +55,54 @@
 
         </div>
 
-        <div id="ElektriskAvfallText" class="grid-containerTextBox">
+        <div id="ElektriskAvfallText">
+            <h1>
+                Hva er elektrisk avfall?
+            </h1>
 
-            <div class="text">
-                <h1>
-                    Hva er elektrisk avfall?
-                </h1>
-                <p>
-                    Elektrisk avfall også kjent som EE-avfall er utstyr som krever strømforsyning fra nettet. Du finner dette i for eksempel kjøleskap, TV-er, radioer og ledninger.
-                    <br>
-                    <br>
-                    Når disse apparatene blir skrotet er det veldig viktig at vi ikke kaster dem som vanlig søppel, men er ekstra varsom og tenker over hvor vi bør kaste elektronikken, dette kan nemlig gjøre store skader dersom det kastes feil. 
-                    <br>
-                    <br>
-                    Eksempler på elektrisk avfall:
-                    <br>
-                    <br>
-    
-                    <br>
-                    Kjøleskap
-                    <br>
-                    Radio
-                    <br>
-                    TV
-                    <br>
-                    Mobiltelefon
-                    <br>
-                    Datamus
-                    <br>
-                    Spillkonsoller
-                    <br>
-                    Klokker
-                    <br>
-                    Lamper
-                    <br>
-                    Lyspærer/lysstoffrør
-                    br
-                    Hårføner
-                </p>
-            </div>
-            
-            <div class="bilder">
-                <img id="lightBulb" src="bilder/brokenLightBulb.jpg">
-            </div>
+            <p>
+                Elektrisk avfall også kjent som EE-avfall er utstyr som krever strømforsyning fra nettet. Du finner dette i for eksempel kjøleskap, TV-er, radioer og ledninger.
+                <br>
+                <br>
+                Når disse apparatene blir skrotet er det veldig viktig at vi ikke kaster dem som vanlig søppel, men er ekstra varsom og tenker over hvor vi bør kaste elektronikken, dette kan nemlig gjøre store skader dersom det kastes feil. 
+                <br>
+                <br>
+                Eksempler på elektrisk avfall:
+            </p>
+
+            <p>
+                Kjøleskap
+                <br>
+                Radio
+                <br>
+                TV
+                <br>
+                Mobiltelefon
+                <br>
+                Datamus
+                <br>
+                Spillkonsoller
+                <br>
+                Klokker
+                <br>
+                Lamper
+                <br>
+                Lyspærer/lysstoffrør
+                br
+                Hårføner
+            </p>
+        
+            <!-- <img id="lightBulb" src="bilder/brokenLightBulb.jpg"> -->
 
 
-            <li class="knappSluttLes"><p id="sluttALes">Lukk</p></li>
-    
-            <!-- <button class="knappSluttLes" id="sluttALes">Lukk</button> -->
+        <li class="knappSluttLes"><p id="sluttALes">Lukk</p></li>
+
+        <!-- <button class="knappSluttLes" id="sluttALes">Lukk</button> -->
         </div>
 
         
         <div class="flexbox">
-            <h1>
+            <h1 id="HvorSkalAvfalletGaa">
                 Hvor skal avfallet gå?
             </h1>
 
@@ -117,7 +115,7 @@
 
 
         <div class="flexbox">
-            <h1>
+            <h1 id="HvaGjorNorge">
                 Hva gjør Norge for å hjelpe til?
             </h1>
 
@@ -130,7 +128,7 @@
 
 
         <div class="flexbox">
-            <h1>
+            <h1 id="HvorBlirElektronikkProdusert">
                 Hvor blir elektronikk produsert?
             </h1>
 
@@ -143,7 +141,7 @@
 
 
         <div class="flexbox">
-            <h1>
+            <h1 id="FareneMedElektriskAvfall">
                 Farene med elektrisk avfall?
             </h1>
 
@@ -153,6 +151,11 @@
 
             <li class="knappLes"><p>Les mer</p></li>
         </div>
+    </div>
+
+    <div class="graf">
+        <h1>Statistikk</h1>
+        <canvas id="myChart"></canvas>
     </div>
 
     <div class="game">

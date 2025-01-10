@@ -427,3 +427,15 @@ p {
     /* justify-content: right;
     justify-items: right; */
 }
+
+
+
+/* kanskje lage en id for knappene til statistikk delen slik at knappene ser bedre ut! */
+
+#myChart {
+    display: flex;
+    justify-items: right;
+    align-items: right;
+    justify-content: right;
+    /* margin-left: 1000px; */
+}

@@ -155,11 +155,12 @@
 
     <div class="graf">
         <h1>Statistikk</h1>
+        <p>Hvor my elektronisk utstyr kaster du? (i kg)</p>
 
-        <div>
+        <div id="skjema">
             <input type="text" id="navn" placeholder="Navn">
-            <input type="number" id="myInput" onkeyup="searchFunction()" placeholder="Hvor my elektronisk utstyr kaster du? (i kg)" min="0">
-            <button type="submit">Send inn</button>
+            <input type="number" id="myInput" onkeyup="searchFunction()" placeholder="kg" min="0">
+            <button type="submit" id="btnSubmit">Send inn</button>
         </div>
 
         <canvas id="myChart">

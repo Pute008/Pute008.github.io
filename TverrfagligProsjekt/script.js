@@ -1,3 +1,6 @@
+const ctx = document.getElementById('myChart');
+
+
 // når du trykker på les mer knappen vil teksten vises
 
 document.getElementById("ElektriskAvfallReadMore").addEventListener("click", readElektriskAvfall);
@@ -82,16 +85,51 @@ function keyCode(event) {
 
 
 
-let navn = document.querySelector("#navn").value;
 
-let svar = document.querySelector("#myInput").value;
 
-document.getElementById("skjema").addEventListener("submit", sendsvar);
+document.getElementById("btnSubmit").addEventListener("click", sendsvar);
 
 function sendsvar(event) {
     event.preventDefault();
+    console.log("Jeg blir trykket på!");
+
+    let navn = document.querySelector("#navn").value;
+
+    let svar = document.querySelector("#myInput").value;
+
     // document.getElementById("output").style.display = "block";
     console.log("Navn: " + navn);
+    console.log("Svar: " + svar);
+    alert("Takk for svarene " + navn + "!");
+
+    new Chart(ctx, {
+        // typen diagrammet skal være
+      type: 'bar',
+    
+    //   hva data diagrammet skal ha
+      data: {
+    
+        // dette er "tallene" på x aksen
+        labels: [navn, 'Norge', 'Verden'],
+        datasets: [{
+    
+        // overskrift som forteller hva dette datasettet er
+          label: '# of electronics thrown away',
+    
+        //   her er tallene på y aksen
+          data: [svar, 26.4, 18],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+    
 }
 
 
@@ -100,35 +138,8 @@ function sendsvar(event) {
 // Chart.js
 // https://www.chartjs.org/docs/latest/getting-started/ 
 
-const ctx = document.getElementById('myChart');
 
-new Chart(ctx, {
-    // typen diagrammet skal være
-  type: 'bar',
 
-//   hva data diagrammet skal ha
-  data: {
-
-    // dette er "tallene" på x aksen
-    labels: [navn, 'Norge', 'Verden'],
-    datasets: [{
-
-    // overskrift som forteller hva dette datasettet er
-      label: '# of electronics thrown away',
-
-    //   her er tallene på y aksen
-      data: [14, 26,4, 18],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
-});
 
 // Det andre eksempelet er eit såkalla line chart, dette er ein type linjediagram
 // Sjå ein nærare forklaring her: https://www.chartjs.org/docs/latest/charts/line.html

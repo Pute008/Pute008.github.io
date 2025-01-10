@@ -102,11 +102,13 @@ function sendsvar(event) {
     console.log("Svar: " + svar);
     alert("Takk for svarene " + navn + "!");
 
+
+    // her er det jeg prøver å lage et diagram
     new Chart(ctx, {
         // typen diagrammet skal være
       type: 'bar',
     
-    //   hva data diagrammet skal ha
+    // hva data diagrammet skal ha
       data: {
     
         // dette er "tallene" på x aksen
@@ -119,6 +121,7 @@ function sendsvar(event) {
         //   her er tallene på y aksen
           data: [svar, 26.4, 18],
           borderWidth: 1
+          
         }]
       },
       options: {

@@ -403,8 +403,8 @@ p {
     overflow-y: scroll;
     scrollbar-width: none;
 
-    border-radius: 10px;
-
+    border-radius: 25px;
+    border: solid 5px orange;
 
     position:absolute;
     top: 50%;
@@ -446,7 +446,6 @@ p {
 
     border-radius: 25px;
     border: solid 5px orange;
-
 
     position:absolute;
     top: 50%;

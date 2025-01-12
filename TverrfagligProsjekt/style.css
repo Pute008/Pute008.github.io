@@ -453,7 +453,8 @@ p {
 
 #myChart2 {
     float: right;
-    margin-left: 600px;
+    /* margin left hjelper også med størrelsen til selve grafen */
+    margin-left: 1000px;
     /* background-color: rgb(18, 52, 86); */
     /* background: linear-gradient(to bottom right, black, rgb(68, 68, 68)); */
 }

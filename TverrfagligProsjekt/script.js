@@ -7,6 +7,8 @@ const ctx = document.getElementById('myChart');
 
 
 // når du trykker på les mer knappen vil teksten vises
+
+// tekst 1
 document.getElementById("ElektriskAvfallReadMore").addEventListener("click", readElektriskAvfall);
 
 function readElektriskAvfall(event) {
@@ -26,18 +28,16 @@ function readElektriskAvfall(event) {
 }
 
 // når du trykker på lukk hvor teksten vises vil teksten og boksen skjules
-document.getElementById("sluttALes").addEventListener("click", sluttALes);
+document.getElementById("sluttALesText1").addEventListener("click", sluttALesText1);
 
-function sluttALes() {
+function sluttALesText1() {
 
     document.getElementById("ElektriskAvfallText").style.display = "none";
     // sticky???
 }
 
 
-
-
-
+// tekst 2
 document.getElementById("HvorSkalAvfalletGaaReadMore").addEventListener("click", readHvorSkalAvfalletGaa);
 
 function readHvorSkalAvfalletGaa(event) {
@@ -53,13 +53,14 @@ function readHvorSkalAvfalletGaa(event) {
 }
 
 // når du trykker på lukk hvor teksten vises vil teksten og boksen skjules
-document.getElementById("sluttALes").addEventListener("click", sluttALes);
+document.getElementById("sluttALesText2").addEventListener("click", sluttALesText2);
 
-function sluttALes() {
+function sluttALesText2() {
 
-    document.getElementById("ElektriskAvfallText").style.display = "none";
+    document.getElementById("HvorSkalAvfalletGaaText").style.display = "none";
 }
 
+// tekst 3
 
 
 
@@ -72,6 +73,7 @@ function keyCode(event) {
     let x = event.keyCode;
     if (x == 27) {
         document.getElementById("ElektriskAvfallText").style.display = "none";
+        document.getElementById("HvorSkalAvfalletGaaText").style.display = "none";
     }
 }
 

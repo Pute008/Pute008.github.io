@@ -387,7 +387,9 @@ p {
 }
 
 
+/* tekstene */
 
+/* tekst 1 */
 #ElektriskAvfallText {
     background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
     color: white;
@@ -412,10 +414,6 @@ p {
     opacity: 0;
 }
 
-.elektriskAvfallClass {
-    opacity: 1;
-}
-
 #ElektriskAvfallText h1 {
     margin-top: 25px;
     justify-content: center;
@@ -430,9 +428,53 @@ p {
     margin-left: 25px;
 }
 
-/* #ElektriskAvfallText:hover {
+
+
+/* tekst 2 */
+#HvorSkalAvfalletGaaText {
+    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    color: white;
+    width: 600px;
+    height: 400px;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    border-radius: 10px;
+
+
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: 1s ease-in;
-} */
+    opacity: 0;
+}
+
+#HvorSkalAvfalletGaaText h1 {
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    margin-left: 25px;
+}
+
+#HvorSkalAvfalletGaaText p {
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    margin-left: 25px;
+}
+
+
+
+
+
+
+/* bilde */
 
 #lightBulb {
     width: 100px;

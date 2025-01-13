@@ -490,6 +490,7 @@ p {
     float: right;
     margin-left: 600px;
     background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    display: none;
 
 }
 

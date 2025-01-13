@@ -116,7 +116,7 @@ let currentSpørsmålIndex = 0;
 // scoren til spilleren
 let score = 0;
 
-// Funksjon for å blande svaralternativene
+// Funksjon for å blande svaralternativene, og rekkefølgen på dem
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -124,7 +124,7 @@ function shuffleArray(array) {
   }
 }
 
-// Funksjon for å laste spørsmål
+// Funksjon for å laste spørsmål, den oppdaterer HTML-en med nye svar og spørsmål
 function loadQuestion() {
   const questionElement = document.getElementById("question");
   const answerButtons = document.querySelectorAll(".button-row button");
@@ -136,29 +136,36 @@ function loadQuestion() {
   questionElement.textContent = currentQuestion.question;
   answerButtons.forEach((button, index) => {
       button.textContent = answers[index].answer;
+      // når man trykker på et av svaralternativene, vil den gå til neste spørsmål
       button.onclick = () => nextQuestion(answers[index].index);
   });
 }
 
 // Funksjon for å gå til neste spørsmål
 function nextQuestion(selectedAnswer) {
+
+  // Sjekekr om svaret er riktig, hvis rikitg vil du få 1 poeng
   if (selectedAnswer === questions[currentSpørsmålIndex].correct) {
       score++;
   }
 
+  // Gå til neste spørsmål
   currentSpørsmålIndex++;
   if (currentSpørsmålIndex < questions.length) {
       loadQuestion();
   } else {
+    // Hvis det ikke er flere spørsmål, vis oppsummering
       showSummary();
   }
 }
 
 // Funksjon for å vise oppsummering
 function showSummary() {
+  // Henter elementene fra HTML, denne er lagd slik at man ikke trenger å skrive document.getElementById hele tiden
   const questionElement = document.getElementById("question");
   const quizContainer = document.querySelector(".quiz-container");
 
+// forteller deg hvor mange poeng du fikk
   questionElement.textContent = `Gratulerer! Du har fullført quizen. Din poengsum er ${score} av ${questions.length}.`;
   quizContainer.innerHTML = ''; // Clear the quiz container
 }

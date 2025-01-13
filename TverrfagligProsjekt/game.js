@@ -129,11 +129,19 @@ function loadQuestion() {
   const questionElement = document.getElementById("question");
   const answerButtons = document.querySelectorAll(".button-row button");
 
+  // henter det nåværende spørsmålet, og blander svaralternativene (currentQuestion.answers passer på hvilket spørsmål som vises)
   const currentQuestion = questions[currentSpørsmålIndex];
+
+  // denne koden inneholder alle objekter med hvert svaralternativ og hver kodes index, dette gjør den med å bruke map-funksjonen. Map-funksjonen lager en ny array med elementer som er resultatet av en funksjon som blir kjørt på hvert element i den originale arrayen.
   const answers = currentQuestion.answers.map((answer, index) => ({ answer, index }));
+
+  // blander svaralternativene, den bruker shuffleArray-funksjonen for å få til dette
   shuffleArray(answers);
 
+  // oppdaterer HTML-en med spørsmålet og svaralternativene
   questionElement.textContent = currentQuestion.question;
+
+  // setter opp click-hendelser for hvert svaralternativ
   answerButtons.forEach((button, index) => {
       button.textContent = answers[index].answer;
       // når man trykker på et av svaralternativene, vil den gå til neste spørsmål

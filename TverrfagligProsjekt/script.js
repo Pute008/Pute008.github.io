@@ -112,7 +112,7 @@ function sendsvar(event) {
         datasets: [{
     
         // overskrift som forteller hva dette datasettet er
-          label: '# of electronics thrown away',
+          label: 'Hvor mye elektronikk vi kaster i kg',
     
         //   her er tallene på y aksen
           data: [svar, 26.4, 18],

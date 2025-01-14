@@ -85,13 +85,13 @@ const questions = [
     // Spørsmål 1
       question: "Hva er EE-avfall?",
       // svaralternativer
-      answers: ["Elektrisk og elektronisk avfall", "Farlig avfall", "Gummi avfall", "Ingen av de svaralternativene"],
+      answers: ["Elektrisk og elektronisk avfall", "Farlig avfall", "Plante avfall", "Eksploderende avfall"],
       // hvilket av svarene i svaralternativene som er riktig
       correct: 0
   },
   {
       question: "Hvilket av disse er ikke EE-avfall?",
-      answers: ["Til gjenvinningsstasjoner eller butikker som selger elektronikk", "Til vanlige søppelkasser", "Anfield stadium", "Ute i gaten"],
+      answers: ["Batteri", "PC-skjerm", "Mobil", ""],
       correct: 0
   },
   {
@@ -101,7 +101,7 @@ const questions = [
   },
   {
       question: "Hvor skal EE-avfall leveres?",
-      answers: ["Farlige stoffer som bly og kvikksølv", "Vanlig plastikk uten metall", "Papir", "Treverk"],
+      answers: ["Farlige stoffer som bly og kvikksølv", "Vanlig plastikk uten metall", "Papir", "Til gjenvinningsstasjoner eller butikker som selger elektronikk"],
       correct: 0
   },
   {

@@ -278,6 +278,9 @@ p {
 } */
 
 
+
+
+
 /* logo på enden som sender deg til hovednettsiden */
 .logo {
     width: 3rem;
@@ -290,6 +293,7 @@ p {
     transition: 0.5;
 }
 
+/* mobilfunksjon */
 @media screen and (max-width: 800px) {
     .grid-container {
         display: flex;
@@ -352,7 +356,9 @@ p {
     }
 }
 
-/* For at tekst skal dukke opp */
+
+
+/* Knapper for at tekstene skal dukke opp */
 
 .knappLes {
     cursor: pointer;
@@ -470,6 +476,127 @@ p {
 }
 
 
+
+/* tekst3 */
+#HvaGjorNorgeText {
+    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    color: white;
+    width: 600px;
+    height: 400px;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    border-radius: 25px;
+    border: solid 5px orange;
+
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in;
+    opacity: 0;
+}
+
+#HvaGjorNorgeText h1 {
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    margin-left: 25px;
+}
+
+#HvaGjorNorgeText p {
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    margin-left: 25px;
+}
+
+
+
+/* tekst4 */
+#HvorBlirElektronikkProdusertText {
+    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    color: white;
+    width: 600px;
+    height: 400px;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    border-radius: 25px;
+    border: solid 5px orange;
+
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in;
+    opacity: 0;
+}
+
+#HvorBlirElektronikkProdusertText h1 {
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    margin-left: 25px;
+}
+
+#HvorBlirElektronikkProdusertText p {
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    margin-left: 25px;
+}
+
+
+
+/* tekst5 */
+#FareneMedElektriskAvfallText {
+    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    color: white;
+    width: 600px;
+    height: 400px;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    border-radius: 25px;
+    border: solid 5px orange;
+
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in;
+    opacity: 0;
+}
+
+#FareneMedElektriskAvfallText h1 {
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    margin-left: 25px;
+}
+
+#FareneMedElektriskAvfallText p {
+    margin-top: 25px;
+    justify-content: center;
+    display: flex;
+    margin-left: 25px;
+}
 
 
 

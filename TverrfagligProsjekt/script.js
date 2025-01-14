@@ -1,3 +1,4 @@
+// denne delen er for my chart koden, ctx skal gjelde for "myChart" id-en
 const ctx = document.getElementById('myChart');
 
 
@@ -46,13 +47,11 @@ function readHvorSkalAvfalletGaa(event) {
 
     let hvorSkalAvfalletGaaText = document.getElementById("HvorSkalAvfalletGaaText");
 
-    // teksten midtstilles og vises
     hvorSkalAvfalletGaaText.style.display = "block";
     hvorSkalAvfalletGaaText.style.justifyContent = "center";
     hvorSkalAvfalletGaaText.style.opacity = "100";
 }
 
-// når du trykker på lukk hvor teksten vises vil teksten og boksen skjules
 document.getElementById("sluttALesText2").addEventListener("click", sluttALesText2);
 
 function sluttALesText2() {
@@ -60,20 +59,88 @@ function sluttALesText2() {
     document.getElementById("HvorSkalAvfalletGaaText").style.display = "none";
 }
 
+
 // tekst 3
+document.getElementById("HvaGjorNorgeReadMore").addEventListener("click", readHvaGjorNorge);
+
+function readHvaGjorNorge(event) {
+
+    event.preventDefault();
+
+    let hvorSkalAvfalletGaaText = document.getElementById("HvaGjorNorgeText");
+
+    hvorSkalAvfalletGaaText.style.display = "block";
+    hvorSkalAvfalletGaaText.style.justifyContent = "center";
+    hvorSkalAvfalletGaaText.style.opacity = "100";
+}
+
+document.getElementById("sluttALesText3").addEventListener("click", sluttALesText3);
+
+function sluttALesText3() {
+
+    document.getElementById("HvaGjorNorgeText").style.display = "none";
+}
+
+
+
+// tekst 4
+document.getElementById("HvorBlirElektronikkProdusertReadMore").addEventListener("click", readHvorBlirElektronikkProdusert);
+
+function readHvorBlirElektronikkProdusert(event) {
+
+    event.preventDefault();
+
+    let hvorSkalAvfalletGaaText = document.getElementById("HvorBlirElektronikkProdusertText");
+
+    hvorSkalAvfalletGaaText.style.display = "block";
+    hvorSkalAvfalletGaaText.style.justifyContent = "center";
+    hvorSkalAvfalletGaaText.style.opacity = "100";
+}
+
+document.getElementById("sluttALesText4").addEventListener("click", sluttALesText4);
+
+function sluttALesText4() {
+
+    document.getElementById("HvorBlirElektronikkProdusertText").style.display = "none";
+}
+
+
+
+// tekst 5
+document.getElementById("FareneMedElektriskAvfallReadMore").addEventListener("click", readFareneMedElektriskAvfall);
+
+function readFareneMedElektriskAvfall(event) {
+
+    event.preventDefault();
+
+    let hvorSkalAvfalletGaaText = document.getElementById("FareneMedElektriskAvfallText");
+
+    hvorSkalAvfalletGaaText.style.display = "block";
+    hvorSkalAvfalletGaaText.style.justifyContent = "center";
+    hvorSkalAvfalletGaaText.style.opacity = "100";
+}
+
+document.getElementById("sluttALesText5").addEventListener("click", sluttALesText5);
+
+function sluttALesText5() {
+
+    document.getElementById("FareneMedElektriskAvfallText").style.display = "none";
+}
 
 
 
 
 
 
-// når du trykker på "escape" så skal det skjule seg
-
+// når du trykker på "escape" så skal tekstene forsvinne
 function keyCode(event) {
     let x = event.keyCode;
     if (x == 27) {
         document.getElementById("ElektriskAvfallText").style.display = "none";
         document.getElementById("HvorSkalAvfalletGaaText").style.display = "none";
+        document.getElementById("HvaGjorNorgeText").style.display = "none";
+        document.getElementById("HvorBlirElektronikkProdusertText").style.display = "none";
+        document.getElementById("FareneMedElektriskAvfallText").style.display = "none"
     }
 }
 

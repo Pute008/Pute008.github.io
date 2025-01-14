@@ -101,12 +101,12 @@ const questions = [
   },
   {
       question: "Hvor skal EE-avfall leveres?",
-      answers: ["Til gjenvinningsstasjoner eller butikker som selger elektronikk", "I søppelet hjemme", "Ut i naturen", "Butikker som selger elektronikk"],
+      answers: ["Til gjenvinningsstasjoner eller butikker som selger elektronikk", "I søppelet hjemme", "Ut i naturen", "Kan ikke kastes, må lagres"],
       correct: 0
   },
   {
       question: "Hva er farene med EE-avfall",
-      answers: ["...", "Det er ingen farer", "Det skader asfalten", "Det kan komme inn i kroppen"],
+      answers: ["Det er skadelig for naturen", "Det er ingen farer", "Det skader asfalten", "Det kan komme inn i kroppen"],
       correct: 0
   }
 ];

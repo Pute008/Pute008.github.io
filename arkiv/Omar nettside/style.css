@@ -239,6 +239,7 @@ transition: 1s;
 }
  
 .flexbox p {
+    color: white;
 }
 .flexbox h1 {
     margin: 5px;

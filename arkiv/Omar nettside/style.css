@@ -14,13 +14,15 @@ html, body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
     "header header header header header"
     "menu   menu   menu   menu   menu"
+    "list   list   list   list   list"
     "main   main   main   main   main"
     "bilde  bilde  bilde  bilde  bilde"
+    "input  input  input  input  input"
     "footer footer footer footer footer";
 }
 
@@ -45,6 +47,8 @@ html, body {
     align-content: space-around;
     z-index: 999;
 }
+
+.list
 
 .main {
     grid-area: main;
@@ -71,6 +75,16 @@ html, body {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
+}
+
+.input {
+    grid-area: input;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: "Poppins", serif;
+    display: flex;
+    align-items: center;
+    
 }
 
 .footer {
@@ -203,10 +217,6 @@ transition: 1s;
         box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
     }
 
-    .main-h1 {
-        font-size: 1.2rem;
-    }
-
     p {
         font-size: 0.8rem;
     }
@@ -219,19 +229,18 @@ transition: 1s;
     border: solid 5px black;
     height: 400px;
     width: 400px;
-    background: linear-gradient(to bottom right, #14487b, #3186db);
+    background: linear-gradient(to bottom right, #b7dbff, #e6f3ff);
     box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
-
-    transition: 1s;
+    transition: 2s;
 }
 
 .flexbox:hover {
     transform: scale(1.07);
-    transition: 1s;
+    transition: 2s;
     border-radius: 10%;
     color: white;
-    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
-    border: solid 5px orange;
+    background: linear-gradient(to bottom right, rgb(108, 81, 81), rgb(164, 89, 89));
+    border: solid 5px rgb(255, 255, 255);
     box-shadow: 7px 7px 7px rgba(66, 66, 66, 0.9);
 }
 

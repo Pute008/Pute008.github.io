@@ -85,28 +85,28 @@ const questions = [
     // Spørsmål 1
       question: "Hva er EE-avfall?",
       // svaralternativer
-      answers: ["Elektrisk og elektronisk avfall", "Farlig avfall", "Plante avfall", "Eksploderende avfall"],
+      answers: ["Elektronisk avfall", "Farlig avfall", "Plante avfall", "Eksploderende avfall"],
       // hvilket av svarene i svaralternativene som er riktig
       correct: 0
   },
   {
       question: "Hvilket av disse er ikke EE-avfall?",
-      answers: ["Batteri", "PC-skjerm", "Mobil", ""],
+      answers: ["Batteri", "PC-skjerm", "Mobil", "Kjøleskap"],
       correct: 0
   },
   {
       question: "Hva er det i et kretskort?",
-      answers: ["For å redusere miljøgifter", "EE-avfall blir resirkulert direkte til nye elektroniske produkter uten behandling.", "Å sortere EE-avfall fører til at man får lavere strømregning", "Sortering av EE-avfall gir raskere internett."],
+      answers: ["Gull, Kobber, Sølv, Wolfram, Tantal og Tinn", "Gull, Kobber, Sølv, Wolfram, Tre og Tinn", "Gull, Kobber, Sølv, Wolfram, Gummi og Tinn", "Gull, Kobber, Sølv, Wolfram, Ull og Tinn"],
       correct: 0
   },
   {
       question: "Hvor skal EE-avfall leveres?",
-      answers: ["Farlige stoffer som bly og kvikksølv", "Vanlig plastikk uten metall", "Papir", "Til gjenvinningsstasjoner eller butikker som selger elektronikk"],
+      answers: ["Til gjenvinningsstasjoner eller butikker som selger elektronikk", "I søppelet hjemme", "Ut i naturen", "Butikker som selger elektronikk"],
       correct: 0
   },
   {
-      question: "...",
-      answers: ["Butikker som selger elektronikk", "Skoler", "Kontorer", "Ingen"],
+      question: "Hva er farene med EE-avfall",
+      answers: ["...", "Det er ingen farer", "Det skader asfalten", "Det kan komme inn i kroppen"],
       correct: 0
   }
 ];

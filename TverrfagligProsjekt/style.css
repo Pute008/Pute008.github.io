@@ -95,7 +95,7 @@ html, body {
     grid-area: game;
     background-color: #123456;
     font-family: "Poppins", serif;
-    height: 280px;
+    height: 400pxpx;
 }
 
 .game h1 {
@@ -644,4 +644,16 @@ p {
     color: rgb(255, 255, 255);
     transition: 1s;
     border: solid 1px orange;
+}
+
+#bildeAvSpill1 {
+    width: 50%;
+    margin-bottom: 25px;
+    margin-left: 600px;
+    transition: 1s;
+}
+
+#bildeAvSpill1:hover {
+    transition: 1s;
+    transform: scale(1.07);
 }

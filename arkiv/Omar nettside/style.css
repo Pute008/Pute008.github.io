@@ -43,6 +43,7 @@ html, body {
     position: sticky;
     top: 0;
     align-content: space-around;
+    z-index: 999;
 }
 
 .main {
@@ -97,44 +98,54 @@ list-style: none;
 background: #000000;
 box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.3);
 
+transition: all 1s ease;
+
 }
 
 ul li {
 display: inline-block;
 position: relative;
+
 }
 
 ul li a {
 font-family: "Poppins", serif;
 display: block;
-padding: 20px 25px;
+padding: 20px 50px;
 color: white;
 text-decoration: none;
 text-align: center;
 font-size: 20px;
-}
 
-ul li ul.dropdown li {
-display: block;
 }
-
 
 ul li ul.dropdown {
 width: 100%;
 background: #3186db;
 position: absolute;
-z-index: -1;
+/* z-index: 99; */
 display: none;
 box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+transition: all 1s ease;
 }
 
 ul li a:hover {
 background: #123456;
+transition: 0.5s;
+/* transition: all 1s ease; */
+
+
 
 }
 
 ul li:hover ul.dropdown {
 display: block;
+transition: 1s;
+
+}
+
+.dropdown li {
+    width: 100%;
 }
 
 
@@ -201,30 +212,41 @@ display: block;
     }
 }
 
+
+
 .flexbox {
-    width: 400px;
+
+    border: solid 5px black;
     height: 400px;
-    border: solid 10px black;
-    background: wheat;
+    width: 400px;
+    background: linear-gradient(to bottom right, #14487b, #3186db);
     box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
-    transition: 0.5s;
-}
 
-.flexbox h1 {
-    justify-content: center;
-    display: flex;
-}
-
-.flexbox p {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
+    transition: 1s;
 }
 
 .flexbox:hover {
-    transform: scale(1.05);
-    border-radius: 5%;
-    transition: 0.5s;
+    transform: scale(1.07);
+    transition: 1s;
+    border-radius: 10%;
+    color: white;
+    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    border: solid 5px orange;
+    box-shadow: 7px 7px 7px rgba(66, 66, 66, 0.9);
+}
+
+.flexbox h1 {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.flexbox p {
+    margin: 5px;
+    padding: 5px;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .bildeAvOmar {

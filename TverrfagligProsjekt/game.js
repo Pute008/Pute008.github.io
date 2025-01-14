@@ -152,13 +152,14 @@ function loadQuestion() {
 // Funksjon for å gå til neste spørsmål
 function nextQuestion(selectedAnswer) {
 
-  // Sjekekr om svaret er riktig, hvis rikitg vil du få 1 poeng
+  // Sjekker om svaret er riktig, hvis rikitg vil du få 1 poeng
   if (selectedAnswer === questions[currentSpørsmålIndex].correct) {
       score++;
   }
 
   // Gå til neste spørsmål
   currentSpørsmålIndex++;
+  // bytter spørsmål til neste i arrayet helt til du kommer til slutten av arrayet
   if (currentSpørsmålIndex < questions.length) {
       loadQuestion();
   } else {

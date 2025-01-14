@@ -31,7 +31,7 @@ html, body {
 }
 
 .answer-btn1:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
     transition: 1s;
 }
 
@@ -51,7 +51,7 @@ html, body {
 }
 
 .answer-btn2:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
     transition: 1s;
 }
 
@@ -71,7 +71,7 @@ html, body {
 }
 
 .answer-btn3:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
     transition: 1s;
 }
 
@@ -91,7 +91,7 @@ html, body {
 }
 
 .answer-btn4:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
     transition: 1s;
 }
 

@@ -250,7 +250,7 @@ p {
     transform: scale(1.07);
     transition: 1s;
     border-radius: 10%;
-    color: white;
+    /* color: white; */
     background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
     border: solid 5px orange;
     box-shadow: 7px 7px 7px rgba(66, 66, 66, 0.9);
@@ -261,6 +261,14 @@ p {
     padding: 5px;
     display: flex;
     justify-content: center;
+    font-size: 1.5rem;
+    transition: 1s;
+}
+
+.flexbox:hover h1 {
+    transform: scale(1.07);
+    transition: 1s;
+    color: white;
 }
 
 .flexbox p {
@@ -268,6 +276,13 @@ p {
     padding: 5px;
     /* display: flex;
     justify-content: center; */
+    font-size: 1.3rem;
+    transition: 1s;
+}
+
+.flexbox:hover p {
+    transition: 1s;
+    color: white;
 }
 
 
@@ -427,6 +442,7 @@ p {
     justify-content: center;
     display: flex;
     margin-left: 25px;
+
 }
 
 #ElektriskAvfallText p {
@@ -665,4 +681,8 @@ p {
 #bildeAvSpill1:hover {
     transition: 1s;
     transform: scale(1.07);
+}
+
+#HvorBlirElektronikkProdusert {
+    text-align: center;
 }

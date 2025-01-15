@@ -8,7 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #74A57F;
+    background-color: #DEF2C8;
     scroll-behavior: smooth;
 }
 
@@ -72,10 +72,10 @@ html, body {
 .graf {
     grid-area: graf;
     /* background: linear-gradient(to bottom right, #123456, #1a446e); */
-    background: #9ECE9A;
+    background: #C5DAC1;
     font-family: "Poppins", serif;
     /* height: 280px; */
-    color: white;
+    color: black;
 }
 
 .graf h1 {
@@ -94,14 +94,14 @@ html, body {
 
 .game {
     grid-area: game;
-    background-color: #E4C5AF;
+    background-color: #C5DAC1;
     font-family: "Poppins", serif;
     height: 400pxpx;
 }
 
 .game h1 {
     font-size: 2rem;
-    color: white;
+    color: black;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -111,7 +111,7 @@ html, body {
 
 .game p {
     font-size: 1.3rem;
-    color: white;
+    color: black;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -130,8 +130,8 @@ html, body {
 .footer {
     grid-area: footer;
     /* background: linear-gradient(to bottom right, #123456, #3186db); */
-    background: #077187;
-    color: white;
+    background: #BCD0C7;
+    color: black;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -150,7 +150,7 @@ html, body {
 
 ul {
 list-style: none;
-background: #077187;
+background: #BCD0C7;
 box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.3);
 
 transition: all 1s ease;
@@ -167,7 +167,7 @@ ul li a {
 font-family: "Poppins", serif;
 display: block;
 padding: 20px 50px;
-color: white;
+color: black;
 text-decoration: none;
 text-align: center;
 font-size: 20px;
@@ -187,7 +187,7 @@ display: block;
 
 ul li ul.dropdown {
 width: 100%;
-background: #077187;
+background: #BCD0C7;
 position: absolute;
 /* z-index: 99; */
 display: none;
@@ -196,7 +196,7 @@ transition: all 1s ease;
 }
 
 ul li a:hover {
-background: #074F57;
+background: #DEF2C8;
 transition: 0.5s;
 /* transition: all 1s ease; */
 
@@ -248,7 +248,7 @@ p {
     height: 400px;
     width: 400px;
     /* background: linear-gradient(to bottom right, #14487b, #3186db); */
-    background: #9ECE9A;
+    background: #C5DAC1;
     box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
 
     transition: 1s;
@@ -260,8 +260,8 @@ p {
     border-radius: 10%;
     /* color: white; */
     /* background: linear-gradient(to bottom right, black, rgb(68, 68, 68)); */
-    background: #3e5844;
-    border: solid 5px black;
+    background: #DEF2C8;
+    border: solid 5px #BCD0C7;
     box-shadow: 7px 7px 7px rgba(66, 66, 66, 0.9);
 }
 
@@ -277,7 +277,7 @@ p {
 .flexbox:hover h1 {
     transform: scale(1.07);
     transition: 1s;
-    color: white;
+    color: rgb(50, 77, 49);
 }
 
 .flexbox p {
@@ -291,7 +291,7 @@ p {
 
 .flexbox:hover p {
     transition: 1s;
-    color: white;
+    color: rgb(50, 77, 49);
 }
 
 
@@ -348,36 +348,6 @@ p {
     html, body {
         width: 100%;
     }
-
-    .flexbox {
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-        flex-wrap: wrap;
-        border: solid 5px black;
-        height: 250px;
-        width: 250px;
-        background: linear-gradient(to bottom right, #123456, #3186db);
-        box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
-    
-        transition: 1s;
-    }
-
-    .title {
-        font-size: 3rem;
-    }
-
-    #ElektriskAvfallText {
-        width: 100px;
-        height: 100px;
-    }
-
-    #ElektriskAvfallText p {
-        margin-top: 25px;
-        justify-content: center;
-        display: flex;
-        margin-left: 25px;
-    }
 }
 
 
@@ -394,7 +364,6 @@ p {
 .knappLes:hover {
     transform: translateX(25px);
     transition: 0.5s;
-    color: yellow;
 }
 
 /* for at teksten ikke skal vises */
@@ -415,7 +384,7 @@ p {
     transform: translateY(-10px);
     transition: 0.5s;
     cursor: pointer;
-    color: red;
+    color: green;
 }
 
 
@@ -424,8 +393,8 @@ p {
 /* tekst 1 */
 #ElektriskAvfallText {
     /* background: linear-gradient(to bottom right, black, rgb(68, 68, 68)); */
-    background: #3e5844;
-    color: white;
+    background: #C5DAC1;
+    color: black;
     width: 600px;
     height: 400px;
     /* display: flex; */
@@ -474,8 +443,8 @@ p {
 /* tekst 2 */
 #HvorSkalAvfalletGaaText {
     /* background: linear-gradient(to bottom right, black, rgb(68, 68, 68)); */
-    background: #3e5844;
-    color: white;
+    background: #C5DAC1;
+    color: black;
     width: 600px;
     height: 400px;
     /* display: flex; */
@@ -515,8 +484,8 @@ p {
 
 /* tekst3 */
 #HvaGjorNorgeText {
-    background: #3e5844;
-    color: white;
+    background: #C5DAC1;
+    color: black;
     width: 600px;
     height: 400px;
     /* display: flex; */
@@ -556,8 +525,8 @@ p {
 
 /* tekst4 */
 #HvorBlirElektronikkProdusertText {
-    background: #3e5844;
-    color: white;
+    background: #C5DAC1;
+    color: black;
     width: 600px;
     height: 400px;
     /* display: flex; */
@@ -597,8 +566,8 @@ p {
 
 /* tekst5 */
 #FareneMedElektriskAvfallText {
-    background: #3e5844;
-    color: white;
+    background: #C5DAC1;
+    color: black;
     width: 600px;
     height: 400px;
     /* display: flex; */
@@ -632,17 +601,7 @@ p {
     justify-content: center;
     display: flex;
     margin-left: 25px;
-}
 
-
-
-
-/* bilde */
-
-#lightBulb {
-    width: 100px;
-    /* justify-content: right;
-    justify-items: right; */
 }
 
 
@@ -652,7 +611,7 @@ p {
 #myChart {
     float: right;
     margin-left: 600px;
-    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    background: #DEF2C8;
     display: none;
 
 }
@@ -667,19 +626,18 @@ p {
 
 .knappInput {
     margin-left: 25px;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0) ;
+    background: #DEF2C8;
+    color: black;
     transition: 1s;
-    border: solid 1px black;
+    border: solid 2px black;
     border-radius: 10px;
     padding: 5px;
 }
 
 .knappInput:hover {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background: #C5DAC1;
+    color: black;
     transition: 1s;
-    border: solid 1px orange;
 }
 
 #bildeAvSpill1 {
@@ -694,6 +652,7 @@ p {
     transform: scale(1.07);
 }
 
+/* denne er for å passe på at den ene teksten i flexboksen blir midtstilt fordi den teksten er rar på en eller annen måte */
 #HvorBlirElektronikkProdusert {
     text-align: center;
 }

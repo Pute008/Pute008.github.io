@@ -79,7 +79,7 @@
 
 
 
-// PS: Må ha qustion i arrayet for at det skal fungere.
+// PS: Må ha question i arrayet for at det skal fungere.
 const questions = [
   {
     // Spørsmål 1

@@ -379,6 +379,8 @@ p {
     margin: 0px 25px 25px 25px;
     transition: 0.5s;
     list-style: none;
+    display: flex;
+    justify-content: center;
     /* transform: scale(1); */
     /* width: 20px; */
     /* text-align: center; */
@@ -429,9 +431,16 @@ p {
 
 #ElektriskAvfallText p {
     margin-top: 25px;
-    justify-content: center;
-    display: flex;
+    /* justify-content: center;
+    display: flex; */
     margin-left: 25px;
+}
+
+#infoText1 {
+    margin-top: 25px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 

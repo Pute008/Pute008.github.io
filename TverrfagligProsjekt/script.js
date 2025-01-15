@@ -184,11 +184,11 @@ function sendsvar(event) {
         //   her er tallene på y aksen
           data: [svar, 26.4, 18],
           borderWidth: 1,
-        //   backgroundColor: [
-        //     'rgba(255, 99, 132, 0.2)',
-        //     'rgba(54, 162, 235, 0.2)',
-        //     'rgba(255, 206, 86, 0.2)'
-        //   ]
+          // backgroundColor: [
+          //   'rgba(255, 99, 132, 0.2)',
+          //   'rgba(54, 162, 235, 0.2)',
+          //   'rgba(255, 206, 86, 0.2)'
+          // ]
           
         }]
       },

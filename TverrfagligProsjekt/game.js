@@ -174,9 +174,11 @@ function showSummary() {
   const questionElement = document.getElementById("question");
   const quizContainer = document.querySelector(".quiz-container");
 
-// forteller deg hvor mange poeng du fikk
+// forteller deg hvor mange poeng du fikk, tar viser poengene dine og lengden av spørsmålene
   questionElement.textContent = `Gratulerer! Du har fullført quizen. Din poengsum er ${score} av ${questions.length}.`;
-  quizContainer.innerHTML = ''; // Clear the quiz container
+
+  // denne gjør at quiz boksene ikke vises mer
+  quizContainer.innerHTML = '';
 }
 
 // Lytter etter at siden er ferdig lastet

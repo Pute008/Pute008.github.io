@@ -8,7 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: rgb(29, 29, 29);
+    background-color: #74A57F;
     scroll-behavior: smooth;
 }
 
@@ -71,7 +71,8 @@ html, body {
 
 .graf {
     grid-area: graf;
-    background: linear-gradient(to bottom right, #123456, #1a446e);
+    /* background: linear-gradient(to bottom right, #123456, #1a446e); */
+    background: #9ECE9A;
     font-family: "Poppins", serif;
     /* height: 280px; */
     color: white;
@@ -93,7 +94,7 @@ html, body {
 
 .game {
     grid-area: game;
-    background-color: #123456;
+    background-color: #E4C5AF;
     font-family: "Poppins", serif;
     height: 400pxpx;
 }
@@ -129,7 +130,7 @@ html, body {
 .footer {
     grid-area: footer;
     /* background: linear-gradient(to bottom right, #123456, #3186db); */
-    background: black;
+    background: #077187;
     color: white;
     height: 100px;
     display: flex;
@@ -149,7 +150,7 @@ html, body {
 
 ul {
 list-style: none;
-background: #000000;
+background: #077187;
 box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.3);
 
 transition: all 1s ease;
@@ -186,7 +187,7 @@ display: block;
 
 ul li ul.dropdown {
 width: 100%;
-background: #3186db;
+background: #077187;
 position: absolute;
 /* z-index: 99; */
 display: none;
@@ -195,7 +196,7 @@ transition: all 1s ease;
 }
 
 ul li a:hover {
-background: #123456;
+background: #074F57;
 transition: 0.5s;
 /* transition: all 1s ease; */
 
@@ -240,7 +241,8 @@ p {
     border: solid 5px black;
     height: 400px;
     width: 400px;
-    background: linear-gradient(to bottom right, #14487b, #3186db);
+    /* background: linear-gradient(to bottom right, #14487b, #3186db); */
+    background: #9ECE9A;
     box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.9);
 
     transition: 1s;
@@ -251,8 +253,9 @@ p {
     transition: 1s;
     border-radius: 10%;
     /* color: white; */
-    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
-    border: solid 5px orange;
+    /* background: linear-gradient(to bottom right, black, rgb(68, 68, 68)); */
+    background: #3e5844;
+    border: solid 5px black;
     box-shadow: 7px 7px 7px rgba(66, 66, 66, 0.9);
 }
 
@@ -414,7 +417,8 @@ p {
 
 /* tekst 1 */
 #ElektriskAvfallText {
-    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    /* background: linear-gradient(to bottom right, black, rgb(68, 68, 68)); */
+    background: #3e5844;
     color: white;
     width: 600px;
     height: 400px;
@@ -427,7 +431,7 @@ p {
     scrollbar-width: none;
 
     border-radius: 25px;
-    border: solid 5px orange;
+    border: solid 5px black;
 
     position:absolute;
     top: 50%;
@@ -463,7 +467,8 @@ p {
 
 /* tekst 2 */
 #HvorSkalAvfalletGaaText {
-    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    /* background: linear-gradient(to bottom right, black, rgb(68, 68, 68)); */
+    background: #3e5844;
     color: white;
     width: 600px;
     height: 400px;
@@ -476,7 +481,7 @@ p {
     scrollbar-width: none;
 
     border-radius: 25px;
-    border: solid 5px orange;
+    border: solid 5px black;
 
     position:absolute;
     top: 50%;
@@ -504,7 +509,7 @@ p {
 
 /* tekst3 */
 #HvaGjorNorgeText {
-    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    background: #3e5844;
     color: white;
     width: 600px;
     height: 400px;
@@ -517,7 +522,7 @@ p {
     scrollbar-width: none;
 
     border-radius: 25px;
-    border: solid 5px orange;
+    border: solid 5px black;
 
     position:absolute;
     top: 50%;
@@ -545,7 +550,7 @@ p {
 
 /* tekst4 */
 #HvorBlirElektronikkProdusertText {
-    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    background: #3e5844;
     color: white;
     width: 600px;
     height: 400px;
@@ -558,7 +563,7 @@ p {
     scrollbar-width: none;
 
     border-radius: 25px;
-    border: solid 5px orange;
+    border: solid 5px black;
 
     position:absolute;
     top: 50%;
@@ -586,7 +591,7 @@ p {
 
 /* tekst5 */
 #FareneMedElektriskAvfallText {
-    background: linear-gradient(to bottom right, black, rgb(68, 68, 68));
+    background: #3e5844;
     color: white;
     width: 600px;
     height: 400px;
@@ -599,7 +604,7 @@ p {
     scrollbar-width: none;
 
     border-radius: 25px;
-    border: solid 5px orange;
+    border: solid 5px black;
 
     position:absolute;
     top: 50%;

@@ -230,6 +230,12 @@ p {
     font-family: "Poppins", serif;
     color: white;
     font-size: 5rem;
+    background-color: black ;
+    
+}
+
+.title background-color {
+    opacity: 50%;
 }
 
 

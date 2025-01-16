@@ -646,11 +646,14 @@ p {
     margin-bottom: 25px;
     margin-left: 600px;
     transition: 1s;
+    border: solid 3px black;
+    box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.3);
 }
 
 #bildeAvSpill1:hover {
     transition: 1s;
     transform: scale(1.07);
+    border: solid 5px black;
 }
 
 

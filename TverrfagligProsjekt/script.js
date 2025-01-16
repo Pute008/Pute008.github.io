@@ -175,14 +175,14 @@ function sendsvar(event) {
       data: {
     
         // dette er "tallene" på x aksen
-        labels: [navn, 'Norge', 'Verden'],
+        labels: [navn, 'Norge', 'USA', "Europa", "Verden"],
         datasets: [{
     
         // overskrift som forteller hva dette datasettet er
-          label: 'Hvor mye elektronikk vi kaster i kg',
+          label: 'Hvor mye elektronikk vi kaster i kg per innbygger',
     
         //   her er tallene på y aksen
-          data: [svar, 26.4, 18],
+          data: [svar, 26.4, 21.3, 18, 7.8],
           borderWidth: 1,
           backgroundColor: [
             'rgb(255, 140, 66, 0.6)',

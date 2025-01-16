@@ -185,7 +185,7 @@ function sendsvar(event) {
           data: [svar, 26.4, 18],
           borderWidth: 1,
           backgroundColor: [
-            'rgb(169, 255, 78, 0.5)',
+            'rgb(255, 140, 66, 0.6)',
           ]
           
         }]

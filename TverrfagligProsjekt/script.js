@@ -220,9 +220,9 @@ new Chart(ctx2, {
         label: '% av hva en mobil inneholder',
         data: [40, 40, 20],
         backgroundColor: [
-            'rgb(177, 101, 14, 0.6)',
-            'rgb(255, 247, 135)',
-            'rgba(255, 206, 86, 0.6)'
+            'rgb(76, 84, 84, 0.6)',
+            'rgb(255, 113, 91, 0.6)',
+            'rgb(130, 113, 145, 0.6)'
         ],
         borderWidth: 1
       }]

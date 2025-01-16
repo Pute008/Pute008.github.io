@@ -17,7 +17,7 @@ html, body {
 }
 
 .answer-btn1 {
-    background-color: #a8964e;
+    background-color: #5eed9c;
     color: white;
     font-size: 1.3rem;
     padding: 10px;
@@ -37,7 +37,7 @@ html, body {
 
 
 .answer-btn2 {
-    background-color: #226cb6;
+    background-color: #0095ff;
     color: white;
     font-size: 1.3rem;
     padding: 10px;
@@ -57,7 +57,7 @@ html, body {
 
 
 .answer-btn3 {
-    background-color: #b32cd5;
+    background-color: #e168ff;
     color: white;
     font-size: 1.3rem;
     padding: 10px;
@@ -77,7 +77,7 @@ html, body {
 
 
 .answer-btn4 {
-    background-color: #d16a09;
+    background-color: #ffbd80;
     color: white;
     font-size: 1.3rem;
     padding: 10px;

@@ -127,6 +127,7 @@ html, body {
     align-items: center;
 }
 
+
 .footer {
     grid-area: footer;
     /* background: linear-gradient(to bottom right, #123456, #3186db); */
@@ -652,7 +653,17 @@ p {
     transform: scale(1.07);
 }
 
+
+
 /* denne er for å passe på at den ene teksten i flexboksen blir midtstilt fordi den teksten er rar på en eller annen måte */
 #HvorBlirElektronikkProdusert {
+    text-align: center;
+}
+
+#HvaGjorNorge {
+    text-align: center;
+}
+
+#FareneMedElektriskAvfall {
     text-align: center;
 }

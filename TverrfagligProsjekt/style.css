@@ -476,7 +476,7 @@ p {
 
 #HvorSkalAvfalletGaaText p {
     margin-top: 25px;
-    justify-content: center;
+    justify-content: left;
     display: flex;
     margin-left: 25px;
 }
@@ -517,7 +517,7 @@ p {
 
 #HvaGjorNorgeText p {
     margin-top: 25px;
-    justify-content: center;
+    justify-content: left;
     display: flex;
     margin-left: 25px;
 }
@@ -558,7 +558,7 @@ p {
 
 #HvorBlirElektronikkProdusertText p {
     margin-top: 25px;
-    justify-content: center;
+    justify-content: left;
     display: flex;
     margin-left: 25px;
 }
@@ -599,7 +599,7 @@ p {
 
 #FareneMedElektriskAvfallText p {
     margin-top: 25px;
-    justify-content: center;
+    justify-content: left;
     display: flex;
     margin-left: 25px;
 
@@ -669,4 +669,23 @@ p {
 
 #FareneMedElektriskAvfall {
     text-align: center;
+}
+
+.linke {
+    transition: 1s;
+}
+
+.linke:hover {
+    transition: 1s;
+    transform: translateX(10px);
+}
+
+.linke a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.linke a:hover {
+    transition: 1s;
+    color: green;
 }

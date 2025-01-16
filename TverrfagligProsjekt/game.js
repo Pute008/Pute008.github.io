@@ -8,7 +8,7 @@ const questions = [
       question: "Hva er EE-avfall?",
       // svaralternativer
       answers: ["Elektronisk avfall", "Farlig avfall", "Plante avfall", "Eksploderende avfall"],
-      // hvilket av svarene i svaralternativene som er riktig
+      // hvilket av svarene i svaralternativene som er riktig, den ser på det første i arrayet
       correct: 0
   },
   {

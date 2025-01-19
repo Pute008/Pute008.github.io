@@ -320,6 +320,13 @@ p {
 
 /* mobilfunksjon */
 @media screen and (max-width: 800px) {
+
+    html, body {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
     .grid-container {
         display: flex;
         grid-template-columns: auto;
@@ -328,8 +335,74 @@ p {
         "header"
         "menu"
         "main"
+        "graf"
+        "game"
         "footer";
     }
+
+    .header {
+        width: 100%;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .main {
+        width: 100%;
+    }
+    
+    .game h1 {
+        font-size: 1.5rem;
+        color: black;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-left: 25px;
+        padding-top: 25px;
+    }
+    
+    .game p {
+        font-size: 15px;
+        color: black;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-left: 25px;
+        padding-top: 25px;
+    }
+    
+    .game a {
+        margin-left: 25px;
+        padding-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+
+
+
+    .flexbox {
+        width: 300px;
+        height: 300px;
+    }
+
+    .flexbox p {
+        font-size: 15px;
+    }
+
+    .flexbox h1 {
+        font-size: 1.5rem;
+    }
+
+
+
+
+
+    
 
     nav ul {
         display: flex;
@@ -346,9 +419,54 @@ p {
         font-family: "Poppins", serif;
     }
 
-    html, body {
+    ul {
         width: 100%;
     }
+
+
+
+    #bildeAvSpill1 {
+        width: 25%;
+        margin-bottom: 25px;
+        margin-left: 0;
+        transition: 1s;
+        display: left;
+        border: solid 3px black;
+        box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.3);
+    }
+
+    #ElektriskAvfallText {
+        width: 50px;
+        height: 50px;
+        /* display: flex; */
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    
+        border-radius: 25px;
+        border: solid 3px black;
+    
+        position:absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        transition: 1s ease-in;
+        opacity: 0;
+    }
+
+    #ElektriskAvfallText p {
+        font-size: 17px;
+    }
+
+    #ElektriskAvfallText h1 {
+        font-size: 1.5rem;
+    }
+
+
 }
 
 

@@ -176,16 +176,6 @@ font-size: 20px;
 
 }
 
-/* ul li ul.dropdown li {
-display: block;
-} */
-
-/* .dropdown{
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;
-} */
-
 ul li ul.dropdown {
 width: 100%;
 background: #BCD0C7;
@@ -762,6 +752,7 @@ p {
     text-align: center;
 }
 
+/* linkene som sender til hvor informasjonen kommer fra */
 .linke {
     transition: 1s;
 }

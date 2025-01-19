@@ -190,7 +190,9 @@ function sendsvar(event) {
           
         }]
       },
+      // alle innstillingene for aksene i diagrammet
       options: {
+        // definerer hvor på y aksen grafen skal begynne
         scales: {
           y: {
             beginAtZero: true

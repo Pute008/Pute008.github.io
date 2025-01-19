@@ -736,7 +736,6 @@ p {
 #bildeAvSpill1 {
     width: 50%;
     margin-bottom: 25px;
-    margin-left: 600px;
     transition: 1s;
     border: solid 3px black;
     box-shadow: 3px 3px 3px rgba(66, 66, 66, 0.3);

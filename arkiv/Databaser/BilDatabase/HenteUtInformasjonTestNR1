@@ -1,0 +1,8 @@
+Select person.fornavn, person.etternavn,
+       person.postnummer, postadresse.poststed,
+       bil.Registreringsnummer
+From person
+Inner join Postadresse
+On Postadresse.postnummer = person.postnummer
+INNER JOIN bil 
+ON bil.Personnummer = person.personnummer;

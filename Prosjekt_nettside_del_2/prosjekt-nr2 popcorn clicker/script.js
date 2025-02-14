@@ -92,7 +92,7 @@ let soyaShop = document.getElementById("soyaShop");
 // gjør at vi kan trykke på soya upgrade
 soyaShop.addEventListener("click", buySoya);
 
-// prisen vil øke for hver gng du kjøper en ny soya upgrade
+// prisen vil øke for hver gang du kjøper en ny soya upgrade
 function buySoya() {
     // hvis popcornTotal (det du har) er like mye som prisen til soya-poppcorn vil først:
     if (popcornTotal >= popcornSmakSoyaPris){

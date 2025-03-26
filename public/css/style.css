@@ -1,0 +1,198 @@
+html, body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    'header header header header header'
+    'menu   menu   menu   menu   menu'
+    'main   main   main   main   main'
+    'footer footer footer footer footer';
+}
+
+.item1 {
+    grid-area: header;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    background: url(../bilder/FelixEllingsenWestby.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* background: linear-gradient(to bottom right, blue, red); */
+    /* background: grey; */
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    /* background: black; */
+    color: white;
+}
+
+.item2 {
+    grid-area: menu;
+    height: 50px;
+    background: lightgray;
+}
+
+.item3 {
+    padding: 1.3rem;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 3rem;
+    background-color: darkgrey;
+}
+
+.item4 {
+    height: 120px;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+}
+
+#logo {
+    transition: 1s;
+}
+
+#logo:hover {
+    transition: 1s;
+    transform: scale(1.01);
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0 10px;
+    margin: 0 30px;
+    position: relative;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #0079A4;
+    transition: all 0.5s;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/* .UnderlineTittel:hover {
+    position: relative;
+    display: inline-block;
+}
+
+.UnderlineTittel::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #0079A4;
+    transition: all 1s;
+}
+
+.UnderlineTittel:hover::before {
+    width: 100%;
+} */
+
+.flexbox {
+    border: solid 3px black;
+    border-radius: 10px;
+    height: 400px;
+    width: 400px;
+    padding: 10px;
+    background: rgb(221, 221, 221);
+    /* margin: 25px 0px 25px 0px; */
+    /* background: linear-gradient(to bottom right, rgb(201, 201, 201), white); */
+    transition: 0.3s;
+    animation: fadeInCards 0.7s ease-in-out forwards;
+
+}
+
+.flexbox:hover {
+    transition: 0.3s;
+    transform: scale(1.02);
+}
+
+/* prøver å lage en hover effekt på bildet i flexboksen */
+/* #HvemErJeg {
+    background: url(bilder/Felix\ Ellingsen\ Westby.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#HvaKanJeg:hover {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+} */
+
+@media screen and (max-width: 800px) {
+    html, body {
+        width: 100px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        'header'
+        'menu'
+        'main'
+        'footer';
+    }
+
+    .flexbox {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInCards {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth Fade-in Animation */
+body {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}

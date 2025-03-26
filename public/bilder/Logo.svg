@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 333 333">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: ErasITC-Bold, 'Eras Bold ITC';
+        font-size: 133.87px;
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        fill: #0079a4;
+        stroke-width: 5px;
+      }
+
+      .cls-5, .cls-2 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 7px;
+      }
+
+      .cls-4 {
+        fill: #231f20;
+      }
+    </style>
+  </defs>
+  <g id="grafikk">
+    <circle class="cls-5" cx="166.5" cy="166.5" r="164"/>
+    <line class="cls-1" x1="84.34" y1="308.46" x2="84.34" y2="308.46"/>
+    <line class="cls-2" x1="289.12" y1="57.61" x2="84.34" y2="308.46"/>
+    <line class="cls-2" x1="308.1" y1="83.74" x2="117.34" y2="323"/>
+    <line class="cls-2" x1="324.52" y1="117.42" x2="157.7" y2="330.27"/>
+  </g>
+  <g id="tekst">
+    <text class="cls-3" transform="translate(61.7 211.35) scale(.97 1)"><tspan x="0" y="0">FW</tspan></text>
+    <text class="cls-4" transform="translate(55.1 206.71) scale(.97 1)"><tspan x="0" y="0">FW</tspan></text>
+  </g>
+</svg>

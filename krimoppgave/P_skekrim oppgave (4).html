@@ -39,7 +39,7 @@ Laget av Felix (Pute) Ellingsen Westby
 (set: $dameArmMerker to false)
 </tw-passagedata><tw-passagedata pid="2" name="Start" tags="Turningpoint" position="3525,475" size="100,100">Du er en kriminaltekniker. 
 Du er ferdig på jobb og har løst en krevende sak, men du vet ikke hva du skal gjøre nå.
-Du har nettopp blitt kastet ut hjemmefra etter at kjæresten din fant ut at du gjorde ulovelige ting på fritiden. 
+Du har nettopp blitt kastet ut hjemmefra etter at kjæresten din fant ut at du gjorde ulovlige ting på fritiden. 
 
 Hva vil du gjøre?
 
@@ -71,11 +71,11 @@ Du er usikker og har to valg
 Hva gjør du nå?
 
 [[Dra tilbake|Gå tilbake og overnatte på et hotell]]
-[[Tar skrittet fram]]</tw-passagedata><tw-passagedata pid="9" name="Gå tilbake og overnatte på et hotell" tags="" position="3475,925" size="100,100">Du går ut av bygget, så tneker du over hvor du skal overnatte.
+[[Tar skrittet fram]]</tw-passagedata><tw-passagedata pid="9" name="Gå tilbake og overnatte på et hotell" tags="" position="3475,925" size="100,100">Du går ut av bygget, så lurer du på hvor du skal overnatte.
 Du er usikker på om det er noen hoteller i nærheten.
-Du fortsetter å gå i gaten
+Du fortsetter bortover gaten
 
-[[Gå videre]]</tw-passagedata><tw-passagedata pid="10" name="Tar skrittet fram" tags="End" position="3300,1150" size="100,100">Du tar skrittet fram og inser at det slutter her.
+[[Gå videre]]</tw-passagedata><tw-passagedata pid="10" name="Tar skrittet fram" tags="End" position="3300,1150" size="100,100">Du tar skrittet fram og innser at det slutter her.
 Du tenker over alt du har gjort i livet og alle de gode minnene dine.
 Plutselig blir alt svart...
 
@@ -87,10 +87,15 @@ Du ser en bakgate hvor det ikke regner så mye.
 [[Gå i bakgaten]]
 
 &lt;script&gt;
+	function stopLyd() {
+    	lyd.pause();
+    }
+    
 	let lyd = new Audio(&quot;calming-rain-257596.mp3&quot;);
-	lyd.play(); 
+	lyd.play();
+    setInterval(stopLyd, 10000);
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="12" name="Sove hos mamma" tags="End" position="4425,325" size="100,100">&lt;p&gt;Du bestemmer deg for å sove hos moren din.&lt;/p&gt;
-Du får med deg på TV-en at en hotellsjef har død av hjerteinnfart.
+Du får med deg på TV-en at en hotellsjef har dødd av hjerteinnfart.
 
 #[[Slutt|StartOfGame]] 
 
@@ -108,33 +113,66 @@ tw-story {
 &lt;/style&gt;</tw-passagedata><tw-passagedata pid="13" name="Fortsette" tags="" position="2500,850" size="100,100">Du treffer på en dame.
 Hun har på seg en rød kjole. Hun har blondt hår og blå øyne.
 
+&lt;body&gt;
+	&lt;img src=&quot;dameMedBar.jpg&quot; alt=&quot;utenfor baren&quot; width=&quot;400px&quot;&gt;
+&lt;/body&gt;
+
 [[Snakk med henne|Gå bort til henne]]</tw-passagedata><tw-passagedata pid="14" name="Gå i bakgaten" tags="Turningpoint" position="4450,1050" size="100,100">Når du går gjennom bakgaten ser du tre personer.
 Du ser en dame i rød kjole.
-Du får øye på en mann i en frakk, han bærer på en koffert, det virker som at han sliter med å bære den.
-Til slutt ser du en uteligge.
-
+Du får og øye på en mann i en brun frakk.
+Og så ser du en uteligger.
 Hvem vil du snakke med?
 [[Damen i den røde kjolen|Den fulle damen]]
 [[Mannen i frakk]]
-[[Uteliggeren]]</tw-passagedata><tw-passagedata pid="15" name="Den fulle damen" tags="Turningpoint" position="4400,1300" size="100,100">Du går bort til damen i den røde kjolen.
+[[Uteliggeren]]
+
+&lt;body&gt;
+	&lt;img src=&quot;bakgate.jpg&quot; alt=&quot;i bakgaten&quot; width=&quot;400px&quot;&gt;
+&lt;/body&gt;
+
+&lt;style&gt;
+img {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="15" name="Den fulle damen" tags="Turningpoint" position="4400,1300" size="100,100">Du går bort til damen i den røde kjolen.
 Hun har blondt hår og blå øyne.
-Du legger merke til at hun er beruset og kan så vidt stå på sine to bein.
-Du spørr henne om hvor det nærmeste hotellet er.
+Du legger merke til at hun er beruset og kan så vidt stå på beina sine.
+Du spør henne om hvor det nærmeste hotellet er.
 - dU fINNeR eT HOTEll ReTT rundT hJØRNET! - Forteller hun.
-Hun spørr deg om du og henne skal gå og overnatte på hotellet sammen.
+Hun spør deg om du vil bli med opp på hennes hotellrom.
 Hva vil du?
+
+&lt;body&gt;
+	&lt;img src=&quot;dameIRødKjole.jpg&quot; alt=&quot;En dame i rød kjole&quot; width=&quot;400px&quot;&gt;
+&lt;/body&gt;
 
 [[Ta henne med deg]]
 [[Gå alene]]
 
 (set: $snakkeMedDame to true)</tw-passagedata><tw-passagedata pid="16" name="Mannen i frakk" tags="" position="4725,1225" size="100,100">Du går bort til mannen i frakken.
-Du spørr han om det er et hotell i nærheten.
-Han svarer deg ikke og går videre
+Du spør han om det er et hotell i nærheten, men han hører deg ikke. 
+Så forsvinner han bortover gaten.
+
+&lt;body&gt;
+    &lt;img src=&quot;mannIFrakk.jpg&quot; alt=&quot;En mann i brun frakk&quot; width=&quot;400px&quot;&gt;
+&lt;/body&gt;
 
 [[Følg etter|FølgEtterMannenIFrakk]]
 (set: $snakkeMedFrakk to true)
 </tw-passagedata><tw-passagedata pid="17" name="Uteliggeren" tags="Turningpoint" position="3900,1175" size="100,100">(set: $snakkeMedUteligger to true)
-Du går bort til uteliggeren. Du ser at klærene hans har sett bedre dager, har har også på seg knuste briller. Brillene ser skarpe ut. Før du får spurt om et hotell, løfter han opp kaffekoppen sin hvor han har noen mynter.
+Du går bort til uteliggeren.
+Du ser at klærene hans har sett bedre dager.
+Du ser at han holder på noe skarpt, men du ser ikke helt hva det er.
+Før du får spurt om et hotell, løfter han opp kaffekoppen sin hvor han har noen mynter.
+Han spør om penger.
+
+&lt;body&gt;
+	&lt;img src=&quot;uteligger.jpg&quot; alt=&quot;En uteligger&quot; width=&quot;400px&quot;&gt;
+&lt;/body&gt;
+
+Vil du gi han penger?
 
 [[Gi han penger]]
 [[Ikke gi han penger]]</tw-passagedata><tw-passagedata pid="18" name="Gå bort til henne" tags="Turningpoint" position="2500,1250" size="100,100">Du går bort til henne, du merker at hun er beruset og ikke i sine fulle fem.
@@ -150,12 +188,13 @@ Det tar ikke lang tid før han forsvinner igjen.
 Du bestemmer deg for å gå rundt hjørnet som mannen sa.
 
 [[Gå rundt hjørnet|FølgEtter]]</tw-passagedata><tw-passagedata pid="20" name="Ta henne med deg" tags="" position="4475,1475" size="100,100">Du sier ja og tar henne med deg.
-Dere går rundt et gjørnet og finner et hotell.
+Dere går rundt et hjørnet og finner et hotell.
 Det ser slitt ut, men du tenker ikke over det. Du skal bare sove der for en natt.
 
-[[Gå inn i hotellet|IHotelletMedDame1]]</tw-passagedata><tw-passagedata pid="21" name="Gå alene" tags="" position="4275,1450" size="100,100">Du sier nei og går videre.
+[[Gå inn i hotellet|IHotelletMedDame1]]</tw-passagedata><tw-passagedata pid="21" name="Gå alene" tags="" position="4275,1450" size="100,100">Du sier nei og går videre bortover den mørke gaten.
 
-[[Fortsett]]</tw-passagedata><tw-passagedata pid="22" name="Fortsett" tags="" position="3625,1625" size="100,100">Du fortsetter mot hjørnet.
+[[Fortsett]]
+(set: $snakkeMedDame to false)</tw-passagedata><tw-passagedata pid="22" name="Fortsett" tags="" position="3625,1625" size="100,100">Du fortsetter mot neste gatehjørnet.
 Du ser et hotell.
 Det ser ganske bra ut.
 Du bestemmer deg for å overnatte der.
@@ -165,10 +204,16 @@ Du bestemmer deg for å overnatte der.
 Mannen forteller deg at du finner et hotell rett rundt hjørnet.
 
 [[Fortsett|FølgEtter]]
-(set: $giPenger to true)</tw-passagedata><tw-passagedata pid="24" name="Ikke gi han penger" tags="" position="3700,1300" size="100,100">(set: $giPenger to false)
-...
+(set: $giPenger to true)
 
-[[Videre|FølgEtter]]</tw-passagedata><tw-passagedata pid="25" name="FølgEtter" tags="" position="4600,1850" size="100,100">Du fortsetter mot hjørnet.
+&lt;script&gt;
+	let lyd = new Audio(&quot;coinInsertingSound.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="24" name="Ikke gi han penger" tags="" position="3700,1300" size="100,100">(set: $giPenger to false)
+- ... Ha deg vekk! - Skriker han til deg.
+Du blir helt sjokkert over hvor aggresive folk kan være og går fra han.
+
+[[Gå videre|FølgEtter]]</tw-passagedata><tw-passagedata pid="25" name="FølgEtter" tags="" position="4600,1850" size="100,100">Du fortsetter rundt hjørnet.
 Du ser et hotell.
 Det ser ganske bra ut.
 Du bestemmer deg for å overnatte der.
@@ -191,10 +236,17 @@ Du bestemmer deg for å gå videre gjennom gaten.
 [[Fortsett|MedHotelletMedDame]]</tw-passagedata><tw-passagedata pid="31" name="MedHotelletMedDame" tags="" position="3525,1950" size="100,100">Dere går rundt hjørnet hvor dere finner et hotell.
 Det ser slitt ut, men du tenker ikke over det. Du skal bare sove der for en natt.
 
-[[Gå inn i hotellet|IHotelletMedDame1]]</tw-passagedata><tw-passagedata pid="32" name="IHotellet" tags="Må-jobbe-med" position="3975,1975" size="100,100">Du går inn i hotellet.
+[[Gå inn i hotellet|IHotelletMedDame1]]</tw-passagedata><tw-passagedata pid="32" name="IHotellet" tags="" position="3975,1975" size="100,100">Du går inn i hotellet.
+
+&lt;body&gt;
+	&lt;img src=&quot;hotelResepsjon.jpg&quot; alt=&quot;i hotell resepsjonen&quot; width=&quot;400px&quot;&gt;
+&lt;/body&gt;
 
 (if: $ikkeSnakkeMedNoen is true) [
-Du kommer til hotellet, det kommer en dame i rød kjole løpende bak deg, du ser en mann i en brun frakk i resepsjonen, det ser ut til at han jobber der. Du går bort til han og betaler for en natt på hotellet.
+Du går inn i hotellresepsjonen.
+Plutselig kommer damen i den røde kjolen som du aviste tidligere løpende forbi deg.
+Det ser ut som at hun skal rekke noe viktig, men akkuratt hva har du ikke peiling på.
+Du ser en mann i en brun frakk i resepsjonen, det ser ut til at han jobber der. Du går bort til han og betaler for en natt på hotellet.
 
 [[Gå til rommet|gåTilHotellrom1]]
 ]
@@ -207,37 +259,44 @@ Du går bort til han og betaler for en natt på hotellet.
 
 [[Gå til rommet|gåTilHotellrom1]]]
 
-(if: $snakkeMedDame is true) 
-[Når du kommer inn ser du mannen i frakken, han er reseptionsiten på hotelelt. Den fulle damen i rød kjole dunker anig deg samtidig som hun løper mot heisen.
-Du lurer på hva problemet hennes.
-Du ser en mann i brun frakk, det ser ut som at han er reseptsjonisten i hotellet.
-Du går bort til han og betaler for en natt på hotellet.
+(if: $snakkeMedDame is true) [
+Når du kommer inn ser du en mann i brun frakk i resepsjonen, det ser ut til at han jobber der.
+Plutselig kommer damen i den røde kjolen du snakket med rett bak deg. Det ser ut som at hun skal rekke noe viktig.
+Du går bort til mannen i den brune frakken og betaler for en natt på hotellet.
 
-[[Gå til rommet|gåTilHotellrom1]]]
+[[Gå til rommet|gåTilHotellrom1]]
+]
 
 (if: $snakkeMedFrakk is true) [
-Du hører at noen kommer løpende bak deg, det er damen i den røde kjolen.
+Du hører at noen kommer løpende bak deg, det er en dame i rød kjole.
 Det ser ut som at hun skal rekke noe viktig, men akkuratt hva har du ikke peiling på.
-Du ser mannen i frakken, det ser ut til t han jobber på hotellet.
-Når han får øye på deg begynner han å beklage for oppførselen sin i sted.
-Det virker som at mannen er stresset, men du vet ikke hva det 
+Du ser mannen i frakken du nettopp snakket med. Det ser ut til t han jobber på hotellet.
+Når han får øye på deg begynner han å beklage for oppførselen sin da dere først møtte hverandre.
+Du får på følelsen av at han virker stresset.
+Du betaler for en natt på hotellet.
+
 [[Gå til rommet|gåTilHotellrom1]]]</tw-passagedata><tw-passagedata pid="33" name="IHotelletMedDame1" tags="" position="3750,2100" size="100,100">Du og damen betaler for en natt på hotellet og går mot trappene.
 Du ser uteliggeren gå inn og setter seg med noen av setene de har i resepsjonen.
 Du og damen fortsetter til rommet deres.
 
-[[Fortsett|gåTilHotellromMedDame]]</tw-passagedata><tw-passagedata pid="34" name="gåTilHotellrom1" tags="Må-jobbe-med" position="4525,2375" size="100,100">Du merker med en gang når du går gjennom gangene i hotellet at det er veldig dårlig kvalitet.
-Når du står utenfor rommet ditt hører du tunge pustelyder. Ved siden av rommet ditt.
-Du lurer på hvem det kan være, plutselig kommer det ut en høy og fyldig mann.
-Han har på seg en mørk dressjakke som har sett bedre dager, du legger merke til at han lukter tobakk, MYE tobakk.
+&lt;body&gt;
+	&lt;img src=&quot;hotelResepsjon.jpg&quot; alt=&quot;i hotell resepsjonen&quot; width=&quot;400px&quot;&gt;
+&lt;/body&gt;
+
+[[Fortsett|gåTilHotellromMedDame]]</tw-passagedata><tw-passagedata pid="34" name="gåTilHotellrom1" tags="" position="4525,2375" size="100,100">Du merker med en gang når du går gjennom gangene på hotellet at det er slitt og har dårlig standard.
+Når du står utenfor rommet ditt hører du tunge pustelyder fra rommet ved siden av.
+Du lurer på hvem det kan være.
+Plutselig kommer en høy og fyldig mann ut fra det rommet.
+Han har på seg en mørk dressjakke som har sett bedre dager og du legger merke til at han lukter tobakk, MYE tobakk.
 Dere får blikkontakt, du bestemmer deg for å snakke med han.
 
 [[Snakke med mannen|snakkeMedMannenISvartDress]]</tw-passagedata><tw-passagedata pid="35" name="gåTilHotellromMedDame" tags="Turningpoint" position="3400,2350" size="100,100">Dere skynder dere til hotellrommet, du ser først nå at kvaliteten på hotellet ikke er så bra, men du skal bare være der en natt.
-Når dere kommer inn i rommet går dere rett til sengen, når du lener deg bakover kjenner du noe hard i sengen din, du løfter opp på dynen og finner en pistol, den er ladd, men det virker som at den ikke funker helt som den skal.
+Når dere kommer inn i rommet går dere rett til sengen, når du lener deg bakover kjenner du noe hard i sengen din, du løfter på dynen og finner en pistol, den er ladd, men det virker som at den ikke funker helt som den skal.
 Du blir helt sjokkert.
 Plutselig blir du omfavnet av damen og du glemmer at pistolen eksisterer.
 Dere holder på i en god stund før dere gir dere.
 
-Etter en liten stund virker det som at damen husker noe, hun virker nervøs og samtidig redd, hun skynder seg til bade.
+Etter en liten stund virker det som at damen husker noe, hun virker nervøs og samtidig redd, hun skynder seg til badet.
 Du merker at pistolen er vekke og du finner ingen spor av den.
 Du ser vesken til damen
 Hva gjør du?
@@ -248,12 +307,12 @@ Hva gjør du?
 (set: $damenHarPistol to true)
 (set: $setDamen to true)</tw-passagedata><tw-passagedata pid="36" name="seOppiVesken" tags="" position="3650,2450" size="100,100">Du tar en titt oppi vesken.
 Det er...
-[[...|seOppiVesken2]]</tw-passagedata><tw-passagedata pid="37" name="seIkkeOppiVesken" tags="" position="3150,2450" size="100,100">Du venter på at hun skal komme tilbake.
+[[...|seOppiVesken2]]</tw-passagedata><tw-passagedata pid="37" name="seIkkeOppiVesken" tags="" position="3150,2450" size="100,100">Du ligger på sengen og venter på at hun skal komme tilbake.
 Plutselig kommer hun ut av badet.
-Hun går ut av rommet uten å si hade til deg.
-Du hører plutselig at en dør åpnes og lukkes i naborommet, etter en liten stund hører du at noen andre går inn i samme hotellrom.
+Hun går videre ut av rommet uten å si hade til deg.
+Du hører plutselig at en dør åpnes og lukkes i naborommet, etter en liten stund hører du at noen andre går inn på samme hotellrom.
 Du hører at noen skriker.
-Du blir sjokert og løper ut for å sjekke hva som har skjedd.
+Du blir sjokkert og løper ut for å sjekke hva som har skjedd.
 
 [[Gå ut av rommet|gåUtAvRommet]]</tw-passagedata><tw-passagedata pid="38" name="seOppiVesken2" tags="" position="3425,2650" size="100,100">Du finner mange piller oppi veksen til damen.
 Du er usikker på hva hun skal med dem, du legger dem tilbake.
@@ -267,21 +326,26 @@ Du hører plutselig at en dør åpnes og lukkes i naborommet, etter en liten stu
 Du hører at noen skriker.
 Du blir sjokkert og løper ut for å sjekke hva som har skjedd.
 
-[[Gå ut av rommet|gåUtAvRommet]]</tw-passagedata><tw-passagedata pid="40" name="gåUtAvRommet" tags="" position="3050,2925" size="100,100">Du går ut av rommet, plutselig kommer det ut en høy og fyldig mann ut av naborommet.
+[[Gå ut av rommet|gåUtAvRommet]]</tw-passagedata><tw-passagedata pid="40" name="gåUtAvRommet" tags="" position="3050,2925" size="100,100">Du går ut av rommet, plutselig kommer en høy og fyldig mann ut av naborommet.
 Han har en mørk dressjakke som har sett bedre dager, du legger merke til at han lukter tobakk, MYE tobakk.
 
 Dere får blikkontakt, du går bort til han og spør hvem han er.
 [[Snakk med mannen|snakkeMedMannenISvartDress]]</tw-passagedata><tw-passagedata pid="41" name="snakkeMedMannenISvartDress" tags="Turningpoint" position="4000,2700" size="100,100">Han introduserer seg selv som hotelleieren.
-Han har på seg en mørk dress. Han holder på et vinglass.
-Han tar en slurk av glasset, det virket som at han ikke likte drikken så mye.
-- Den smakte litt rart - Forteller han.
-Så begynner han å fortelle deg om hvordan HAN startet opp hotellet og hvordan det har blitt en kjempe suksess.
-Du prøver å følge med, men du sovner mens han snakker.
+Han holder på et vinglass.
+
+&lt;body&gt;
+	&lt;img src=&quot;hotelleier.jpg&quot; alt=&quot;hotelleierenen kommer ut av rommet&quot; width=&quot;400px&quot;&gt;
+&lt;/body&gt;
+
+Han tar en slurk av glasset, men skjærer en grimase som om han ikke likte vinen.
+- Den smakte litt rart - sier han.
+Han er pratesalig, så han begynner å fortelle deg om hvordan HAN startet opp hotellet og hvordan det har blitt en kjempe suksess.
+Du prøver å følge med, men du greier ikke å få med deg alle detaljene siden du er så trøtt.
 Etter en liten stund stopper han å prate.
 Han takker for praten og går videre.
 
 (if: $setDamen is true) [
-Du ser damen du nettopp var med komme ut av rommet hvor hotelleieren kom ut fra.
+Du ser damen du var sammen med litt tidligere, komme ut av rommet hvor hotelleieren kom ut fra.
 Du ser at hun har merker rundt armen og halsen, hun virker lei seg.
 Hun holder på en vinflaske.
 Hun får blikkontakt med deg og løper inn igjen på rommet hvor hun kom fra.
@@ -302,11 +366,11 @@ Du bestemmer deg for å spise litt kvelds før du legger deg.
 
 [[Gå ut av baren|FortsetterMedDame]]</tw-passagedata><tw-passagedata pid="43" name="ikkeTaDamenMed" tags="" position="2500,2300" size="100,100">Du sier nei og går ut av bygget.
 
-[[Gå ut av baren|Regne]]</tw-passagedata><tw-passagedata pid="44" name="gåNedOgSpisKvelds" tags="Turningpoint" position="4025,3175" size="100,100">Når du går ned ser du den fattige mannen, du ser også hotelleirene sammen med mannen i resepsjonen.
+[[Gå ut av baren|Regne]]</tw-passagedata><tw-passagedata pid="44" name="gåNedOgSpisKvelds" tags="Turningpoint" position="4075,3175" size="100,100">Når du går ned ser du uteliggeren, du ser også hotelleieren sammen med mannen med frakk som også jobber i resepsjonen.
 Hvem vil du gå bort til?
 
 [[Mannen i frakken]]
-[[Den fattige mannen]]</tw-passagedata><tw-passagedata pid="45" name="Mannen i frakken" tags="" position="3725,3150" size="100,100">Du går bort til mannen i frakken, de legger ikke merke til deg.
+[[Uteliggeren|Den fattige mannen]]</tw-passagedata><tw-passagedata pid="45" name="Mannen i frakken" tags="" position="3725,3150" size="100,100">Du går bort mot mannen i frakken, men de legger ikke merke til deg.
 Du hører de snakke om hotellet.
 
 - Plis sjef, kan du ikke bare gi meg litt mer penger? Jeg og familien trenger det for mat, vi har så vidt råd til nok mat til alle i husstanden!  sier mannen i frakken
@@ -315,21 +379,21 @@ Du hører de snakke om hotellet.
 
 - Jeg ser ingen grunn til at du skal få mer i lønn! Uansett trenger jeg noen som kan være reseptsjonist!  sier hotelleieren
 
-- Vi får så få kunder og jeg kan ikke rissikere å gå konkurs.  hvisker hotelleieren
+- Vi får så få kunder og jeg kan ikke risikere å gå konkurs.  hvisker hotelleieren
 
 Hotelleieren tar et trekk fra sigaren og blåser røyken rett i ansiktet på mannen i frakken.
 Du gidder ikke å være i et rom hvor det er mye støy.
-[[Gå til tommet ditt|gåOgSove]]</tw-passagedata><tw-passagedata pid="46" name="Den fattige mannen" tags="Turningpoint" position="4600,3050" size="100,100">(if: $giPenger is true) [
-Du går bort til den fattige mannen.
-Han snur seg og kjener deg igjen.
-- Hva gjør du her? - Spørr han med et smil rundt munnen.
+[[Gå til rommet ditt|gåOgSove]]</tw-passagedata><tw-passagedata pid="46" name="Den fattige mannen" tags="Turningpoint" position="4600,3050" size="100,100">(if: $giPenger is true) [
+Du går bort til uteliggeren.
+Han snur seg og kjenner deg igjen.
+- Hva gjør du her? - Spør han med et smil rundt munnen.
 Hva svarer du?
 
 [[Jeg skulle bare spise litt kvelds]]
 [[Hva gjør du her?]]
 ]
 
-(else:) [Du går bort til den fattige mannen. Han ser deg ikke, men du setter deg på stolen ved siden av.
+(else:) [Du går bort til uteliggeren. Han ser deg ikke, men du setter deg på stolen ved siden av.
 Du prøver å starte en hyggelig samtale, men du vet ikke hva du skal si.
 
 Hva vil du si?
@@ -342,61 +406,74 @@ $pistolSkudd
 
 (if: $pistolSkudd is 1) [... [[traff]]]
 (if: $pistolSkudd is 2) [... [[bom]]]</tw-passagedata><tw-passagedata pid="50" name="gåOgSove" tags="" position="3325,3400" size="100,100">Rett før du går i heisen hører du mannen i frakken mumle om noe.
-- Hadde jeg hatt muligheten...hadde jeg drept han!&quot; - mumler mannen i frakken
+- &quot;Hadde jeg hatt muligheten...hadde jeg drept han!&quot; - 
 
 Du tenker ikke over det og går i heisen.
 Du går inn på rommet ditt og legger deg.
 
 [[Neste dag|soveEtterLangDag]]
 
-(set: $bevisMannIDress to true)</tw-passagedata><tw-passagedata pid="51" name="soveEtterLangDag" tags="" position="4300,3400" size="100,100">Plutselig hører du at noen skriker.
+(set: $bevisMannIDress to true)</tw-passagedata><tw-passagedata pid="51" name="soveEtterLangDag" tags="" position="4300,3425" size="100,100">Plutselig hører du at noen skriker.
 Du løper ned i reseptsjonen.
-Du finner ingen der, men du ser i koridoren i spisesalen at dørene er åpne.
+Du finner ingen der, men du ser at døren til spisesalen er åpen.
 
-[[Gå inn i spisesalen]]</tw-passagedata><tw-passagedata pid="52" name="Gå inn i spisesalen" tags="" position="3600,3450" size="100,100">Når du kommer inn ser du de andre.
+[[Gå inn i spisesalen]]
+&lt;script&gt;
+	let lyd = new Audio(&quot;frantic-screaming-213549.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="52" name="Gå inn i spisesalen" tags="" position="3600,3450" size="100,100">Når du kommer inn i spisesalen ser du de andre.
 Mannen i frakken,
 Uteliggeren og
 Damen i den røde kjolen.
-De er alle rundt hotelleieren.
+De står alle rundt hotelleieren.
 Han er død.
 
 [[Se på han|sePåLiket]]</tw-passagedata><tw-passagedata pid="53" name="sePåLiket" tags="Turningpoint" position="3725,3700" size="100,100">Du bøyer deg ned for å se på liket.
 Du ser at han har merker rundt halsen, han holder også på et glass med drikke, men du ser ikke noe annet.
 
+&lt;body&gt;
+	&lt;img src=&quot;hotelleierDød.jpg&quot; alt=&quot;hotelleieren er død&quot; width=&quot;400px&quot;&gt;
+&lt;/body&gt;
+
 Du legger merke til de andre, uteliggeren gliser, mannen i frakken ser ikke ut til at han bryr seg og damen i den røde kjolen gråter, men hvorfor?
 
-Plutselig begynner de å fortelle deg at et var fortjent, - det var bra at han døde - sier de
-- Det må ha vært en ulykke, kunne aldri tenke meg at noen ville gjøre dette med hotelleieren - sier de også.
-Men det virker veldig tilfeldig, du har sett lignende ting på jobben før. Du konkluder med at det ikke har vært et uhell men et drap.
+Plutselig begynner de å fortelle deg at et var fortjent, - &quot;Det var bra at han døde&quot; - sier de
+- Men de sier også at - &quot;Det må ha vært en ulykke, kunne aldri tenke meg at noen ville gjøre dette med hotelleieren&quot;.
+Men det virker veldig tilfeldig, og du har sett lignende ting på jobben før. Du konkluderer med at det ikke har vært et uhell, men et drap.
 
-Når du har sagt det blir alle i rommet sjokkert. Alle i rommet ser beskymret ut, nesten som om de skjuler noe for deg, men hva?
-
+Når du sier det blir alle i rommet sjokkert. Men du får likevel en følele av at de skjuler noe for deg, men hva?
 
 
 Hvem tror du det er?
 
 [[Mannen i frakken|duTrorDetErMannenIDrakken]]
 [[Uteliggeren|duTrorDetErUteliggeren]]
-[[Damen i den røde kjolen|duTrorDetErDamenIRødKjole]]</tw-passagedata><tw-passagedata pid="54" name="Fint vær ute" tags="" position="4575,3250" size="100,100">- Fint vær ute - sier du til den fattige mannen.
+[[Damen i den røde kjolen|duTrorDetErDamenIRødKjole]]</tw-passagedata><tw-passagedata pid="54" name="Fint vær ute" tags="" position="4450,3200" size="100,100">- Fint vær ute - sier du til den fattige mannen.
 Han snur seg og ser på deg med et stygt blikk.
 
 Du kan høre i bakgrunnen at hotelleieren er kjempe sint, plutselig går han sin vei.
 Du bestemmer deg for å gå på rommet ditt.
-[[Gå på rommet for å sove|soveEtterLangDag]]</tw-passagedata><tw-passagedata pid="55" name="Være stille" tags="Turningpoint" position="4725,3400" size="100,100">Du hører at han mumler om noe.
-- jeg...eier...hotellet! - visker den fattige mannen.
+[[Gå på rommet for å sove|soveEtterLangDag]]</tw-passagedata><tw-passagedata pid="55" name="Være stille" tags="Turningpoint" position="4750,3325" size="100,100">Du hører at han mumler om noe.
+- jeg...eier...hotellet! - hvisker den fattige mannen.
 Du ser at han holder en kniv i lommen sin.
 
 [[Eier du virkelig hotellet?]]
 [[Hvorfor har du en kniv|spørrOmKniven]]
-[[Gå på rommet for å sove|soveEtterLangDag]]</tw-passagedata><tw-passagedata pid="56" name="Eier du virkelig hotellet?" tags="" position="4575,3625" size="100,100">Han snur seg mot deg.
+[[Gå på rommet for å sove|soveEtterLangDag]]
+(set: $bevisKniv to true)</tw-passagedata><tw-passagedata pid="56" name="Eier du virkelig hotellet?" tags="" position="4575,3625" size="100,100">Han snur seg mot deg.
 - Jeg gjorde det... men det var for LENGE siden - Forteller mannen
-- Det var jeg som startet hotellet, men HAN, den skitne ekle ufyselige mannen i den mørke dressen, HAN gjorde meg om til det jeg er nå... EN TAPER. - Skriker mannen til deg.
-Du ser at hotelleieren snur seg og ler hånelig mens han ser på den fattige mannen.
+- Det var jeg som startet hotellet, men HAN, den skitne, ekle, ufyselige mannen i den mørke dressen, HAN gjorde meg om til det jeg er nå... EN TAPER. - Skriker mannen til deg.
+Du ser at hotelleieren snur seg og ler hånlig mens han ser på den fattige mannen.
 Du bestemmer deg for å legge deg etter en lang dag.
 
-[[Gå opp på rommet ditt|soveEtterLangDag]]</tw-passagedata><tw-passagedata pid="57" name="spørrOmKniven" tags="" position="4900,3675" size="100,100">- Hvorfor har du en kniv - spør du mannen.
+[[Gå opp på rommet ditt|soveEtterLangDag]]
+
+&lt;script&gt;
+	let lyd = new Audio(&quot;maleAngryGrowl.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="57" name="spørrOmKniven" tags="" position="4900,3675" size="100,100">- Hvorfor har du en kniv - spør du mannen.
 Plutselig snur han seg og stirrer deg dypt inn i sjelen.
-- Ikke fortell dette til NOEN! - Visker han deg i øret mens han holder kniven mot strupen din.
+- Ikke fortell dette til NOEN! - Hvisker han deg i øret mens han holder kniven mot strupen din.
 
 [[Løp til rommet ditt||soveEtterLangDag]]
 
@@ -425,7 +502,7 @@ Plutselig snur han seg og stirrer deg dypt inn i sjelen.
 
 [[Bevis det da!|finneFramKniv]]</tw-passagedata><tw-passagedata pid="63" name="bevisPåHvaHanSa" tags="" position="2850,4200" size="100,100">- EEEEHMMMMMM, hva MENER DU - roper han
 Du merker at han ikke virker som om han er seg selv.
-- Skal du arrestere meg da liksom, arrestere meg?
+- &quot;Skal du arrestere meg da liksom?.... arrestere meg?&quot;
 
 Hva gjør du?
 
@@ -435,7 +512,7 @@ Hva gjør du?
 ]</tw-passagedata><tw-passagedata pid="64" name="ingenBevisMannIFrakk" tags="" position="3300,4250" size="100,100">- Ser du, jeg her helt uskyldig - Sier han
 [[Tilbake|hvemTrorDuDetEr2]]
 [[Arrester han likevel|arresterMannenIFrakken]]
-[[Skyt han|skytMannenIFrakken]]</tw-passagedata><tw-passagedata pid="65" name="ingenBevisDame" tags="" position="4000,4575" size="100,100">- Tenkte meg det - Sier hun.
+[[Skyt han|skytMannenIFrakken]]</tw-passagedata><tw-passagedata pid="65" name="ingenBevisDame" tags="" position="4000,4575" size="100,100">- &quot;Tenkte meg det&quot; - Sier hun.
 
 [[Tilbake|hvemTrorDuDetEr2]]
 [[Arrester henne]]</tw-passagedata><tw-passagedata pid="66" name="hvemTrorDuDetEr2" tags="" position="3600,4375" size="100,100">Hvem tror du det er?
@@ -492,10 +569,10 @@ tw-story {
 Og du treffer.
 Han faller til bakken, men lever enda.
 Han skriker i smerte mens han ser på deg med et forskrekket blikk.
-- HVA HAR DU GJORT - Skriker han i smerte.
+- &quot;HVA HAR DU GJORT&quot; - Skriker han i smerte.
 Han skriker en liten stund før det blir helt stille.
 Etter en liten stund kommer politiet.
-De ser på overvåkningskamera og finner ut at mannen i frakken var helt uskyldig.
+De ser på video fra overvåkningskamera og finner ut at mannen i frakken var helt uskyldig.
 De bestemmer for å arrester deg og konkluderer med at DU er morderen.
 Du blir dømt til henrettelse.
 
@@ -508,6 +585,12 @@ tw-story {
     color: black;
 }
 &lt;/style&gt;
+
+&lt;script&gt;
+	let lyd = new Audio(&quot;gunShot.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;
+
 ]
 
 (if: $pistolSkudd is 2) [
@@ -515,7 +598,7 @@ Du bommer.
 Han løper mot deg og slår deg ut.
 Etter en liten stund våkner du opp til at politiet står over deg.
 De konkluderer med at du er morderen.
-De finner også alibi for at det ikke kan være mannen i rakken fordi han var i resepsjoen hele tiden.
+De finner også alibi for at det ikke kan være mannen i frakken fordi han var i resepsjoen hele tiden.
 Du blir dømt til livstid i fengsel.
 
 #Men dette stemmer jo IKKE!
@@ -527,12 +610,21 @@ tw-story {
     color: black;
 }
 &lt;/style&gt;
+
+&lt;script&gt;
+	let lyd = new Audio(&quot;emptyGunShot.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;
 ]</tw-passagedata><tw-passagedata pid="71" name="Dra på baren" tags="" position="2875,475" size="100,100">Du drar på baren.
-Det tar en liten stund før du kommer deg der, men til slutt er du med baren.
+Det tar en liten stund før du kommer deg der, men til slutt er du ved baren.
+
+&lt;body&gt;
+	&lt;img src=&quot;bar.jpg&quot; alt=&quot;utenfor baren&quot; width=&quot;400px&quot;&gt;
+&lt;/body&gt;
 
 [[Gå inn i baren|Fortsette]] </tw-passagedata><tw-passagedata pid="72" name="gåPåRommetDitt" tags="" position="3550,2925" size="100,100">Du går inn på rommet ditt og slenger det du har med deg i sengen.
-Når du gjør det hører du en rar lyd.
-Du går bort til sengen og løfter på dyna.
+Når du gjør det hører du en rar lyd fra sengen.
+Du går bort og løfter på dyna.
 Du får øye på en pistol, den er ladd, men det virker som at den ikke funker helt som den skal.
 Du bestemmer deg for å beholde den og levere den inn til politiet i morgen.
 
@@ -544,30 +636,35 @@ Du ser at han holder noe skinnende
 
 [[Se nermere]]
 [[Gå på rommet for å sove|soveEtterLangDag]]</tw-passagedata><tw-passagedata pid="74" name="Hva gjør du her?" tags="" position="5075,3300" size="100,100">Han rynker litt på øyenbrynene sine før han sier.
-- Jeg har ingen steder å sove, så jeg pleir som oftestr å overnatte her i respesjonen, han mannen i frakken er så hyggelig og lar meg overnatte her helt gratis - forteller han.
-- Men det har ikke altid vært sånn - forteller han.
+- Jeg har ingen steder å sove, så jeg pleier som oftest å overnatte her i respesjonen, han mannen i frakken er så hyggelig og lar meg overnatte her helt gratis - forteller han.
+- Men det har ikke alltid vært sånn - forteller han.
 [[Sitt litt lenger og hør på historien]]</tw-passagedata><tw-passagedata pid="75" name="Sitt litt lenger og hør på historien" tags="" position="4975,3475" size="100,100">- Da jeg var ung, var jeg veldig god på å forhandle med folk. Jeg var så flink at jeg bygde mitt eget hotell.
 - Men så kom HAN, og ødela alt. Han tok rikdommen, berømmelsen og ryktet mitt fra meg. - Sier han med en sint stemme.
-Du ser at han holder en kniv og strammer krepet rundt den mens han ser på hotelleieren.
+Du ser at han holder en kniv og strammer grepet rundt den mens han ser på hotelleieren.
 Du bestemmer deg for å legge deg etter en lang dag.
 
 [[Gå opp på rommet ditt|soveEtterLangDag]]
 
-(set: $bevisKniv to true)</tw-passagedata><tw-passagedata pid="76" name="Se nermere" tags="" position="5250,3200" size="100,100">Du ser at han holder en kniv.
+(set: $bevisKniv to true)
+
+&lt;script&gt;
+	let lyd = new Audio(&quot;maleAngryGrowl.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="76" name="Se nermere" tags="" position="5250,3200" size="100,100">Du ser at han holder en kniv.
 Du bestemmer deg for å ikke spørre han om den.
 Du bestemmer deg for å legge deg etter en lang dag.
 
 [[Gå opp på rommet ditt|soveEtterLangDag]]
 
-(set: $bevisKniv to true)</tw-passagedata><tw-passagedata pid="77" name="manual" tags="" position="3800,100" size="100,100">I dette spillet er du en krimminalteknikker, du overnatter på et hotell hvor det har skjedd et drap, underveis vil du møtet karakterer som har en eller annen relasjon til den drepte.
+(set: $bevisKniv to true)</tw-passagedata><tw-passagedata pid="77" name="manual" tags="" position="3800,100" size="100,100">I dette spillet er du en kriminaltekniker, du overnatter på et hotell hvor det har skjedd et drap, underveis vil du møte karakterer som har en eller annen relasjon til den drepte.
 Det er din oppgave å løse dette mysteriet.
 
 Vi vil anbefale at du tar noen små notater eller leser teksten nøye for å få med deg hint som kan være avgjørende for historien.
 
 [[Tilbake|StartOfGame]]</tw-passagedata><tw-passagedata pid="78" name="arresterFattigMann" tags="End" position="4350,4600" size="100,100">Du bestemmer deg for å ringe politiet, mens du gjør det kan du se raseriet i øynene hans.
 Etter en liten stund dukker politiet opp.
-De intervjuer alle inkludert deg.
-De konkluderer med at det var den fattige mannen som drepte hotelleieren.
+De tar avhør av alle, inkludert deg.
+De konkluderer med at det var uteliggeren som drepte hotelleieren.
 
 #Men stemmer det?
 #[[Slutt|StartOfGame]]
@@ -580,28 +677,44 @@ tw-story {
 }
 &lt;/style&gt;</tw-passagedata><tw-passagedata pid="79" name="Løp etter han" tags="" position="4925,4475" size="100,100">Du prøver å løpe etter han, men han er for rask.
 Han løper mot trappene og løper opp til toppen av hotellet.
-Når du er på toppen av hotellet ser du den fattige mannen med kanten.
+Når du er på toppen av hotellet ser du uteliggeren står helt ute på kanten av taket.
 Hva gjør du nå?
 
-[[Snakke han til fonuft|snakkFornuftTilFattigMann]]</tw-passagedata><tw-passagedata pid="80" name="skytFattigMann1" tags="" position="5050,4075" size="100,100">Du bestemmer deg for å skyte han.
+[[Snakke han til fonuft|snakkFornuftTilFattigMann]] </tw-passagedata><tw-passagedata pid="80" name="skytFattigMann1" tags="" position="5050,4075" size="100,100">Du bestemmer deg for å skyte han.
 
 (set: $pistolSkudd to (random: 1, 2))
 
 (if: $pistolSkudd is 1) [
 Og du treffer.
 Du løper bort til han og bøyer deg ned til hans nivå.
-Han gisper etter luft, men får midnre og mindre iksygen for hvert åndedrag.
+Han gisper etter luft, men får mindre og mindre oksygen for hvert åndedrag.
+Så slutter han å puste.
+Da polititet kommer fram ser de deg og de andre rundt likene.
+Politiet konkluderer med at den fattige mannen drepte hotelleieren, men du mister jobben din for uaktsomt drap på den skyldige.
 
+#Men stemmer det?
+#[[Slutt|StartOfGame]]
+
+&lt;script&gt;
+	let lyd = new Audio(&quot;gunShot.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;
 ]
 
 (if: $pistolSkudd is 2) [
 Du bommer.
 [[Løp etter han|Løp etter han]]
+
+&lt;script&gt;
+	let lyd = new Audio(&quot;emptyGunShot.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;
 ]</tw-passagedata><tw-passagedata pid="81" name="skytFattigMann2" tags="End" position="4650,4675" size="100,100">Du bestemmer deg for å ta fram pistolen.
-Han står der og er på deg med et forskrekket blikk, uten at han får sagt et ord faller han rett i bakken.
+Han står der og ser på deg med et forskrekket blikk, du trekker av.
+Uten et ord faller han rett i bakken.
 Du løper bort til han for å sjekke tilstanden hans, han er død.
 Da polititet kommer fram ser de deg og de andre rundt likene.
-Politiet konkluderer med at den fattige mannen drepte hotelleieren, men du mister jobben din for uaktsomt drap på den skyldige.
+Politiet konkluderer med at uteliggeren drepte hotelleieren, men du mister jobben din for uaktsomt drap på den skyldige.
 
 #Men stemmer det?
 #[[Slutt|StartOfGame]]
@@ -613,11 +726,16 @@ tw-story {
     color: black;
 }
 &lt;/style&gt;
+
+&lt;script&gt;
+	let lyd = new Audio(&quot;gunShot.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;
 </tw-passagedata><tw-passagedata pid="82" name="snakkFornuftTilFattigMann" tags="End" position="4850,4675" size="100,100">Du prøver å snakke han til fornuft.
-Så lener han seg bakover og tar sitt eget liv.
+Så lener han seg bakover og faller utfor og ned på bakken. Han dør momentant.
 Det ser ut til at du aldri får vite sannheten om hvem som drepte hotelleieren.
 Etter en liten stund kommer polititet.
-De konkludere med at den fattige mannen drepte hotelleieren og tok selvmord for å ungå straff.
+De konkludere med at uteliggeren drepte hotelleieren og tok selvmord for å unngå straff.
 
 #Men stemmer det?
 #[[Slutt|StartOfGame]]
@@ -632,7 +750,7 @@ tw-story {
 Det viser seg at hun hadde vært med hotelleieren i naborommet og ligget med han.
 Hun likte ikke han og ville derfor drepe han.
 Hun hadde mange medisner i vesken sin og bestemte seg for å drepe han med dem.
-Hun helte meidsinene i drikken mens han ikke lå merke til det.
+Hun helte medisinene i drikken uten at han la merke til det.
 Men medisinene virket ikke helt, derfor kvelte hun han når de var alene i spisesalen.
 Godt jobbet.
 
@@ -644,8 +762,8 @@ Hva skal du gjøre nå?
 [[Skyt henne|skyteDamen]]
 ]</tw-passagedata><tw-passagedata pid="84" name="Arrester henne" tags="End" position="3550,4950" size="100,100">(if: $damenHarPistol is true) [
 Du bestemmer deg for å ringe politiet.
-Plutselig hører du at neon skyter fra en pistol.
-Du snur deg ser at damen skøt deg.
+Plutselig hører du at noen skyter med en pistol.
+Du snur deg ser at damen skjøt deg.
 Du faller rett i bakken.
 Du prøver å gispe etter luft, men det blir bare mørkere og mørkere.
 Så blir alt mørkt...
@@ -662,7 +780,7 @@ tw-story {
 Du bestemmer deg for å ringe politiet.
 Etter en liten stund kommer politiet.
 Politiet finner ingen beviser for at hun drepte hotelleieren.
-Du mister jobben din for å være en elendig kriminalteknikker og vi hører ladri noe fra deg igjen.
+Du mister jobben din for å være en elendig kriminalteknikker og vi hører aldri noe fra deg igjen.
 Saken blir henlagt.
 
 #Men hvem drepte hotelleieren?
@@ -693,17 +811,31 @@ Hva gjør du?
 [[Gjøre slutt på smertene hennes|sluttPåSmerteneTilHenne]]
 [[La henne blø i hjel|laHenneBløIHjel]]
 
+&lt;script&gt;
+	let lyd = new Audio(&quot;gunShot.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;
+
 ]
 
 (if: $pistolSkudd is 2) [
 Du bommer.
 Plutselig løper hun mot deg og er oppå deg, hun tar glasset som hotelleiern drakk av og knuser det slik at hun kan stikke deg.
-Rett før hun treffer deg i brystet, kalrer du å holde henne på plass.
-Du 
+Rett før hun treffer deg i brystet, hopper du til side og unngår å bli truffet.
+Du dytter henne vekk fra deg.
+Du binder henne fast til en stol og ringer politiet.
+Etter en liten stund kommer politiet.
+De konkluderer med at hun drepte hotelleieren.
+Godt jobbet.
+
+&lt;script&gt;
+	let lyd = new Audio(&quot;emptyGunShot.mp3&quot;);
+	lyd.play(); 
+&lt;/script&gt;
 ]</tw-passagedata><tw-passagedata pid="86" name="arresterDamen" tags="End" position="3450,5350" size="100,100">(if: $damenHarPistol is true) [
 Du bestemmer deg for å ringe politiet.
-Plutselig hører du at neon skyter fra en pistol.
-Du snur deg ser at damen skøt deg.
+Plutselig hører du at noen skyter med en pistol.
+Du snur deg ser at damen skjøt deg.
 Du faller rett i bakken.
 Du prøver å gispe etter luft, men det blir bare mørkere og mørkere.
 Så blir alt mørkt...
@@ -721,7 +853,7 @@ Du bestemmer deg for å ringe politiet.
 Etter en liten stund kommer politiet.
 Du forteller dem om hva som ar skjedd og de finner spor som tyder på at dette stemmer.
 Politiet konkluderer med damen i den røde kjolen drepte hotelleieren.
-Du ser at de plaserer henne i politibilen, mens de gjør det ser hundeg i øynene.
+Du ser at de plasserer henne i politibilen, mens de gjør det ser hun deg i øynene.
 Hun gliser på deg.
 Du får en følelse at dette ikke er over.
 Godt jobbet.
@@ -739,8 +871,8 @@ Du tar opp glasset og knuser det i noen biter.
 Du kutter strupen på henne slik at hun dør raskt.
 
 Etter en liten stund kommer politiet.
-De konkluderer med at hun drepte hotelleieren.
-Godt jobbet.
+De konkluderer med at hun drepte hotelleieren. Godt jobben, men du kommer i fengsel fordi du drepte henne.
+
 
 #[[Slutt|StartOfGame]]
 
@@ -773,6 +905,9 @@ tw-story {
 [[Arrester henne]]
 (if: $fantMedisiner is true) [
 [[Jeg fant medisiner]]
+]
+(if: $harPistol is true) [
+[[Skyt henne|skyteDamen]]
 ]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!

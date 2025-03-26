@@ -1,0 +1,27 @@
+{
+  "name": "pute008.github.io",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pute008/Pute008.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pute008/Pute008.github.io/issues"
+  },
+  "homepage": "https://github.com/Pute008/Pute008.github.io#readme",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "better-sqlite3": "^11.9.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "public": "^0.1.5"
+  }
+}

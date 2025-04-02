@@ -27,6 +27,7 @@ body {
     grid-template-areas:
     'header header header header header'
     'menu   menu   menu   menu   menu'
+    'text   text   text   text   text'
     'main   main   main   main   main'
     'footer footer footer footer footer';
 }
@@ -40,18 +41,19 @@ body {
     background: url(../bilder/FelixEllingsenWestby.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-
     /* background: linear-gradient(to bottom right, blue, red); */
     /* background: grey; */
 }
 
 /* for parallax effekt */
-.item1, .item2 {
+/* .item1, .item2 {
     width: 100%;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     position: relative;
     transform-style: preserve-3d;
 }
+*/
+
 
 
 /* .item2 {
@@ -60,7 +62,7 @@ body {
     transform-style: preserve-3d;
 } */
 
-.item1::before {
+/* .item1::before {
     content:"";
     width: 100%;
     height: 100%;
@@ -69,7 +71,7 @@ body {
     background-size: cover;
     transform: translateZ(-1px) scale(2.2);
     filter: blur(2px);
-}
+} */
 
 #title {
     display: flex;
@@ -78,12 +80,18 @@ body {
     width: 200px;
     /* background: black; */
     color: white;
+    font-weight: 900;
 }
 
 .item2 {
     grid-area: menu;
-    height: 90px;
-    background: lightgray;
+    height: 50px;
+    background: #07004D;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    position: sticky;
+    top: 0;
 }
 
 .item3 {
@@ -95,7 +103,7 @@ body {
     flex-wrap: wrap;
     position: relative;
     gap: 3rem;
-    background-color: darkgrey;
+    background-color: #0079A4;
 }
 
 .item4 {
@@ -104,8 +112,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #07004D;
+    color: white;
+    font-weight: 900;
+
+}
+
+.item5 {
+    height: 1500px;
+    grid-area: text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: black;
     color: white;
+    font-weight: 900;
+    font-size: 2rem;
 }
 
 #logo {
@@ -126,10 +148,13 @@ nav a {
     padding: 0 10px;
     margin: 0 30px;
     position: relative;
+    color: white;
+    font-weight: 600;
+
 }
 
 nav a:hover {
-    color: black;
+    color: #42E2B8;
 }
 
 nav a::before {
@@ -147,43 +172,30 @@ nav a:hover::before {
     width: 100%;
 }
 
-/* .UnderlineTittel:hover {
-    position: relative;
-    display: inline-block;
-}
-
-.UnderlineTittel::before {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background-color: #0079A4;
-    transition: all 1s;
-}
-
-.UnderlineTittel:hover::before {
-    width: 100%;
-} */
-
 .flexbox {
     border: solid 3px black;
     border-radius: 10px;
     height: 400px;
     width: 400px;
     padding: 10px;
-    background: rgb(221, 221, 221);
+    background: #07004D;
     /* margin: 25px 0px 25px 0px; */
     /* background: linear-gradient(to bottom right, rgb(201, 201, 201), white); */
     transition: 0.3s;
     animation: fadeInCards 0.7s ease-in-out forwards;
+    color: white;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    font-weight: 900;
+
 
 }
 
 .flexbox:hover {
     transition: 0.3s;
     transform: scale(1.02);
+    color: #42E2B8;
 }
 
 /* prøver å lage en hover effekt på bildet i flexboksen */
@@ -221,6 +233,8 @@ nav a:hover::before {
     }
 }
 
+
+/* for scrollen til prosjektsiden */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -268,4 +282,17 @@ nav a:hover::before {
 
 .snaps-inline > * {
     scroll-snap-align: start;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        /* clip-path: inset(100% 100% 0 0); */
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        /* clip-path: inset(0 0 0 0 ); */
+        transform: translateX(0px);
+    }
 }

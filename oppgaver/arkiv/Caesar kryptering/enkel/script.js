@@ -81,7 +81,7 @@ for (let bokstav of setning) {
 console.log(krypterSetning)
 
 let hemmeligBeskjed = prompt("Skriv inn den hemmelige beskjeden");
-let nokkel = Number(prompt("Hva er nokkelen? "));
+let nokkel = Number(prompt("Hva er nøkkelen? "));
 let avsloring = "";
 
 for (let bokstav of hemmeligBeskjed) {

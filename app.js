@@ -23,16 +23,16 @@ app.get("/getUser", (req, res) => {
 
 app.post("/newUser", async (req, res) => {
     // får informasjon fra skjemaet i html-filen, skjemaet må være fylt ut
-    const { personnummer, fornavn, etternavn, epost, telefon, password } = req.body;
+    const {fornavn, etternavn, epost, telefon, password } = req.body;
 
     // Hash passordet med bcrypt
     const saltRounds = 10; // Antall runder med hashing
     const hashPassord = await bcrypt.hash(password, saltRounds);
 
     // sier hva den skal legge til i databasen
-    const stmt = db.prepare("INSERT INTO user (personnummer, fornavn, etternavn, epost, telefon, password) VALUES (?, ?, ?, ?, ?, ?)");
+    const stmt = db.prepare("INSERT INTO user (fornavn, etternavn, epost, telefon, password) VALUES (?, ?, ?, ?, ?)");
     // legger til personen i databasen
-    const info = stmt.run(personnummer, fornavn, etternavn, epost, telefon, hashPassord);
+    const info = stmt.run(fornavn, etternavn, epost, telefon, hashPassord);
 
     // vi får en melding tilbake om at personen er lagt til
     res.json({ message: "New user made", info });

@@ -10,7 +10,6 @@
             event.preventDefault(); // Forhindre standard form-innsending
 
             // Henter ut verdien fra input feltene
-            const personnummer = document.getElementById("personnummer").value;
             const fornavn = document.getElementById("fornavn").value;
             const etternavn = document.getElementById("etternavn").value;
             const epost = document.getElementById("epost").value;
@@ -26,7 +25,6 @@
                 },
                 // hva som skal være i json filen
                 body: JSON.stringify({
-                    personnummer,
                     fornavn,
                     etternavn,
                     epost,
@@ -45,9 +43,6 @@
     <!-- input, alt som vises på siden -->
     <h1>Legg til bruker</h1>
     <form onsubmit="leggTilPerson(event)">
-        <label for="personnummer">Personnummer:</label>
-        <input type="text" id="personnummer" name="personnummer" required><br>
-
         <label for="fornavn">Fornavn:</label>
         <input type="text" id="fornavn" name="etternavn" required><br>
 
@@ -55,7 +50,7 @@
         <input type="text" id="etternavn" name="etternavn" required><br>
 
         <label for="epost">Epost:</label>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" id="epost" name="epost" required><br>
 
         <label for="telefon">Telefon:</label>
         <input id="telefon" name="telefon" required>
@@ -64,7 +59,7 @@
         <label for="password">Passord:</label>
         <input type="password" id="password" name="password" required><br>
 
-        <button type="submit">Lag bruker</button>
+        <button type="submit"><a href="login.html">Lag bruker</a>Lag bruker</button>
     </form>
 </body>
 </html>

@@ -36,6 +36,7 @@ app.post("/newUser", async (req, res) => {
 
     // vi får en melding tilbake om at personen er lagt til
     res.json({ message: "New user made", info });
+    window.location.href='./login.html';
 });
 
 

@@ -10,10 +10,7 @@ body {
     font-family: 'Roboto', sans-serif;
     transition: background-color 0.3s ease-in-out;
     perspective: 1px;
-    transform-style: preserve-3d;
     background: black;
-    overflow-x: hidden;
-    overflow-y: scroll;
 
     /* smooth fade animasjon */
     opacity: 0;
@@ -35,45 +32,23 @@ body {
 .item1 {
     grid-area: header;
     height: 900px;
+    background-position: bottom;
     display: flex;
     justify-content: center;
     background-position: center;
     background: url(../bilder/FelixEllingsenWestby.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    /* background: linear-gradient(to bottom right, blue, red); */
-    /* background: grey; */
+
+    /* parallax */
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-/* for parallax effekt */
-/* .item1, .item2 {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    transform-style: preserve-3d;
-}
-*/
-
-
-
-/* .item2 {
-    width: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-} */
-
-/* .item1::before {
-    content:"";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: url(../bilder/FelixEllingsenWestby.jpg);
-    background-size: cover;
-    transform: translateZ(-1px) scale(2.2);
-    filter: blur(2px);
-} */
 
 #title {
+    /* text-align: center; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,6 +103,8 @@ body {
     color: white;
     font-weight: 900;
     font-size: 2rem;
+    text-align: center;
+
 }
 
 #logo {
@@ -295,4 +272,44 @@ nav a:hover::before {
         /* clip-path: inset(0 0 0 0 ); */
         transform: translateX(0px);
     }
+}
+
+
+
+/* parallax */
+.parallax-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+
+}
+
+.parallax-wrapper::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: red;
+    position: absolute;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+.regular-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    background: blue;
+    z-index: 2;
+    position: relative;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 50px;
+    width: 50%;
+    /* background: #aaa; */
 }

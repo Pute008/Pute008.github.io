@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 html {
     height: 100vh;
     /* overflow: hidden; */
@@ -15,6 +19,7 @@ body {
     /* smooth fade animasjon */
     opacity: 0;
     animation: fadeIn 0.8s ease-in-out forwards;
+    scroll-behavior: smooth;
 }
 
 .grid-container {
@@ -67,6 +72,7 @@ body {
     display: flex;
     position: sticky;
     top: 0;
+    font-size: 1.5rem;
 }
 
 .item3 {
@@ -90,6 +96,7 @@ body {
     background: #07004D;
     color: white;
     font-weight: 900;
+    font-size: 1.2rem;
 
 }
 
@@ -102,8 +109,8 @@ body {
     background: black;
     color: white;
     font-weight: 900;
-    font-size: 2rem;
     text-align: center;
+    font-size: 2.5rem;
 
 }
 
@@ -165,6 +172,8 @@ nav a:hover::before {
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
     font-weight: 900;
+    text-align: center;
+    font-size: 1.2rem;
 
 
 }
@@ -187,28 +196,6 @@ nav a:hover::before {
     -webkit-filter: blur(5px);
     filter: blur(5px);
 } */
-
-@media screen and (max-width: 800px) {
-    html, body {
-        width: 100px;
-    }
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas:
-        'header'
-        'menu'
-        'main'
-        'footer';
-    }
-
-    .flexbox {
-        height: 300px;
-        width: 300px;
-    }
-}
 
 
 /* for scrollen til prosjektsiden */
@@ -312,4 +299,127 @@ nav a:hover::before {
     padding: 50px;
     width: 50%;
     /* background: #aaa; */
+}
+
+
+
+
+
+/* fra w3 schools */
+/* .parallax {
+    The image used
+    background: red;
+  
+    Full height
+    height: 100%;
+  
+    Create the parallax scrolling effect
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+
+@media screen and (max-width: 800px) {
+    html, body {
+        width: 100%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        'header'
+        'menu'
+        'text'
+        'main'
+        'footer';
+    }
+
+    .item1 {
+        grid-area: header;
+        height: 900px;
+        background-position: bottom;
+        display: flex;
+        justify-content: center;
+        background-position: center;
+        background: url(../bilder/FelixEllingsenWestby.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+        /* parallax */
+        transform-style: preserve-3d;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    
+    #title {
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        /* background: black; */
+        color: white;
+        font-weight: 900;
+    }
+    
+    .item2 {
+        grid-area: menu;
+        height: 50px;
+        background: #07004D;
+        justify-content: left;
+        align-items: center;
+        display: flex;
+        position: sticky;
+        top: 0;
+        font-size: 1.5rem;
+    }
+    
+    .item3 {
+        padding: 1.3rem;
+        grid-area: main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        gap: 3rem;
+        background-color: #0079A4;
+    }
+    
+    .item4 {
+        height: 200px;
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #07004D;
+        color: white;
+        font-weight: 900;
+        font-size: 1.2rem;
+    
+    }
+    
+    .item5 {
+        height: 1500px;
+        grid-area: text;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        color: white;
+        /* font-weight: 900; */
+        text-align: center;
+    
+    }
+
+    .flexbox {
+        height: 300px;
+        width: 300px;
+    }
 }

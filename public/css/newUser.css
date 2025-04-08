@@ -1,0 +1,51 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    /* background: #07004D; */
+    background: black;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    animation: fadeIn 1s ease-in-out forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    gap: 2rem;
+    flex-direction: column;
+
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInCards {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.button {
+    background-color: #07004D;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.25em;
+    padding: 0.5em 1em;
+    transition: background-color 0.5s;
+    transition: color 0.5s;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #0079A4;
+    color: #42E2B8;
+}

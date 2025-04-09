@@ -52,7 +52,7 @@ app.post("/login", async (req, res) => {
 
     // Lagre brukerdata i session
     req.session.bruker = { id: bruker.fornavn, etternavn: bruker.etternavn };
-    res.json({ message: "Innlogging vellykket", redirect: "/html/website.html" });
+    res.json({ message: "Innlogging vellykket", redirect: "/dashboard" });
 });
 
 
@@ -66,7 +66,7 @@ app.post("/logout", (req, res) => {
 
 // Eksempel på en beskyttet rute
 app.get("/beskyttet", kreverInnlogging, (req, res) => {
-    res.json({ fornavn: req.session.bruker.fornavn });
+    res.json({ password: req.session.bruker.password });
 });
 
 
@@ -112,7 +112,7 @@ app.post("/newUser", async (req, res) => {
 
 // Rute for å vise dashboard.html (kun for innlogga brukarar)
 app.get("/dashboard", kreverInnlogging, (req, res) => {
-    res.sendFile(__dirname + "/public/html/website.html");
+    res.sendFile(__dirname + "");
 });""
 
 

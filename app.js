@@ -1,4 +1,5 @@
 const express = require("express");
+const session = require("express-session");
 const app = express();
 
 const Database = require("better-sqlite3");
@@ -14,6 +15,62 @@ app.use(cors());
 app.use(express.json());
 
 const port = 3000;
+
+app.use(
+    session({
+        secret: "hemmeligNøkkel", // Bytt til en sikker nøkkel i produksjon
+        resave: false,
+        saveUninitialized: false,
+        cookie: { secure: false } // Sett til true hvis du bruker HTTPS
+    })
+);
+
+
+
+// Middleware for å beskytte sider bak innloggings-mur
+function kreverInnlogging(req, res, next) {
+    if (!req.session.bruker) {
+        return res.redirect("/login.html");
+    }
+    next();
+}
+
+
+// Rute for innlogging
+app.post("/login", async (req, res) => {
+    const { epost, password } = req.body;
+
+    const bruker = db.prepare("SELECT * FROM person WHERE epost = ?").get(epost);
+    if (!bruker) {
+        return res.status(401).json({ message: "Feil email eller passord" });
+    }
+
+    const passordErGyldig = await bcrypt.compare(password, bruker.password);
+    if (!passordErGyldig) {
+        return res.status(401).json({ message: "Feil email eller passord" });
+    }
+
+    // Lagre brukerdata i session
+    req.session.bruker = { id: bruker.fornavn, etternavn: bruker.etternavn };
+    res.json({ message: "Innlogging vellykket", redirect: "/html/website.html" });
+});
+
+
+
+// Rute for å logge ut
+app.post("/logout", (req, res) => {
+    // slutter besøket på siden
+    req.session.destroy();
+    res.json({ message: "Du er logget ut" });
+});
+
+// Eksempel på en beskyttet rute
+app.get("/beskyttet", kreverInnlogging, (req, res) => {
+    res.json({ fornavn: req.session.bruker.fornavn });
+});
+
+
+
 
 
 app.get("/getUser", (req, res) => {
@@ -37,6 +94,26 @@ app.post("/newUser", async (req, res) => {
     // vi får en melding tilbake om at personen er lagt til
     res.json({ message: "New user made", info });
 });
+
+
+
+
+
+// Rute for å hente bilane til den innlogga brukaren
+// app.get("/minebiler", kreverInnlogging, (req, res) => {
+//     const personnummer = req.session.bruker.id;
+
+//     const biler = db.prepare("SELECT * FROM bil WHERE personnummer = ?").all(personnummer);
+
+//     res.json(biler);
+// });
+
+
+
+// Rute for å vise dashboard.html (kun for innlogga brukarar)
+app.get("/dashboard", kreverInnlogging, (req, res) => {
+    res.sendFile(__dirname + "/public/html/website.html");
+});""
 
 
 app.listen(port, () => {

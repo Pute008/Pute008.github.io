@@ -39,8 +39,7 @@ function kreverInnlogging(req, res, next) {
 // Rute for innlogging
 app.post("/login", async (req, res) => {
     const { epost, password } = req.body;
-
-    const bruker = db.prepare("SELECT * FROM person WHERE epost = ?").get(epost);
+    const bruker = db.prepare("SELECT * FROM user WHERE epost = ?").get(epost);
     if (!bruker) {
         return res.status(401).json({ message: "Feil email eller passord" });
     }
@@ -52,7 +51,7 @@ app.post("/login", async (req, res) => {
 
     // Lagre brukerdata i session
     req.session.bruker = { id: bruker.fornavn, etternavn: bruker.etternavn };
-    res.json({ message: "Innlogging vellykket", redirect: "/dashboard" });
+    res.json({ message: "Innlogging vellykket", redirect: "/skjult" });
 });
 
 
@@ -111,8 +110,8 @@ app.post("/newUser", async (req, res) => {
 
 
 // Rute for å vise dashboard.html (kun for innlogga brukarar)
-app.get("/dashboard", kreverInnlogging, (req, res) => {
-    res.sendFile(__dirname + "");
+app.get("/skjult", kreverInnlogging, (req, res) => {
+    res.sendFile(__dirname + "/hidden/website.html");
 });""
 
 

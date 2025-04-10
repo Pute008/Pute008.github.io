@@ -25,18 +25,18 @@
 
     <script>
 
-       async function loggInn(event) {
+       async function loginPerson(event) {
             event.preventDefault();
 
             const epost = document.getElementById("epost").value;
-            const password = document.getElementById("passord").value;
+            const password = document.getElementById("password").value;
 
             const response = await fetch("/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ epost, passord })
+                body: JSON.stringify({ epost, password })
             });
 
             const result = await response.json();
@@ -56,7 +56,7 @@
 
             if (response.ok) {
                 alert("Du er nå logget ut.");
-                window.location.href = "/login.html"; // Omdiriger til login-siden
+                window.location.href = "login.html"; // Omdiriger til login-siden
             } else {
                 alert("Noe gikk galt under utlogging.");
             }

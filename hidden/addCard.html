@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legg til kort</title>
+    <link rel="stylesheet" href="../css/card.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Legg til kort</h1>
+        <form onsubmit="leggTilKort(event)">
+            <label for="set">Set</label>
+            <input type="text" id="set" name="set" required><br>
+
+            <label for="kortNavn">Kortnavn:</label>
+            <input type="text" id="kortNavn" name="kortNavn" required><br>
+
+            <label for="kortType">Kort nr:</label>
+            <input type="text" id="kortType" name="kortType" required><br>
+
+            <button type="submit">Legg til kort</button>
+            
+            <h1><a href="/skjult">Tilbake</a></h1>
+        </form>
+    </div>
+
+    <script>
+        async function leggTilKort(event) {
+            event.preventDefault();
+
+
+        }
+    </script>
+</body>
+</html>

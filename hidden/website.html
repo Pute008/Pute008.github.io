@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/card.css">
     <script src="../js/script.js"></script>
 </head>
 <body>
@@ -14,11 +14,11 @@
 
     <div class="item2">
         <div class="">
-            Se på samling
+            <h1><a href="/collection">Se på samling</a></h1>
         </div>
 
         <div class="">
-            Legg til kort
+            <h1><a href="/addCardPage/html">Legg til kort</a></h1>
         </div>
 
         <div class="">
@@ -27,5 +27,36 @@
 
         <button id="logoutButton">Logg ut</button>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            try {
+                // Hent brukernavn fra session (hvis tilgjengelig)
+                const response = await fetch("/beskyttet");
+                if (!response.ok) {
+                    throw new Error("Kunne ikke hente brukernavn");
+                }
+                const data = await response.json();
+                document.getElementById("brukernavn").textContent = data.fornavn;
+            } catch (error) {
+                console.error("Feil:", error);
+            }
+    
+            // Logg ut-knapp
+            document.getElementById("logoutButton").addEventListener("click", async () => {
+                try {
+                    const response = await fetch("/logout", { method: "POST" });
+                    if (response.ok) {
+                        alert("Du er logget ut.");
+                        window.location.href = "html/login.html";
+                    } else {
+                        alert("Kunne ikke logge ut.");
+                    }
+                } catch (error) {
+                    console.error("Feil under utlogging:", error);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

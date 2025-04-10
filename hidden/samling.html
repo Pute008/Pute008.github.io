@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/card.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Collection</h1>
+
+        <thead>
+            <tr>
+                <th>Pokemon</th>
+                <th>set</th>
+                <th>rarity</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Bilene vil bli lagt til her via JavaScript -->
+        </tbody>
+    </div>
+
+    <script>
+                document.addEventListener("DOMContentLoaded", async () => {
+            const tabellBody = document.querySelector("#bilerTabell tbody");
+
+            try {
+                // Hent bilane frå server
+                const response = await fetch("/mineKort");
+                if (!response.ok) {
+                    throw new Error("Kunne ikke hente kortene. Er du logget inn?");
+                }
+
+                const biler = await response.json();
+
+                // Legg til bilene i tabellen
+                biler.forEach(bil => {
+                    const rad = document.createElement("tr");
+
+                    const regNrCell = document.createElement("td");
+                    regNrCell.textContent = card.cardName;
+                    rad.appendChild(regNrCell);
+
+                    const merkeCell = document.createElement("td");
+                    merkeCell.textContent = set.setName;
+                    rad.appendChild(merkeCell);
+
+                    const modellCell = document.createElement("td");
+                    modellCell.textContent = card.rarity;
+                    rad.appendChild(modellCell);
+
+                    tabellBody.appendChild(rad);
+                });
+            } catch (error) {
+                console.error("Feil:", error);
+                tabellBody.innerHTML = `<tr><td colspan="3">Kunne ikke laste bilene: ${error.message}</td></tr>`;
+            }
+        });
+    </script>
+</body>
+</html>

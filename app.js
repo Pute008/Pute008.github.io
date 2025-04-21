@@ -116,9 +116,9 @@ app.post("/newUser", async (req, res) => {
 app.get("/mineKort", kreverInnlogging, (req, res) => {
     const cardID = req.session.bruker.id;
 
-    const kort = db.prepare("SELECT samling.cardID, samling.userID FROM samling WHERE userID = ?").all(userID);
+    const samling = db.prepare("SELECT samling.cardID, samling.userID FROM samling WHERE userID = ?").all(userID);
 
-    res.json(kort);
+    res.json(samling);
 });
 
 

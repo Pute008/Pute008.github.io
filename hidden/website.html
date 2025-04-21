@@ -36,8 +36,8 @@
                 if (!response.ok) {
                     throw new Error("Kunne ikke hente brukernavn");
                 }
-                const data = await response.json();
-                document.getElementById("brukernavn").textContent = data.fornavn;
+                const user = await response.json();
+                document.getElementById("brukernavn").textContent = user.fornavn;
             } catch (error) {
                 console.error("Feil:", error);
             }

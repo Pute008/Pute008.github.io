@@ -71,7 +71,7 @@ app.post("/logout", (req, res) => {
 
 // Eksempel på en beskyttet rute
 app.get("/beskyttet", kreverInnlogging, (req, res) => {
-    res.json({ password: req.session.bruker.password });
+    res.json({ fornavn: req.session.bruker.fornavn });
 });
 
 
@@ -105,13 +105,32 @@ app.post("/newUser", async (req, res) => {
 
 
 // Rute for å hente bilene til den innlogga brukaren
+// app.get("/mineKort", kreverInnlogging, (req, res) => {
+//     const cardID = req.session.bruker.id;
+
+//     const kort = db.prepare("SELECT * FROM samling WHERE cardID = ?").all(cardID);
+
+//     res.json(kort);
+// });
+
 app.get("/mineKort", kreverInnlogging, (req, res) => {
     const cardID = req.session.bruker.id;
 
-    const kort = db.prepare("SELECT * FROM samling WHERE cardID = ?").all(cardID);
+    const kort = db.prepare("SELECT samling.cardID, samling.userID FROM samling WHERE userID = ?").all(userID);
 
     res.json(kort);
 });
+
+
+
+// SELECT card.cardName, card.rarity, card.cardNR, setType.setID FROM card INNER JOIN setType ON setType.setID = card.setID ORDER BY card.cardNR;
+
+// sender deg til samling.html siden (som er i hidden mappen)
+app.get("/collection", kreverInnlogging, (req, res) => {
+    res.sendFile(__dirname + "/hidden/samling.html");
+});
+
+
 
 
 
@@ -124,11 +143,6 @@ app.get("/skjult", kreverInnlogging, (req, res) => {
 // hele denne koden sender deg til en nettside (du må bruke denne hvis du har html sider som er utenfor public mappen)
 app.get("/addCardPage/html", kreverInnlogging, (req, res) => {
     res.sendFile(__dirname + "/hidden/addCard.html");
-});
-
-// sender deg til samling.html siden (som er i hidden mappen)
-app.get("/collection", kreverInnlogging, (req, res) => {
-    res.sendFile(__dirname + "/hidden/samling.html");
 });
 
 

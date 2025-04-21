@@ -10,23 +10,25 @@
 <body>
     <div>
         <h1>Collection</h1>
+        <table id="kortTabell" border="1">
+            <thead>
+                <tr>
+                    <th>Pokemon</th>
+                    <th>set</th>
+                    <th>rarity</th>
+                </tr>
+            </thead>
 
-        <thead>
-            <tr>
-                <th>Pokemon</th>
-                <th>set</th>
-                <th>rarity</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <!-- Bilene vil bli lagt til her via JavaScript -->
-        </tbody>
+            <tbody>
+                <!-- Bilene vil bli lagt til her via JavaScript -->
+            </tbody>
+        </table>
     </div>
 
     <script>
-                document.addEventListener("DOMContentLoaded", async () => {
-            const tabellBody = document.querySelector("#bilerTabell tbody");
+            // DOMContentLoaded er en event som trigges når hele HTML dokumentet er lastet inn og analysert
+            document.addEventListener("DOMContentLoaded", async () => {
+            const tabellBody = document.querySelector("#kortTabell tbody");
 
             try {
                 // Hent bilane frå server
@@ -35,29 +37,41 @@
                     throw new Error("Kunne ikke hente kortene. Er du logget inn?");
                 }
 
-                const biler = await response.json();
+                const kort = await response.json();
 
                 // Legg til bilene i tabellen
-                biler.forEach(bil => {
+                kort.forEach(samling => {
                     const rad = document.createElement("tr");
 
-                    const regNrCell = document.createElement("td");
-                    regNrCell.textContent = card.cardName;
-                    rad.appendChild(regNrCell);
+                    const cardID = document.createElement("td");
+                    cardID.textContent = samling.cardID;
+                    rad.appendChild(cardID);
 
-                    const merkeCell = document.createElement("td");
-                    merkeCell.textContent = set.setName;
-                    rad.appendChild(merkeCell);
+                    const userID = document.createElement("td");
+                    userID.textContent = samling.userID;
+                    rad.appendChild(userID);
 
-                    const modellCell = document.createElement("td");
-                    modellCell.textContent = card.rarity;
-                    rad.appendChild(modellCell);
+                    // const cardNameCell = document.createElement("td");
+                    // cardNameCell.textContent = samling.cardName;
+                    // rad.appendChild(cardNameCell);
 
-                    tabellBody.appendChild(rad);
+                    // const rarityCell = document.createElement("td");
+                    // rarityCell.textContent = samling.rarity;
+                    // rad.appendChild(rarityCell);
+
+                    // const cardNRCell = document.createElement("td");
+                    // cardNRCell.textContent = samling.cardNR;
+                    // rad.appendChild(cardNRCell);
+
+                    // const setIDCell = document.createElement("td");
+                    // setIDCell.textContent = samling.setID;
+                    // rad.appendChild(setIDCell);
+
+                    tabellBody.appendChild(samling);
                 });
             } catch (error) {
                 console.error("Feil:", error);
-                tabellBody.innerHTML = `<tr><td colspan="3">Kunne ikke laste bilene: ${error.message}</td></tr>`;
+                tabellBody.innerHTML = `<tr><td colspan="3">Kunne ikke laste inn kortene: ${error.message}</td></tr>`;
             }
         });
     </script>

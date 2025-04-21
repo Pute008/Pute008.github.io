@@ -28,9 +28,28 @@
 
     <script>
         async function leggTilKort(event) {
-            event.preventDefault();
+            event.preventDefault(); // Forhindre standard form-innsending
 
+            const registreringsnummer = document.getElementById("registreringsnummer").value;
+            const merke = document.getElementById("merke").value;
+            const modell = document.getElementById("modell").value;
+            const personnummer = document.getElementById("personnummer").value;
 
+            const response = await fetch("/leggTilKort", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    registreringsnummer,
+                    merke,
+                    modell,
+                    personnummer
+                })
+            });
+
+            const result = await response.json();
+            alert(result.message);
         }
     </script>
 </body>

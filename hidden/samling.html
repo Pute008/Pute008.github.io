@@ -22,6 +22,8 @@
                 <!-- Bilene vil bli lagt til her via JavaScript -->
             </tbody>
         </table>
+
+        <h1><a href="/skjult">Tilbake</a></h1>
     </div>
 
     <script>
@@ -30,20 +32,28 @@
             const tabellBody = document.querySelector("#kortTabell tbody");
 
             try {
+                console.log('yo!');
+                console.log(tabellBody);
                 // Hent bilane frå server
-                const response = await fetch("/mineKort");
+
+                // NOE RART HER
+                const response = await fetch("http://localhost:3000/mineKort");
+                console.log(response);
                 if (!response.ok) {
                     throw new Error("Kunne ikke hente kortene. Er du logget inn?");
                 }
 
                 const kort = await response.json();
+                console.log(kort);
 
                 // Legg til bilene i tabellen
                 kort.forEach(samling => {
+                    console.log(samling);
                     const rad = document.createElement("tr");
 
                     const cardID = document.createElement("td");
                     cardID.textContent = samling.cardID;
+                    console.log(rad)
                     rad.appendChild(cardID);
 
                     const userID = document.createElement("td");
@@ -66,7 +76,7 @@
                     // setIDCell.textContent = samling.setID;
                     // rad.appendChild(setIDCell);
 
-                    tabellBody.appendChild(samling);
+                    tabellBody.appendChild(rad);
                 });
             } catch (error) {
                 console.error("Feil:", error);

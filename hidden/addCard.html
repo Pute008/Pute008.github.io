@@ -11,14 +11,11 @@
     <div>
         <h1>Legg til kort</h1>
         <form onsubmit="leggTilKort(event)">
-            <label for="set">Set</label>
-            <input type="text" id="set" name="set" required><br>
+            <label for="cardID">Card ID</label>
+            <input type="text" id="cardID" name="cardID" required><br>
 
-            <label for="kortNavn">Kortnavn:</label>
-            <input type="text" id="kortNavn" name="kortNavn" required><br>
-
-            <label for="kortType">Kort nr:</label>
-            <input type="text" id="kortType" name="kortType" required><br>
+            <label for="userID">Din user ID</label>
+            <input type="text" id="userID" name="userID" required><br>
 
             <button type="submit">Legg til kort</button>
             
@@ -30,10 +27,8 @@
         async function leggTilKort(event) {
             event.preventDefault(); // Forhindre standard form-innsending
 
-            const registreringsnummer = document.getElementById("registreringsnummer").value;
-            const merke = document.getElementById("merke").value;
-            const modell = document.getElementById("modell").value;
-            const personnummer = document.getElementById("personnummer").value;
+            const cardID = document.getElementById("cardID").value;
+            const userID = document.getElementById("userID").value;
 
             const response = await fetch("/leggTilKort", {
                 method: "POST",
@@ -41,10 +36,8 @@
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    registreringsnummer,
-                    merke,
-                    modell,
-                    personnummer
+                    cardID,
+                    userID
                 })
             });
 

@@ -29,6 +29,7 @@ app.use(
 
 // Middleware for å beskytte sider bak innloggings-mur
 function kreverInnlogging(req, res, next) {
+    console.log('kreverInnlogging');
     // hvis vi ikke har en bruker som er i en session vil vi bli omdirigert til login-siden
     if (!req.session.bruker) {
         return res.redirect("/login.html");
@@ -53,7 +54,7 @@ app.post("/login", async (req, res) => {
     }
 
     // Lagre brukerdata i session
-    req.session.bruker = { id: bruker.fornavn, etternavn: bruker.etternavn };
+    req.session.bruker = { id: bruker.userID, fornavn: bruker.fornavn, etternavn: bruker.etternavn };
     // når vi er logget inn vil vi bli sendt til en ny side (dashboard) hvor ting er skjult for andre brukere
     // og vi vil få en melding om at innloggingen var vellykket
     res.json({ message: "Innlogging vellykket", redirect: "/skjult" });
@@ -100,6 +101,22 @@ app.post("/newUser", async (req, res) => {
     res.json({ message: "New user made", info });
 });
 
+app.post("/leggTilKort", (req, res) => {
+    const { cardID, userID } = req.body;
+    // sjekker om kortet allerede er i databasen
+    // const stmt = db.prepare("SELECT * FROM samling WHERE cardID = ? AND userID = ?");
+    // const eksisterendeKort = stmt.get(cardID, userID);
+
+    // if (eksisterendeKort) {
+    //     return res.status(400).json({ message: "Kortet finnes allerede i samlingen" });
+    // }
+
+    // Legger til kortet i databasen
+    const stmt = db.prepare("INSERT INTO samling (cardID, userID) VALUES (?, ?)");
+    const info = stmt.run(cardID, userID);
+
+    res.json({ message: "Kort lagt til i samlingen", info });
+});
 
 
 
@@ -113,11 +130,17 @@ app.post("/newUser", async (req, res) => {
 //     res.json(kort);
 // });
 
+// NOE RART HER
 app.get("/mineKort", kreverInnlogging, (req, res) => {
-    const cardID = req.session.bruker.id;
+    console.log(req.session.bruker);
+    const userID = req.session.bruker.id;
+    console.log(userID)
+    console.log(22)
+    console.log(22 === userID)
 
-    const samling = db.prepare("SELECT samling.cardID, samling.userID FROM samling WHERE userID = ?").all(userID);
-
+    const samling = db.prepare("SELECT samling.cardID, samling.userID FROM samling WHERE samling.userID = ?").all(userID);
+    // const samling = db.prepare("SELECT samling.cardID, samling.userID FROM samling WHERE samling.userID = 22").all();
+    console.log(samling)
     res.json(samling);
 });
 

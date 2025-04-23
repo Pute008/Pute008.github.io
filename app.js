@@ -29,7 +29,6 @@ app.use(
 
 // Middleware for å beskytte sider bak innloggings-mur
 function kreverInnlogging(req, res, next) {
-    console.log('kreverInnlogging');
     // hvis vi ikke har en bruker som er i en session vil vi bli omdirigert til login-siden
     if (!req.session.bruker) {
         return res.redirect("/login.html");
@@ -132,15 +131,10 @@ app.post("/leggTilKort", (req, res) => {
 
 // NOE RART HER
 app.get("/mineKort", kreverInnlogging, (req, res) => {
-    console.log(req.session.bruker);
     const userID = req.session.bruker.id;
-    console.log(userID)
-    console.log(22)
-    console.log(22 === userID)
 
-    const samling = db.prepare("SELECT samling.cardID, samling.userID FROM samling WHERE samling.userID = ?").all(userID);
+    const samling = db.prepare("SELECT card.cardID, card.cardName, samling.userID FROM card INNER JOIN samling ON card.cardID = samling.cardID WHERE samling.userID = ?;").all(userID);
     // const samling = db.prepare("SELECT samling.cardID, samling.userID FROM samling WHERE samling.userID = 22").all();
-    console.log(samling)
     res.json(samling);
 });
 

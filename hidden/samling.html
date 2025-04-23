@@ -9,12 +9,13 @@
 </head>
 <body>
     <div>
-        <h1>Collection</h1>
+        <h1>Her er samlingen din <span id="brukernavn"></span></h1>
         <table id="kortTabell" border="1">
             <thead>
                 <tr>
-                    <th>cardID</th>
-                    <th>userID</th>
+                    <th>Card ID</th>
+                    <th>Card name</th>
+                    <th>User ID</th>
                 </tr>
             </thead>
 
@@ -32,29 +33,37 @@
             const tabellBody = document.querySelector("#kortTabell tbody");
 
             try {
-                console.log('yo!');
-                console.log(tabellBody);
-                // Hent bilane frå server
+                // Hent brukernavn fra session (hvis tilgjengelig)
+                const response = await fetch("/beskyttet");
+                if (!response.ok) {
+                    throw new Error("Kunne ikke hente brukernavn");
+                }
+                const user = await response.json();
+                document.getElementById("brukernavn").textContent = user.fornavn;
+            } catch (error) {
+                console.error("Feil:", error);
+            }
 
+            try {
                 // NOE RART HER
                 const response = await fetch("http://localhost:3000/mineKort");
-                console.log(response);
                 if (!response.ok) {
                     throw new Error("Kunne ikke hente kortene. Er du logget inn?");
                 }
 
                 const kort = await response.json();
-                console.log(kort);
 
                 // Legg til bilene i tabellen
                 kort.forEach(samling => {
-                    console.log(samling);
                     const rad = document.createElement("tr");
 
                     const cardID = document.createElement("td");
                     cardID.textContent = samling.cardID;
-                    console.log(rad)
                     rad.appendChild(cardID);
+
+                    const cardName = document.createElement("td");
+                    cardName.textContent = samling.cardName;
+                    rad.appendChild(cardName);
 
                     const userID = document.createElement("td");
                     userID.textContent = samling.userID;

@@ -13,14 +13,15 @@
         <table id="kortTabell" border="1">
             <thead>
                 <tr>
-                    <th>Card ID</th>
+                    <!-- <th>Card ID</th> -->
+                    <th>Set ID</th>
                     <th>Card name</th>
                     <th>User ID</th>
                 </tr>
             </thead>
 
             <tbody>
-                <!-- Bilene vil bli lagt til her via JavaScript -->
+                <!-- kortene vil bli lagt til her via JavaScript -->
             </tbody>
         </table>
 
@@ -45,8 +46,7 @@
             }
 
             try {
-                // NOE RART HER
-                const response = await fetch("http://localhost:3000/mineKort");
+                const response = await fetch("/mineKort");
                 if (!response.ok) {
                     throw new Error("Kunne ikke hente kortene. Er du logget inn?");
                 }
@@ -54,36 +54,24 @@
                 const kort = await response.json();
 
                 // Legg til bilene i tabellen
-                kort.forEach(samling => {
+                kort.forEach(card => {
                     const rad = document.createElement("tr");
 
-                    const cardID = document.createElement("td");
-                    cardID.textContent = samling.cardID;
-                    rad.appendChild(cardID);
+                    // const cardID = document.createElement("td");
+                    // cardID.textContent = samling.cardID;
+                    // rad.appendChild(cardID);
+
+                    const setID = document.createElement("td");
+                    setID.textContent = card.setID;
+                    rad.appendChild(setID);
 
                     const cardName = document.createElement("td");
-                    cardName.textContent = samling.cardName;
+                    cardName.textContent = card.cardName;
                     rad.appendChild(cardName);
 
                     const userID = document.createElement("td");
-                    userID.textContent = samling.userID;
+                    userID.textContent = card.userID;
                     rad.appendChild(userID);
-
-                    // const cardNameCell = document.createElement("td");
-                    // cardNameCell.textContent = samling.cardName;
-                    // rad.appendChild(cardNameCell);
-
-                    // const rarityCell = document.createElement("td");
-                    // rarityCell.textContent = samling.rarity;
-                    // rad.appendChild(rarityCell);
-
-                    // const cardNRCell = document.createElement("td");
-                    // cardNRCell.textContent = samling.cardNR;
-                    // rad.appendChild(cardNRCell);
-
-                    // const setIDCell = document.createElement("td");
-                    // setIDCell.textContent = samling.setID;
-                    // rad.appendChild(setIDCell);
 
                     tabellBody.appendChild(rad);
                 });

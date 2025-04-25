@@ -8,6 +8,26 @@
     <script src="../js/script.js"></script>
 </head>
 <body>
+
+    <div>
+        <h1>Legg til kort<span id="brukernavn"></span></h1>
+        <table id="kortTabell" border="1">
+            <thead>
+                <tr>
+                    <!-- <th>Card ID</th> -->
+                    <th>Set ID</th>
+                    <th>Card name</th>
+                    <th>User ID</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- kortene vil bli lagt til her via JavaScript -->
+            </tbody>
+        </table>
+
+    </div>
+
     <div>
         <h1>Legg til kort</h1>
         <form onsubmit="leggTilKort(event)">
@@ -21,9 +41,12 @@
             
             <h1><a href="/skjult">Tilbake</a></h1>
         </form>
+
+        <h1><a href="/fjernKort">Fjern kort</a></h1>
     </div>
 
     <script>
+        // kode for å legge til kort
         async function leggTilKort(event) {
             event.preventDefault(); // Forhindre standard form-innsending
 
@@ -44,6 +67,63 @@
             const result = await response.json();
             alert(result.message);
         }
+
+
+
+
+
+        // DOMContentLoaded er en event som trigges når hele HTML dokumentet er lastet inn og analysert
+        // DOMContentLoaded er en event som trigges når hele HTML dokumentet er lastet inn og analysert
+        document.addEventListener("DOMContentLoaded", async () => {
+            const tabellBody = document.querySelector("#kortTabell tbody");
+
+            try {
+                // Hent brukernavn fra session (hvis tilgjengelig)
+                const response = await fetch("/beskyttet");
+                if (!response.ok) {
+                    throw new Error("Kunne ikke hente brukernavn");
+                }
+                const user = await response.json();
+                document.getElementById("brukernavn").textContent = user.fornavn;
+            } catch (error) {
+                console.error("Feil:", error);
+            }
+
+            try {
+                const response = await fetch("/mineKort");
+                if (!response.ok) {
+                    throw new Error("Kunne ikke hente kortene. Er du logget inn?");
+                }
+
+                const kort = await response.json();
+
+                // Legg til bilene i tabellen
+                kort.forEach(card => {
+                    const rad = document.createElement("tr");
+
+                    // const cardID = document.createElement("td");
+                    // cardID.textContent = samling.cardID;
+                    // rad.appendChild(cardID);
+
+                    const setID = document.createElement("td");
+                    setID.textContent = card.setID;
+                    rad.appendChild(setID);
+
+                    const cardName = document.createElement("td");
+                    cardName.textContent = card.cardName;
+                    rad.appendChild(cardName);
+
+                    const userID = document.createElement("td");
+                    userID.textContent = card.userID;
+                    rad.appendChild(userID);
+
+                    tabellBody.appendChild(rad);
+                });
+            } catch (error) {
+                console.error("Feil:", error);
+                tabellBody.innerHTML = `<tr><td colspan="3">Kunne ikke laste inn kortene: ${error.message}</td></tr>`;
+            }
+        });
     </script>
 </body>
 </html>

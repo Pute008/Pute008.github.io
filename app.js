@@ -100,6 +100,11 @@ app.post("/newUser", async (req, res) => {
     res.json({ message: "New user made", info });
 });
 
+app.get("/visKort", kreverInnlogging, (req, res) => {
+    const samling = db.prepare("SELECT card.cardID, card.setID, card.cardName FROM card");
+    res.json(samling);
+});
+
 app.post("/leggTilKort", (req, res) => {
     const { cardID, userID } = req.body;
     // sjekker om kortet allerede er i databasen
@@ -111,11 +116,15 @@ app.post("/leggTilKort", (req, res) => {
     // }
 
     // Legger til kortet i databasen
+
     const stmt = db.prepare("INSERT INTO samling (cardID, userID) VALUES (?, ?)");
     const info = stmt.run(cardID, userID);
 
     res.json({ message: "Kort lagt til i samlingen", info });
+
+    
 });
+
 
 
 
@@ -133,8 +142,7 @@ app.post("/leggTilKort", (req, res) => {
 app.get("/mineKort", kreverInnlogging, (req, res) => {
     const userID = req.session.bruker.id;
 
-    const samling = db.prepare("SELECT card.cardID, card.cardName, samling.userID FROM card INNER JOIN samling ON card.cardID = samling.cardID WHERE samling.userID = ?;").all(userID);
-    // const samling = db.prepare("SELECT samling.cardID, samling.userID FROM samling WHERE samling.userID = 22").all();
+    const samling = db.prepare("SELECT card.cardID, card.setID, card.cardName, samling.userID FROM card INNER JOIN samling ON card.cardID = samling.cardID WHERE samling.userID = ?;").all(userID);
     res.json(samling);
 });
 

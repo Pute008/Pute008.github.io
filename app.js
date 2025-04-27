@@ -71,7 +71,10 @@ app.post("/logout", (req, res) => {
 
 // Eksempel på en beskyttet rute
 app.get("/beskyttet", kreverInnlogging, (req, res) => {
-    res.json({ fornavn: req.session.bruker.fornavn });
+    res.json({
+        fornavn: req.session.bruker.fornavn,
+        id: req.session.bruker.id
+    });
 });
 
 
@@ -100,10 +103,27 @@ app.post("/newUser", async (req, res) => {
     res.json({ message: "New user made", info });
 });
 
+// app.get("/visKort", kreverInnlogging, (req, res) => {
+//     const samling = db.prepare("SELECT card.cardID, card.setID, card.cardName FROM card");
+//     res.json(samling);
+// });
+
 app.get("/visKort", kreverInnlogging, (req, res) => {
-    const samling = db.prepare("SELECT card.cardID, card.setID, card.cardName FROM card");
-    res.json(samling);
+    try {
+        const alleKort = db.prepare(`
+            SELECT card.cardID, card.setID, card.cardName
+            FROM card
+        `).all();
+        res.json(alleKort);
+    } catch (error) {
+        console.error("Feil ved henting av kort:", error);
+        res.status(500).json({ message: "Kunne ikke hente kortene" });
+    }
 });
+
+
+
+
 
 app.post("/leggTilKort", (req, res) => {
     const { cardID, userID } = req.body;

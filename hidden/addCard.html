@@ -10,14 +10,14 @@
 <body>
 
     <div>
-        <h1>Legg til kort<span id="brukernavn"></span></h1>
+        <h1>Legg til kort <span id="brukernavn"></span></h1>
         <table id="kortTabell" border="1">
             <thead>
                 <tr>
                     <!-- <th>Card ID</th> -->
+                    <th>Card ID</th>
                     <th>Set ID</th>
-                    <th>Card name</th>
-                    <th>User ID</th>
+                    <th>Card Name</th>
                 </tr>
             </thead>
 
@@ -29,7 +29,8 @@
     </div>
 
     <div>
-        <h1>Legg til kort</h1>
+        <h1>Skriv cardID og din userID</h1>
+        <h2>Din userID er <span id="userID"></span></h2>
         <form onsubmit="leggTilKort(event)">
             <label for="cardID">Card ID</label>
             <input type="text" id="cardID" name="cardID" required><br>
@@ -73,7 +74,6 @@
 
 
         // DOMContentLoaded er en event som trigges når hele HTML dokumentet er lastet inn og analysert
-        // DOMContentLoaded er en event som trigges når hele HTML dokumentet er lastet inn og analysert
         document.addEventListener("DOMContentLoaded", async () => {
             const tabellBody = document.querySelector("#kortTabell tbody");
 
@@ -85,12 +85,13 @@
                 }
                 const user = await response.json();
                 document.getElementById("brukernavn").textContent = user.fornavn;
+                document.getElementById("userID").textContent = user.id; 
             } catch (error) {
                 console.error("Feil:", error);
             }
 
             try {
-                const response = await fetch("/mineKort");
+                const response = await fetch("/visKort");
                 if (!response.ok) {
                     throw new Error("Kunne ikke hente kortene. Er du logget inn?");
                 }
@@ -101,9 +102,9 @@
                 kort.forEach(card => {
                     const rad = document.createElement("tr");
 
-                    // const cardID = document.createElement("td");
-                    // cardID.textContent = samling.cardID;
-                    // rad.appendChild(cardID);
+                    const cardID = document.createElement("td");
+                    cardID.textContent = card.cardID;
+                    rad.appendChild(cardID);
 
                     const setID = document.createElement("td");
                     setID.textContent = card.setID;
@@ -112,10 +113,6 @@
                     const cardName = document.createElement("td");
                     cardName.textContent = card.cardName;
                     rad.appendChild(cardName);
-
-                    const userID = document.createElement("td");
-                    userID.textContent = card.userID;
-                    rad.appendChild(userID);
 
                     tabellBody.appendChild(rad);
                 });

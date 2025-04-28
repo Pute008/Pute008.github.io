@@ -1,5 +1,6 @@
 const express = require("express");
 const session = require("express-session");
+// const multer = require('multer');
 const app = express();
 
 const Database = require("better-sqlite3");
@@ -155,12 +156,35 @@ app.post("/leggTilKort", kreverInnlogging, (req, res) => {
 
 
 
+app.delete("/slettKort", kreverInnlogging, (req, res) => {
+    const { cardID } = req.body; // Hent cardID fra forespørselen
+    const userID = req.session.bruker.id; // Hent userID fra sesjonen
+
+    try {
+        const stmt = db.prepare("DELETE FROM samling WHERE cardID = ? AND userID = ?");
+        const info = stmt.run(cardID, userID);
+
+        if (info.changes > 0) {
+            res.json({ message: "Kortet ble slettet fra samlingen" });
+        } else {
+            res.status(404).json({ message: "Kortet ble ikke funnet i samlingen" });
+        }
+    } catch (error) {
+        console.error("Feil ved sletting av kort:", error);
+        res.status(500).json({ message: "Kunne ikke slette kortet" });
+    }
+});
+
+
+
+
 
 
 app.get("/mineKort", kreverInnlogging, (req, res) => {
     const userID = req.session.bruker.id;
 
-    const samling = db.prepare("SELECT card.cardID, card.setID, card.cardName, samling.userID FROM card INNER JOIN samling ON card.cardID = samling.cardID WHERE samling.userID = ?;").all(userID);
+    // const samling = db.prepare("SELECT card.cardID, card.setID, card.cardName, samling.userID FROM card INNER JOIN samling ON card.cardID = samling.cardID WHERE samling.userID = ?;").all(userID);
+    const samling = db.prepare("SELECT card.cardID, card.setID, card.cardName, card.bilde, samling.userID FROM card INNER JOIN samling ON card.cardID = samling.cardID WHERE samling.userID = ? ORDER BY card.cardNR;").all(userID);
     res.json(samling);
 });
 
@@ -186,6 +210,10 @@ app.get("/skjult", kreverInnlogging, (req, res) => {
 // hele denne koden sender deg til en nettside (du må bruke denne hvis du har html sider som er utenfor public mappen)
 app.get("/addCardPage/html", kreverInnlogging, (req, res) => {
     res.sendFile(__dirname + "/hidden/addCard.html");
+});
+
+app.get("/deleteCardPage/html", kreverInnlogging, (req, res) => {
+    res.sendFile(__dirname + "/hidden/fjernKort.html");
 });
 
 

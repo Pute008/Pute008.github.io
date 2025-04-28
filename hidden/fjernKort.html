@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slett kort</title>
+    <link rel="stylesheet" href="../css/card.css">
+</head>
+<body>
+    <div>
+        <table id="kortTabell" border="1">
+            <thead>
+                <tr>
+                    <th>Card ID</th>
+                    <th>Set ID</th>
+                    <th>Card Name</th>
+                    <th>Handling</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Kortene vil bli lagt til her via JavaScript -->
+            </tbody>
+        </table>
+
+        <h1><a href="/addCardPage/html">Legg til kort</a></h1>
+        <h1><a href="/skjult">Tilbake</a></h1>
+
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const tabellBody = document.querySelector("#kortTabell tbody");
+
+        try {
+            const response = await fetch("/mineKort");
+            if (!response.ok) {
+                throw new Error("Kunne ikke hente kortene");
+            }
+
+            const kort = await response.json();
+
+            // Legg til kortene i tabellen
+            kort.forEach(card => {
+                const rad = document.createElement("tr");
+
+                const cardIDCell = document.createElement("td");
+                cardIDCell.textContent = card.cardID;
+                rad.appendChild(cardIDCell);
+
+                const setIDCell = document.createElement("td");
+                setIDCell.textContent = card.setID;
+                rad.appendChild(setIDCell);
+
+                const cardNameCell = document.createElement("td");
+                cardNameCell.textContent = card.cardName;
+                rad.appendChild(cardNameCell);
+
+                // Legg til en "Slett"-knapp
+                const handlingCell = document.createElement("td");
+                const slettKnapp = document.createElement("button");
+                slettKnapp.textContent = "Slett";
+                slettKnapp.addEventListener("click", async () => {
+                    try {
+                        const slettResponse = await fetch("/slettKort", {
+                            method: "DELETE",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({ cardID: card.cardID }),
+                        });
+
+                        if (!slettResponse.ok) {
+                            throw new Error("Kunne ikke slette kortet");
+                        }
+
+                        const result = await slettResponse.json();
+                        alert(result.message);
+
+                        // Fjern raden fra tabellen
+                        rad.remove();
+                    } catch (error) {
+                        console.error("Feil:", error);
+                        alert("En feil oppstod: " + error.message);
+                    }
+                });
+                handlingCell.appendChild(slettKnapp);
+                rad.appendChild(handlingCell);
+
+                tabellBody.appendChild(rad);
+            });
+        } catch (error) {
+            console.error("Feil:", error);
+            tabellBody.innerHTML = `<tr><td colspan="4">Kunne ikke laste inn kortene: ${error.message}</td></tr>`;
+        }
+    });
+
+    </script>
+</body>
+</html>

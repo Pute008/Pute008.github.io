@@ -8,7 +8,6 @@
     <script src="../js/script.js"></script>
 </head>
 <body>
-
     <div>
         <h1>Legg til kort <span id="brukernavn"></span></h1>
         <table id="kortTabell" border="1">
@@ -26,11 +25,13 @@
             </tbody>
         </table>
 
+
+        <!-- bilde test -->
     </div>
 
     <div>
-        <h1>Skriv cardID og din userID</h1>
-        <h2>Din userID er <span id="userID"></span></h2>
+        <h1>Skriv cardID</h1>
+        <!-- <h2>Din userID er <span id="userID"></span></h2> -->
         <form onsubmit="leggTilKort(event)">
             <label for="cardID">Card ID</label>
             <input type="text" id="cardID" name="cardID" required><br>
@@ -39,11 +40,12 @@
             <input type="text" id="userID" name="userID" required><br> -->
 
             <button type="submit">Legg til kort</button>
+
+            <h1><a href="/deleteCardPage/html">Fjern kort</a></h1>
             
             <h1><a href="/skjult">Tilbake</a></h1>
         </form>
 
-        <h1><a href="/fjernKort">Fjern kort</a></h1>
     </div>
 
     <script>
@@ -61,7 +63,7 @@
                 },
                 body: JSON.stringify({
                     cardID,
-                    userID
+                    // userID
                 })
             });
 
@@ -83,7 +85,7 @@
                 document.getElementById("brukernavn").textContent = user.fornavn;
                 document.getElementById("userID").textContent = user.id; 
             } catch (error) {
-                console.error("Feil:", error);
+                // console.error("Feil:", error);
             }
 
             try {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/card.css">
+    <!-- <link rel="stylesheet" href="../css/card.css"> -->
     <script src="../js/script.js"></script>
 </head>
 <body>
@@ -16,6 +16,7 @@
                     <!-- <th>Card ID</th> -->
                     <th>Set ID</th>
                     <th>Card name</th>
+                    <th>Bilde</th>
                     <th>User ID</th>
                 </tr>
             </thead>
@@ -68,6 +69,10 @@
                     const cardName = document.createElement("td");
                     cardName.textContent = card.cardName;
                     rad.appendChild(cardName);
+
+                    const cardBilde = document.createElement("td");
+                    cardBilde.innerHTML = `<img src="${card.bilde}" alt="${card.cardName}" width="150px">`;
+                    rad.appendChild(cardBilde);
 
                     const userID = document.createElement("td");
                     userID.textContent = card.userID;

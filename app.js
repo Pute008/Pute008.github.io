@@ -125,40 +125,38 @@ app.get("/visKort", kreverInnlogging, (req, res) => {
 
 
 
-app.post("/leggTilKort", (req, res) => {
-    const { cardID, userID } = req.body;
-    // sjekker om kortet allerede er i databasen
-    // const stmt = db.prepare("SELECT * FROM samling WHERE cardID = ? AND userID = ?");
-    // const eksisterendeKort = stmt.get(cardID, userID);
+// app.post("/leggTilKort", (req, res) => {
+//     const { cardID, userID } = req.body;
 
-    // if (eksisterendeKort) {
-    //     return res.status(400).json({ message: "Kortet finnes allerede i samlingen" });
-    // }
+//     const stmt = db.prepare("INSERT INTO samling (cardID, userID) VALUES (?, ?)");
+//     // const stmt = db.prepare("INSERT INTO samling (cardID) VALUES (?)");
+//     const info = stmt.run(cardID, userID);
 
-    // Legger til kortet i databasen
-
-    const stmt = db.prepare("INSERT INTO samling (cardID, userID) VALUES (?, ?)");
-    const info = stmt.run(cardID, userID);
-
-    res.json({ message: "Kort lagt til i samlingen", info });
+//     res.json({ message: "Kort lagt til i samlingen", info });
 
     
+// });
+
+app.post("/leggTilKort", kreverInnlogging, (req, res) => {
+    const { cardID } = req.body; // Hent cardID fra forespørselen
+    const userID = req.session.bruker.id; // Hent userID fra sesjonen
+
+    try {
+        const stmt = db.prepare("INSERT INTO samling (cardID, userID) VALUES (?, ?)");
+        const info = stmt.run(cardID, userID);
+
+        res.json({ message: "Kort lagt til i samlingen", info });
+    } catch (error) {
+        console.error("Feil ved å legge til kort:", error);
+        res.status(500).json({ message: "Kunne ikke legge til kortet" });
+    }
 });
 
 
 
 
 
-// Rute for å hente bilene til den innlogga brukaren
-// app.get("/mineKort", kreverInnlogging, (req, res) => {
-//     const cardID = req.session.bruker.id;
 
-//     const kort = db.prepare("SELECT * FROM samling WHERE cardID = ?").all(cardID);
-
-//     res.json(kort);
-// });
-
-// NOE RART HER
 app.get("/mineKort", kreverInnlogging, (req, res) => {
     const userID = req.session.bruker.id;
 

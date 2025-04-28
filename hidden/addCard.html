@@ -35,8 +35,8 @@
             <label for="cardID">Card ID</label>
             <input type="text" id="cardID" name="cardID" required><br>
 
-            <label for="userID">Din user ID</label>
-            <input type="text" id="userID" name="userID" required><br>
+            <!-- <label for="userID">Din user ID</label>
+            <input type="text" id="userID" name="userID" required><br> -->
 
             <button type="submit">Legg til kort</button>
             
@@ -52,7 +52,7 @@
             event.preventDefault(); // Forhindre standard form-innsending
 
             const cardID = document.getElementById("cardID").value;
-            const userID = document.getElementById("userID").value;
+            // const userID = document.getElementById("userID").value;
 
             const response = await fetch("/leggTilKort", {
                 method: "POST",
@@ -68,10 +68,6 @@
             const result = await response.json();
             alert(result.message);
         }
-
-
-
-
 
         // DOMContentLoaded er en event som trigges når hele HTML dokumentet er lastet inn og analysert
         document.addEventListener("DOMContentLoaded", async () => {

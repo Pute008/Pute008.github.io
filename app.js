@@ -109,12 +109,10 @@ app.post("/newUser", async (req, res) => {
 //     res.json(samling);
 // });
 
+// denne koden er for når du skal legge til nye kort (den viser kort som finnes)
 app.get("/visKort", kreverInnlogging, (req, res) => {
     try {
-        const alleKort = db.prepare(`
-            SELECT card.cardID, card.setID, card.cardName
-            FROM card
-        `).all();
+        const alleKort = db.prepare(`SELECT card.cardID, card.setID, card.cardName, card.bilde FROM card`).all();
         res.json(alleKort);
     } catch (error) {
         console.error("Feil ved henting av kort:", error);
@@ -139,8 +137,8 @@ app.get("/visKort", kreverInnlogging, (req, res) => {
 // });
 
 app.post("/leggTilKort", kreverInnlogging, (req, res) => {
-    const { cardID } = req.body; // Hent cardID fra forespørselen
-    const userID = req.session.bruker.id; // Hent userID fra sesjonen
+    const { cardID } = req.body; // Hent cardID fra forespørselen/html-filen
+    const userID = req.session.bruker.id; // Hent userID fra sesjonen fra localhost
 
     try {
         const stmt = db.prepare("INSERT INTO samling (cardID, userID) VALUES (?, ?)");

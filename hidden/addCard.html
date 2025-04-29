@@ -17,6 +17,7 @@
                     <th>Card ID</th>
                     <th>Set ID</th>
                     <th>Card Name</th>
+                    <th>Card Picture</th>
                 </tr>
             </thead>
 
@@ -30,7 +31,7 @@
     </div>
 
     <div>
-        <h1>Skriv cardID</h1>
+        <h1>Skriv cardID til kortet du vil ha</h1>
         <!-- <h2>Din userID er <span id="userID"></span></h2> -->
         <form onsubmit="leggTilKort(event)">
             <label for="cardID">Card ID</label>
@@ -111,6 +112,10 @@
                     const cardName = document.createElement("td");
                     cardName.textContent = card.cardName;
                     rad.appendChild(cardName);
+
+                    const cardBilde = document.createElement("td");
+                    cardBilde.innerHTML = `<img src="${card.bilde}" alt="${card.cardName}" width="100px">`;
+                    rad.appendChild(cardBilde);
 
                     tabellBody.appendChild(rad);
                 });

@@ -8,12 +8,14 @@
 </head>
 <body>
     <div>
+        <h1>Fjern kort fra samlingen din</h1>
         <table id="kortTabell" border="1">
             <thead>
                 <tr>
                     <th>Card ID</th>
                     <th>Set ID</th>
                     <th>Card Name</th>
+                    <th>Card Picture</th>
                     <th>Handling</th>
                 </tr>
             </thead>
@@ -54,6 +56,10 @@
                 const cardNameCell = document.createElement("td");
                 cardNameCell.textContent = card.cardName;
                 rad.appendChild(cardNameCell);
+
+                const cardBilde = document.createElement("td");
+                cardBilde.innerHTML = `<img src="${card.bilde}" alt="${card.cardName}" width="100px">`;
+                rad.appendChild(cardBilde);
 
                 // Legg til en "Slett"-knapp
                 const handlingCell = document.createElement("td");

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.67 203.82">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 26.46px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #231f20;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-4 {
+        font-family: AcuminVariableConcept, 'Acumin Variable Concept';
+        font-variation-settings: 'wght' 194, 'wdth' 100, 'slnt' 0;
+      }
+
+      .cls-5 {
+        letter-spacing: .02em;
+      }
+
+      .cls-6 {
+        letter-spacing: .06em;
+      }
+
+      .cls-7 {
+        letter-spacing: .04em;
+      }
+
+      .cls-8 {
+        letter-spacing: .07em;
+      }
+
+      .cls-9 {
+        fill: none;
+      }
+
+      .cls-10 {
+        letter-spacing: .06em;
+      }
+
+      .cls-11 {
+        letter-spacing: .06em;
+      }
+
+      .cls-12 {
+        letter-spacing: .07em;
+      }
+
+      .cls-13 {
+        letter-spacing: .06em;
+      }
+
+      .cls-14 {
+        letter-spacing: .07em;
+      }
+
+      .cls-15 {
+        letter-spacing: .05em;
+      }
+
+      .cls-16 {
+        letter-spacing: .08em;
+      }
+
+      .cls-17 {
+        letter-spacing: .08em;
+      }
+
+      .cls-4 {
+        font-size: 36.74px;
+        stroke-width: 3px;
+      }
+
+      .cls-18 {
+        letter-spacing: .07em;
+      }
+
+      .cls-19 {
+        letter-spacing: .08em;
+      }
+    </style>
+  </defs>
+  <g id="tekst">
+    <line class="cls-9" x1="101.4" y1="97.7" x2="101.4" y2="97.7"/>
+    <text class="cls-1" transform="translate(1.5 180.9)"><tspan class="cls-8" x="0" y="0">F</tspan><tspan class="cls-18" x="16.3" y="0">e</tspan><tspan class="cls-12" x="31.4" y="0">l</tspan><tspan class="cls-14" x="38.78" y="0">i</tspan><tspan class="cls-11" x="46.4" y="0">x </tspan><tspan class="cls-5" x="67.96" y="0">W</tspan><tspan class="cls-19" x="93.01" y="0">e</tspan><tspan class="cls-10" x="108.33" y="0">st</tspan><tspan class="cls-14" x="131" y="0">b</tspan><tspan class="cls-6" x="147.51" y="0">y</tspan></text>
+    <rect class="cls-2" y="186.7" width="426.28" height="17.12"/>
+    <g>
+      <rect class="cls-2" y="136.27" width="306.2" height="19"/>
+      <ellipse class="cls-3" cx="153.1" cy="136.27" rx="151.6" ry="12.51"/>
+    </g>
+    <g>
+      <rect class="cls-2" x="324.22" y="135.08" width="102.07" height="19"/>
+      <ellipse class="cls-3" cx="375.25" cy="135.08" rx="50.53" ry="12.51"/>
+    </g>
+    <text class="cls-1" transform="translate(176.12 180.9)"><tspan class="cls-5" x="0" y="0">W</tspan><tspan class="cls-12" x="25.05" y="0">e </tspan><tspan class="cls-15" x="48.65" y="0">M</tspan><tspan class="cls-6" x="72.65" y="0">a</tspan><tspan class="cls-13" x="87.8" y="0">k</tspan><tspan class="cls-12" x="101.75" y="0">e It </tspan><tspan class="cls-7" x="151.64" y="0">P</tspan><tspan class="cls-17" x="168.86" y="0">o</tspan><tspan class="cls-16" x="184.84" y="0">s</tspan><tspan class="cls-6" x="198.62" y="0">sible</tspan></text>
+    <text class="cls-4" transform="translate(385.25 113.19)"><tspan x="0" y="0">Z</tspan></text>
+    <text class="cls-4" transform="translate(399.25 73.3)"><tspan x="0" y="0">Z</tspan></text>
+    <text class="cls-4" transform="translate(415.75 32.77)"><tspan x="0" y="0">Z</tspan></text>
+  </g>
+</svg>

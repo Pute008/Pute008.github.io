@@ -1,6 +1,5 @@
 const express = require("express");
 const session = require("express-session");
-// const multer = require('multer');
 const app = express();
 
 const Database = require("better-sqlite3");
@@ -16,6 +15,47 @@ app.use(cors());
 app.use(express.json());
 
 const port = 3000;
+
+
+// DDOS beskyttelse
+const rateLimit = require("express-rate-limit");
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutt, hvor lenge vi vil ha beskyttelse
+    max: 100 // maks 100 førespurnader per vindu
+
+});
+app.use(limiter);
+
+let besokTeller = 0;
+
+// Middleware for å logge kvar førespurnad
+app.use((req, res, next) => {
+    const clientIP = req.ip; // Hent IP-adressen til klienten
+    const requestTime = new Date().toISOString(); // Hent tidspunktet for forespørselen
+    const requestUrl = req.originalUrl; // Hent URL-en som ble forespurt
+
+    besokTeller++; // øker telleren for antall besøk
+
+    console.log(`Førespurnad mottatt: 
+        Tid: ${requestTime},
+        IP: ${clientIP},
+        URL: ${requestUrl},
+        Antall besøk: ${besokTeller}`);
+
+
+    next(); // Fortsett til neste middleware eller route
+});
+
+
+
+
+
+
+
+
+// const multer = require('multer');
+
+
 
 app.use(
     session({

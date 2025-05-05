@@ -43,8 +43,7 @@
             const result = await response.json();
             if (response.ok) {
                 alert(result.message);
-                // window.location.href = "/beskyttet"; // Tidlegare testkode for å sjekke innlogging
-                window.location.href = result.redirect; // Omdiriger til dashboard-sida
+                window.location.href = result.redirect; // Omdiriger til dashboard-siden
             } else {
                 alert(result.message);
             }

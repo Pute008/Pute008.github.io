@@ -94,6 +94,7 @@ app.post("/login", async (req, res) => {
     }
 
     // Lagre brukerdata i session
+    // kurle brackets viser at jeg har lagret et objekt med id, fornavn og etternavn
     req.session.bruker = { id: bruker.userID, fornavn: bruker.fornavn, etternavn: bruker.etternavn };
     // når vi er logget inn vil vi bli sendt til en ny side (dashboard) hvor ting er skjult for andre brukere
     // og vi vil få en melding om at innloggingen var vellykket

@@ -244,7 +244,7 @@ app.get("/collection", kreverInnlogging, (req, res) => {
 app.get("/skjult", kreverInnlogging, (req, res) => {
     // sender oss til website.html som er i hidden-mappen
     res.sendFile(__dirname + "/hidden/website.html");
-});""
+});
 
 // hele denne koden sender deg til en nettside (du må bruke denne hvis du har html sider som er utenfor public mappen)
 app.get("/addCardPage/html", kreverInnlogging, (req, res) => {
